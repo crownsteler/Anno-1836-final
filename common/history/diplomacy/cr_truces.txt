@@ -1,0 +1,20 @@
+﻿DIPLOMACY = {
+	c:FRA ?= {
+		create_unidirectional_truce  = {
+			country = c:MAS
+			months = 60
+		}
+		create_unidirectional_truce = {
+			country = c:CON
+			months = 7
+		}
+		create_unidirectional_truce = {
+			country = c:ZWA
+			months = 16
+		}
+		create_unidirectional_truce = {
+			country = c:AIT
+			months = 16
+		}
+	}	
+}

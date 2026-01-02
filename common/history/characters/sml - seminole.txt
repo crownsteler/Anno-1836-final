@@ -1,0 +1,35 @@
+﻿CHARACTERS = {
+	c:SML ?= {
+		create_character = {
+			template = SML_micanopy
+		}
+		
+		create_character = {
+			template = SML_osceola
+		}
+		
+		create_character = {
+			template = SML_abiaka
+		}
+		
+		create_character = {
+			template = SML_chipco
+		}
+		
+		create_character = {
+			template = SML_john_horse
+		}
+		
+		create_character = {
+			template = SML_holata_micco
+		}
+		
+		create_character = {
+			template = SML_coacoochee
+		}
+		
+		create_character = {
+			template = SML_halpatter_tustenuggee
+		}
+	}
+}

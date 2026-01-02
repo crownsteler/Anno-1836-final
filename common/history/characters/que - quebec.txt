@@ -1,0 +1,27 @@
+﻿CHARACTERS = {
+	c:QUE ?= {
+		create_character = {
+			template = QUE_archibald_acheson
+		}
+		create_character = {
+			template = QUE_louis_joseph_papineau
+		}
+		create_character = {
+			template = QUE_austin_cuvillier
+		}
+		create_character = {
+			template = QUE_peter_mcgill
+		}
+		create_character = {
+			template = QUE_jean-jacques_lartigue
+		}
+		create_character = {
+			template = QUE_john_molson
+		}
+
+		# agitator - Robert Nelson
+		create_character = {
+			template = QUE_robert_nelson
+		}
+	}
+}

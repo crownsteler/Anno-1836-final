@@ -1,0 +1,486 @@
+﻿je_cr_carlist_war_carlists = {
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_historical_content
+	
+	is_shown_in_lobby = {
+		c:SPC ?= this
+		exists = c:SPC
+	}
+	
+	complete = {
+        custom_tooltip = {
+			text = cr_defeat_the_christinos
+			is_at_war = no
+			NOT = { exists = c:SPA }
+		}
+	}
+	immediate = {
+		s:STATE_BASQUE_COUNTRY.region_state:SPC = {
+			save_scope_as = cr_STATE_BASQUE_COUNTRY
+		}
+		c:SPA = {
+			save_scope_as = cr_christinos
+			ig:ig_intelligentsia = {
+				save_scope_as = cr_spanish_liberals
+			}
+			ig:ig_devout = {
+				save_scope_as = cr_spanish_catholic_church
+			}
+		}
+		c:SPC = {
+			save_scope_as = cr_carlists
+		}
+		cu:basque = {
+			save_scope_as = cr_basque_culture
+		}
+		cu:catalan = {
+			save_scope_as = cr_catalan_culture
+		}
+		c:GBR = {
+			save_scope_as = cr_britain
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+	
+
+	on_complete = {
+		annex = c:SPA
+		change_tag = SPA
+		hidden_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_variable = cr_isabel_accept_compromise
+					}
+				}
+				set_variable = cr_carlist_victory
+			}
+			set_capital = STATE_NEW_CASTILE
+		}
+	}
+}
+
+je_cr_carlist_war_christinos = {
+
+	icon = "gfx/interface/icons/event_icons/event_military.dds"
+	
+	group = je_group_historical_content
+	
+	is_shown_in_lobby = {
+		c:SPA ?= this
+		exists = c:SPC
+	}
+
+	complete = {
+        custom_tooltip = {
+			text = cr_defeat_the_carlists
+			is_at_war = no
+			NOT = { exists = c:SPC }
+		}	
+	}
+	immediate = {
+		s:STATE_BASQUE_COUNTRY.region_state:SPC = {
+			save_scope_as = cr_STATE_BASQUE_COUNTRY
+		}
+		c:SPA = {
+			save_scope_as = cr_christinos
+			ig:ig_intelligentsia = {
+				save_scope_as = cr_spanish_liberals
+			}
+			ig:ig_devout = {
+				save_scope_as = cr_spanish_catholic_church
+			}
+			ig:ig_landowners = {
+				save_scope_as = cr_spanish_landowners
+			}
+			
+			ig:ig_rural_folk = {
+			}
+			
+			ig:ig_petty_bourgeoisie = {
+			}
+		}
+		c:SPC = {
+			save_scope_as = cr_carlists
+		}
+		c:GBR = {
+			save_scope_as = cr_britain
+		}
+		cu:basque = {
+			save_scope_as = cr_basque_culture
+		}
+		cu:catalan = {
+			save_scope_as = cr_catalan_culture
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+	
+	on_monthly_pulse = {
+		random_events = {
+			3 = 0
+			1 = cr_carlist_events.1 #The Desamortización of the Monastaries
+			1 = cr_carlist_events.71 #A Royal Union for Peace - Two Sicilies
+		}
+	}
+	
+	on_complete = {
+		annex = c:SPC
+	}
+}
+
+je_cr_carlist_question_christinos = {
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	group = je_group_historical_content
+	
+
+	complete = {
+		scope:carlist_movement = {
+			political_movement_support <= 0.05
+		}
+	}
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_carlists
+			}
+			save_scope_as = carlist_movement
+		}
+		random_country = {
+			limit = {
+				has_variable = don_carlos_exile_country_var
+			}
+			save_scope_as = don_carlos_exile_country
+			random_political_movement = {
+				limit = {
+					has_modifier = cr_don_carlos_liberal_support
+				}
+				save_scope_as = supported_movement
+			}
+		}
+		s:STATE_BASQUE_COUNTRY.region_state:SPC = {
+			save_scope_as = cr_STATE_BASQUE_COUNTRY
+		}
+		
+		c:SPA = {
+			save_scope_as = cr_christinos
+			ig:ig_intelligentsia = {
+				save_scope_as = cr_spanish_liberals
+			}
+			ig:ig_devout = {
+				save_scope_as = cr_spanish_catholic_church
+			}
+			ig:ig_landowners = {
+				save_scope_as = cr_spanish_landowners
+			}
+			
+			ig:ig_rural_folk = {
+			}
+			
+			ig:ig_petty_bourgeoisie = {
+			}
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+	
+	on_monthly_pulse = {
+		#random_events = {
+		#	3 = 0
+		#	1 = cr_carlist_events.1 #The Desamortización of the Monastaries
+		#}
+	}
+	
+	scripted_button = je_cr_don_carlos_stop_supporting_portugese_liberals_button
+	
+	on_complete = {
+		custom_tooltip = {
+			text = je_cr_carlist_question_christinos_completion_tt
+			set_variable = cr_carlists_question_ended_var
+		}
+	}
+}
+
+je_cr_carlist_regency = {
+
+	icon = "gfx/interface/icons/event_icons/event_portrait.dds"
+	
+	group = je_group_historical_content
+	
+
+	complete = {
+		
+	}
+	immediate = {
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_carlists
+			}
+			save_scope_as = carlist_movement
+		}
+		#random_country = {
+		#	limit = {
+		#		has_variable = don_carlos_exile_country_var
+		#	}
+		#	save_scope_as = don_carlos_exile_country
+		#	random_political_movement = {
+		#		limit = {
+		#			has_modifier = cr_don_carlos_liberal_support
+		#		}
+		#		save_scope_as = supported_movement
+		#	}
+		#}
+		
+		c:SPA = {
+			ig:ig_intelligentsia = {
+				save_scope_as = cr_spanish_liberals
+			}
+			ig:ig_devout = {
+				save_scope_as = cr_spanish_catholic_church
+			}
+			ig:ig_landowners = {
+				save_scope_as = cr_spanish_landowners
+			}
+			
+			ig:ig_rural_folk = {
+				save_scope_as = cr_spanish_peasants
+			}
+			
+			ig:ig_petty_bourgeoisie = {
+			}
+		}
+	}
+	
+	should_be_pinned_by_default = yes
+	
+	on_monthly_pulse = {
+		#random_events = {
+		#	3 = 0
+		#	1 = cr_carlist_events.1 #The Desamortización of the Monastaries
+		#}
+		
+		#Carlos support calculator
+		#if = {
+		#	limit = {
+		#		ig:ig_landowners = {
+		#		
+		#		}
+		#	}
+		#}
+	}
+	
+	scripted_button = je_cr_don_carlos_stop_supporting_portugese_liberals_button
+	
+	on_complete = {
+		custom_tooltip = {
+			text = je_cr_carlist_question_christinos_completion_tt
+			set_variable = cr_carlists_question_ended_var
+		}
+	}
+}
+
+#je_cr_ferdinando_po = {
+#
+#	icon = "gfx/interface/icons/event_icons/event_map.dds"
+#	
+#	group = je_group_foreign_affairs
+#	
+#    is_shown_when_inactive = {
+#		OR = {
+#			AND = {
+#				exists = c:SPA
+#				THIS = c:SPA
+#			}
+#			AND = {
+#				exists = c:SPC
+#				THIS = c:SPC
+#			}
+#		}
+#		NOT = { has_variable = cr_carlist_war_ongoing }
+#		OR = {
+#			AND = {
+#				exists = c:GBR
+#				p:x902089.owner = c:GBR
+#			}
+#			AND = {
+#				exists = c:ENG
+#				p:x902089.owner = c:ENG
+#			}
+#		}
+#		NOT = {
+#			has_law = law_type:law_slave_trade
+#			p:x902089.owner = { 
+#				has_law = law_type:law_slave_trade
+#			}
+#			p:x902089.owner = { 
+#				has_technology_researched = civilizing_mission
+#			}
+#		}
+#    }
+#	
+#	scripted_button = je_cr_ferdinando_po_button_a
+#	scripted_button = je_cr_ferdinando_po_button_b
+#	scripted_button = je_cr_ferdinando_po_button_c
+#	
+#    possible = {
+#		has_interest_marker_in_region = region_biafra
+#		NOT = {
+#			has_law = law_type:law_slave_trade
+#			p:x902089.owner = { 
+#				has_law = law_type:law_slave_trade
+#			}
+#			p:x902089.owner = { 
+#				has_technology_researched = civilizing_mission
+#			}
+#		}
+#    }
+#	
+#	immediate = {
+#		set_variable = {
+#			name = je_fernando_po_ai_count_var
+#			value = 0
+#		}
+#		save_scope_as = cr_fernado_po_claimant
+#		s:STATE_SAO_TOME_AND_PRINCIPE.region_state:GBR = {
+#			save_scope_as = cr_fernando_po_state
+#		}
+#		p:x902089.region = {
+#			save_scope_as = cr_fernando_po_region
+#		}
+#		p:x365A5B.region = {
+#			save_scope_as = cr_rio_de_la_plata_region
+#		}
+#		s:STATE_URUGUAY.region_state:URU = {
+#			save_scope_as = cr_uruguay_state
+#		}
+#		p:x902089.owner = {
+#			save_scope_as = cr_fernado_po_owner
+#		}
+#		c:POR = {
+#			save_scope_as = cr_fernado_po_prev_owner
+#		}
+#		sr:region_biafra = {
+#			save_scope_as = cr_biafra
+#		}
+#		sr:region_guinea = {
+#			save_scope_as = cr_guinea
+#		}
+#		sr:region_congo = {
+#			save_scope_as = cr_congo
+#		}
+#		p:x902089.owner = {
+#			set_variable = {
+#				name = cr_pressed_the_fernando_po_issue
+#				value = 0
+#			}		
+#		}
+#	}
+#
+#	complete = {
+#		custom_tooltip = {
+#			text = je_cr_ferdinando_po_complete_tooltip
+#			p:x902089.owner = this
+#		}
+#	}
+#	
+#	should_be_pinned_by_default = no
+#	
+#	on_complete = {
+#		p:x902089.owner = {
+#			save_scope_as = cr_fernado_po_owner
+#		}
+#		every_country = {
+#			limit = {
+#				NOT = {
+#					THIS = ROOT
+#				}
+#				has_interest_marker_in_region = region_biafra
+#			}
+#			post_notification = cr_fernando_po_returned_notification
+#		}
+#		hidden_effect = {
+#			remove_variable = je_fernando_po_ai_count_var
+#			remove_variable = cr_fernando_po_dealt_with_local_var
+#		}
+#	}
+#	
+#	fail = {
+#		OR = {
+#			has_law = law_type:law_slave_trade
+#			p:x902089.owner = {
+#				OR = {
+#					has_law = law_type:law_slave_trade
+#					has_technology_researched = civilizing_mission
+#				}
+#			}
+#		}
+#	}
+#	
+#	on_fail = {
+#		save_scope_as = cr_fernado_po_claimant
+#		p:x902089.owner = {
+#			save_scope_as = cr_fernado_po_owner
+#		}
+#		if = {
+#			limit = {
+#				has_law = law_type:law_slave_trade
+#			}
+#			post_notification = cr_fernando_po_returned_notification_slavery_reinstated
+#		}
+#		else_if = {
+#			limit = {
+#				p:x902089.owner = {
+#					has_law = law_type:law_slave_trade
+#				}
+#			}
+#			post_notification = po_returned_notification_their_slavery_reinstated			
+#		}
+#		else_if = {
+#			limit = {
+#				p:x902089.owner = {
+#					has_technology_researched = civilizing_mission
+#				}
+#			}
+#			post_notification = po_returned_notification_their_slavery_reinstated			
+#		}
+#		hidden_effect = {
+#			remove_variable = je_fernando_po_ai_count_var
+#			remove_variable = cr_fernando_po_dealt_with_local_var
+#			remove_variable = cr_fernando_po_appealed_to_treaty
+#		}
+#	}
+#	
+#	
+#	
+#	invalid = {
+#		NOT = { 
+#			c:GBR = {
+#				any_scope_state = {
+#					state_region = s:STATE_SAO_TOME_AND_PRINCIPE
+#				}
+#			}
+#			c:ENG = {
+#				any_scope_state = {
+#					state_region = s:STATE_SAO_TOME_AND_PRINCIPE
+#				}
+#			}
+#		}	
+#	}
+#	
+#	on_invalid = {
+#		save_scope_as = cr_fernado_po_claimant
+#		scope:cr_fernando_po_state.owner = {
+#			save_scope_as = cr_fernado_po_occupier
+#		}
+#		hidden_effect = {
+#			remove_variable = je_fernando_po_ai_count_var
+#			remove_variable = cr_fernando_po_dealt_with_local_var
+#			remove_variable = cr_fernando_po_appealed_to_treaty
+#		}
+#	}
+#}

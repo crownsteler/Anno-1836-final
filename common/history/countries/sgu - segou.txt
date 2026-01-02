@@ -1,0 +1,10 @@
+﻿COUNTRIES = {
+	c:SGU	?= {
+		effect_starting_technology_west_africa_transition = yes
+		effect_starting_politics_traditional = yes
+		effect_west_african_slave_trader = yes
+		
+		activate_law = law_type:law_oligarchy
+		activate_law = law_type:law_appointed_bureaucrats
+	}
+}

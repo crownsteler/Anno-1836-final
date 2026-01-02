@@ -1,0 +1,35 @@
+﻿# This is executed last among all history
+GLOBAL = {
+	s:STATE_BASQUE_COUNTRY = {
+		add_devastation = 26
+	}
+	s:STATE_CATALONIA = {
+		add_devastation = 22
+	}
+	s:STATE_ARAGON = {
+		add_devastation = 22
+	}
+	s:STATE_ASTURIAS = {
+		add_devastation = 15
+	}
+	s:STATE_GALICIA = {
+		add_devastation = 15
+	}
+	s:STATE_LOWER_ANDALUSIA = {
+		add_devastation = 12
+	}
+	s:STATE_EXTREMADURA = {
+		add_devastation = 8
+	}
+	s:STATE_NEW_CASTILE = {
+		add_devastation = 8
+	}
+	s:STATE_UPPER_ANDALUSIA = {
+		add_devastation = 8
+	}
+	s:STATE_LEON = {
+		add_devastation = 12
+	}
+	c:SPA = {
+		add_treasury = -600000
+}

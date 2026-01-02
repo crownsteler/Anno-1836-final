@@ -1,0 +1,116 @@
+﻿### Netherlands character template file ###
+
+# Netherlands - NET
+
+NET_willem_i_van_oranje_nassau = {
+	# King William I of the Netherlands
+	first_name = "Willem"
+	last_name = "van_Oranje-Nassau"
+	historical = yes
+	culture = primary_culture
+	ruler = yes
+	age = 64
+	dna = dna_king_william_01
+	interest_group = ig_petty_bourgeoisie
+	ideology = ideology_royalist
+	traits = {
+		romantic
+	}
+}
+
+NET_willem_ii_van_oranje_nassau = {
+	first_name = "Willem"
+	last_name = "van_Oranje-Nassau"
+	historical = yes
+	culture = primary_culture
+	heir = yes
+	age = 44
+	interest_group = ig_intelligentsia
+	ideology = ideology_reformer
+	traits = {
+		persistent
+	}
+	on_created = {
+		set_variable = is_married
+	}
+}
+
+NET_david_hendrik_chasse = { # General
+	is_general = yes
+	first_name = David_Hendrik
+	last_name = Chasse
+	historical = yes
+	culture = primary_culture
+	age = 71
+	traits = {
+		wrathful
+		wounded # Right upper arm
+	}
+}
+
+NET_engelbertus_lucas = { # Admiral
+	is_admiral = yes
+	 first_name = Engelbertus
+	 last_name = Lucas
+	 historical = yes
+	 culture = primary_culture
+	 age = 51
+	 commander_rank = commander_rank_2
+	 traits = {
+		 experienced_naval_commander
+		 wrathful
+	}
+}
+
+NET_johan_rudolph_thorbecke = {
+    first_name = Johan_Rudolph
+    last_name = Thorbecke
+    historical = yes
+    culture = cu:dutch
+    female = no
+    religion = rel:protestant
+    ideology = ideology_liberal_leader
+    interest_group = ig_petty_bourgeoisie
+    birth_date = 1798.1.14
+    traits = {
+        erudite
+        persistent
+        ambitious
+    }
+    interest_group_leader_usage = {
+        country_trigger = {
+            exists = c:NET
+            this = c:NET
+        }
+        interest_group_trigger = {
+            is_interest_group_type = ig_petty_bourgeoisie
+            NOR = {
+				has_variable = communist_ig_var
+				has_variable = chose_vanguardism
+				has_variable = chose_fascism
+				has_variable = chose_conservatism
+				has_variable = chose_ethno_nationalism
+			}
+        }
+        earliest_usage_date = 1844.1.1
+        latest_usage_date = 1871.1.4 # start of the third Thorbecke cabinet
+        chance = 50
+    }
+}
+
+###MOVED FROM historical_commanders_europe.txt CHECK FOR UPDATES THERE!!!! ###Moved to the formations files, 
+dei_general_michiels = {
+	is_general = yes
+	first_name = Andreas_Victor
+	last_name = Michiels
+	historical = yes
+	culture = cu:dutch
+	hq = region_java
+	commander_rank = default
+	birth_date = 1797.5.30
+	interest_group = ig_armed_forces
+	ideology = ideology_jingoist_leader
+	traits = {
+		ambitious
+	}
+}

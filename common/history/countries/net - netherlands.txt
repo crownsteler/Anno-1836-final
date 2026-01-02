@@ -1,0 +1,88 @@
+﻿COUNTRIES = {
+	c:NET ?= {
+		effect_starting_technology_tier_2_tech = yes
+		effect_starting_politics_liberal = yes
+		add_technology_researched = intensive_agriculture
+		add_technology_researched = atmospheric_engine
+		add_technology_researched = mechanical_tools
+		#add_technology_researched = fractional_distillation
+		#add_technology_researched = crystal_glass
+		#add_technology_researched = canneries
+		add_technology_researched = corporate_charters
+		add_technology_researched = central_banking
+		add_technology_researched = joint_stock_companies #We invented this shit
+		add_technology_researched = egalitarianism
+
+		ig:ig_petty_bourgeoisie ?= {
+			add_ruling_interest_group = yes
+		}
+
+		ig:ig_landowners ?= {
+			add_ruling_interest_group = yes
+		}
+
+		set_tax_level = medium
+		
+		add_taxed_goods = g:tobacco
+		add_taxed_goods = g:luxury_clothes
+
+		activate_law = law_type:law_monarchy
+		activate_law = law_type:law_landed_voting 				#Actually law_wealth_voting, but this allows for better representation of the expansion of the voting francise; 1815: indirect elections by the aristocracy, urban notables, rural notables. 1848: direct elections, officially by census voting 1887: Caoutchouc article expanding the francise (census elections). 1817: universal voting for men. 1919: women's suffrage
+		activate_law = law_type:law_per_capita_based_taxation
+		activate_law = law_type:law_freedom_of_conscience 		#officially freedom of conscience, but in reality king head of the church and discrimination of catholics
+		activate_law = law_type:law_national_supremacy
+		activate_law = law_type:law_mercantilism 				#Or protectionism
+		activate_law = law_type:law_interventionism
+		activate_law = law_type:law_colonial_exploitation
+		activate_law = law_type:law_colonial_slavery
+		activate_law = law_type:law_local_police				#Various police forces; Marechaussée (gendarms), urban police, rural police and military police. All could fit, but the fragmented nature of the police makes local fit better I guess.
+		activate_law = law_type:law_public_schools
+		activate_law = law_type:law_right_of_assembly
+		activate_law = law_type:law_appointed_bureaucrats
+		activate_law = law_type:law_private_health_insurance
+		activate_law = law_type:law_women_own_property
+		activate_law = law_type:law_poor_laws
+
+		set_institution_investment_level = {
+			institution = institution_schools
+			level = 1 #There were public schools, just not great.
+		}
+
+		set_institution_investment_level = {
+			institution = institution_colonial_affairs
+			level = 1
+		}	
+
+		#ig:ig_petty_bourgeoisie = {
+		#	set_interest_group_name = ig_merchant_bankers
+		#}
+		
+		ig:ig_intelligentsia = {
+			set_interest_group_name = ig_liberals
+		}
+		
+		#ig:ig_rural_folk = {
+		#	set_interest_group_name = ig_protestants
+		#}
+
+		#ig:ig_trade_unions = {
+		#	set_interest_group_name = ig_socialists
+		#}
+
+		#ig:ig_devout = {
+		#	set_interest_group_name = ig_catholics
+		#}	
+
+		#add_company = company_type:company_maatschappij_van_weldadigheid
+		#company:company_maatschappij_van_weldadigheid = {
+		#	set_company_establishment_date = 1818.4.1
+		#	set_company_state_region = s:STATE_FRIESLAND
+		#}
+
+		add_company = company_type:company_nederlandse_handelmaatschappij
+		company:company_nederlandse_handelmaatschappij = {
+			set_company_establishment_date = 1824.3.29
+			set_company_state_region = s:STATE_HOLLAND
+		}
+	}
+}

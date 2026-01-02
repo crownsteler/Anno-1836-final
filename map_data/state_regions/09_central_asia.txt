@@ -1,0 +1,694 @@
+﻿STATE_DAGESTAN = {
+    id = 433
+    subsistence_building = "building_subsistence_farm"
+    provinces = { xC01040 x9F1D8F x3B6A9E xDA5ABE x84A24F x72A1AB x01D041 }
+    city = "x72A1AB"
+    farm = "x9F1D8F"
+    mine = "xDA5ABE"
+    wood = "x3B6A9E"
+    arable_land = 25
+    arable_resources = { "building_livestock_ranch" "building_dye_plantation" "building_vineyard" } #Dyes for madder production at Derbent
+
+
+
+
+    capped_resources = {
+        building_logging_camp = 10
+    #building_lead_mine = 22
+    }
+    traits = { "state_trait_caucasus_mountains" }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 30
+    }
+}
+
+STATE_KUBAN = {
+    id = 434
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x0E69B9" "x16687C" "x191F70" "x2CF115" "x2E1A32" "x33CC4D" "x3C9016" "x405000" "x469A99" "x522F82" "x594403" "x61D073" "x6BB70E" "x6F16AA" "x708C99" "x76B63F" "x7BCBCC" "x80D080" "x89223D" "x9809B7" "x9A01E0" "xAF4F59" "xB63D94" "xBCF376" "xC88562" "xD5648D" "xD9CD9D" "xE6667B" "xEB2EF5" "xF51533" "x2790A8" }
+    traits = { "state_trait_western_steppe" }
+    city = "x80D080"
+    port = "x9809B7"
+    farm = "x6F16AA"
+    mine = "x2CF115"
+    wood = "x405000"
+    arable_land = 105
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_vineyard" } #Some minor tea production around Sochi, didn't find it to be too relevant.
+
+
+
+
+    capped_resources = {
+        #building_coal_mine = 32 #No coal reserves here at all?
+        #building_copper_mine = 18 #Karachay-Cherkessia, 1.51% copper
+        building_logging_camp = 6
+        building_fishing_wharf = 6
+    }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 30
+    }
+    naval_exit_id = 3036
+}
+
+STATE_ARMENIA = {
+    id = 435
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x005000" "x16A02D" "x30DF60" "x3161E0" "x805000" "xAB3AF1" "xDC0812" }
+    city = "x805000"
+    farm = "x005000"
+    mine = "xAB3AF1"
+    wood = "x3161E0"
+    arable_land = 60
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_silk_plantation" "building_cotton_plantation" }
+    capped_resources = {
+        building_copper_mine = 27 #Kajaran & Alaverdi
+
+
+
+
+    #building_minor_metals_mine = 18 #molybdenum
+    }
+}
+
+STATE_AZERBAIJAN = {
+    id = 436
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x007060" "x008FBF" "x0467D5" "x0B74ED" "x0E8C3E" "x493F0B" "x69FE0D" "x6EB08E" "xBFD159" "xD77566" "xE7B07C" }
+    city = "x6EB08E"
+    farm = "x493F0B"
+    mine = "x0E8C3E"
+    wood = "x69FE0D"
+    arable_land = 30
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" }
+    capped_resources = {
+    #building_logging_camp = 4
+    }
+    resource = {
+        type = "building_lead_mine"
+        undiscovered_amount = 18
+    }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 140
+    }
+}
+
+STATE_GREATER_CAUCASUS = {
+    id = 437
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x011141" "x3537D5" "x40D001" "x4A4DF9" "x73A639" "x74A861" "x801000" "x85DCE4" "x9BC69B" "xC0CF80" "xC27075" "xC9B445" "xD15CBD" "xD1A8AF" "xD62036" "xD65AC8" "xF0E0DF" "xFB38B0" "xFB53B8" }
+    traits = { "state_trait_caucasus_mountains" "state_trait_great_terroir" }
+    city = "x3537D5"
+    port = "x011141"
+    farm = "x801000"
+    mine = "xC27075"
+    wood = "xF0E0DF"
+    arable_land = 75
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" "building_vineyard" }
+    capped_resources = {
+        building_logging_camp = 19
+        building_fishing_wharf = 4
+    #building_minor_metals_mine = 24 #Manganese
+    }
+    #resource = {	#Removed for better resource distribution
+    #    type = "building_copper_mine"
+    #    undiscovered_amount = 24
+    #}
+    naval_exit_id = 3036
+}
+
+STATE_SAMARA = {
+    id = 438
+    subsistence_building = "building_subsistence_farm"
+    provinces = { x96058F x42401C x1E5008 xEE1033 x115723 xE41C9D x795854 xA7620E xA46A6B xBF7060 x7C8665 xFE5E9D xA4990C xD49810 xFA8D56 xB7AA35 x90C19D xA0E021 xE6ED05 xCEF631 xA121CB xC45745 x32A08B xD4F3FD xE44235 xA7B747 x5B392A x2FE543 x2505DB xCF5257 x71BA78 xDADB41 x28AD29 x9F49D5 x59D2D4 x7F204D x340E79 x7EA5A3 xE9B9FB xE0856C xB70239 xD914CA xCF6246 x434D42 xAC95C4 x1CF34F xB42F67 x21DFA0 x37CD87 xB921A7 x93546F x658056 xEF1983 x3F9C38 x51CA06 x11EA2C xE9FFBB x942629 x024868 x1C1FB7 x610EC7 x184EBD xB53431 xC7340F xB52DF6 x8840E2 x915A42 x6364BE xB353F0 x3F987B x8F80BA x53AFD2 xD9B952 xB9D801 x0DFFD3 xEBD048 x5DFE91 xFBE9D0 x001A4C x1B441A xDA0B52 x831CDC xA59162 x2DD811 x47EC86 xB6D2D8 x8CFB3E xDFE0A0 x756FF5 xC470FD xCB9D88 x25E850 xDFE045 }
+    traits = { "state_trait_volga_river" "state_trait_western_steppe" }
+    city = "xBF7060"
+    farm = "x28AD29"
+    mine = "xC470FD"
+    wood = "xA0E021"
+    arable_land = 120
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" }
+    capped_resources = {
+        building_logging_camp = 9
+    }
+    resource = {
+        #Orenburg (Gaisky Mine Complex), Orsk, Kargaly
+        type = "building_copper_mine"
+        discovered_amount = 15
+        undiscovered_amount = 15
+    }
+}
+
+STATE_TARTARIA = {
+    #Saratov
+    id = 817
+    subsistence_building = "building_subsistence_farm"
+    provinces = { x370996 x302B65 x1233B6 x69239F x8447C0 x36696F x904CD8 x587F59 x1C9CEB x66929F xF2884A x20D17F x5DC7DF xFAB9A8 xA0DFA0 xE4E080 xF0F779 x060F1F x2D0CA0 x161ACD x341DB2 xCC3356 x346C85 x1889E9 x9672A5 x328BF7 xF26043 x0BAE1A x3BA63A x16B7FE x8BB04E x21DF21 xD19BE5 xC4B284 }
+    traits = { "state_trait_volga_river" "state_trait_western_steppe" "state_trait_black_soil" }
+    city = "xFAB9A8"
+    farm = "x16B7FE"
+    mine = "xD19BE5"
+    wood = "x341DB2"
+    arable_land = 90
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" }
+    capped_resources = {
+        building_logging_camp = 9
+    }
+    resource = {}
+}
+
+STATE_ASTRAKHAN = {
+    id = 588
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { x015040 x0BABA7 x0E39F5 x176C7A x18458E x2DED24 x444735 x702ECE x70BC3A x805140 xD4CB58 xD559DF xDC287A xEDBFF9 xEF0EF7 xFFAEC1 x112A5D x214E13 x9633B6 x4254FA x047D6D xE06020 x4190C0 xAA798E x41AA95 xCFBC40 xE8B3EC xD9BEED xB5D0F6 }
+    traits = { "state_trait_volga_river" "state_trait_western_steppe" }
+    city = "x015040"
+    farm = "x047D6D"
+    mine = "xEF0EF7"
+    wood = "x176C7A"
+    arable_land = 45
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_tobacco_plantation" }
+    capped_resources = {
+
+    }
+}
+
+STATE_TRANSOXIANA = {
+    id = 3443
+    subsistence_building = "building_subsistence_farm"
+    provinces = { xF2786A x665341 x9B6910 xC19656 x0A3F4D xACA7FD x5743DD xF1C7F1 x2CDB86 x03630A xD38A78 x6BD3A0 x6B31FF x95C1EA x97161C xB0C419 xC3D59A x7A0CCA x9F6258 x72D3A8 x14A7BE x1F4F98 x73D87A x5DEB84 xCEA4C1 xB38748 xC87F8A x8D638E x078459 x086B0D x9A8732 xFD83A1 xA69653 xDAD39B x82E6C0 x33A3BE x3ABB84 xD1425A x44F40B xA02922 xAF6AE5 x100231 x7A943A xC359F7 x7A884B xB22914 xEA2F67 x2C7B0C xB1E3FB x8AE0DC }
+    prime_land = { xF2786A x665341 x9B6910 xC19656 x0A3F4D xACA7FD x5743DD xF1C7F1 x2CDB86 x03630A }
+    #impassable = { xD38A78 x6BD3A0 x6B31FF x95C1EA x97161C xB0C419 xC3D59A x7A0CCA x9F6258 x72D3A8 x14A7BE x1F4F98 x73D87A xCEA4C1 xB38748 xC87F8A x8D638E x078459 x086B0D x9A8732 xFD83A1 xA69653 xDAD39B x82E6C0 x33A3BE x3ABB84 xAF6AE5 x100231 x7A943A xB22914 xEA2F67 x2C7B0C xB1E3FB x8AE0DC }
+    city = "xACA7FD"
+    farm = "x2CDB86"
+    mine = "x72D3A8"
+    wood = "xF2786A"
+    arable_land = 24
+    arable_resources = { "building_wheat_farm" "building_cotton_plantation" "building_tobacco_plantation" }
+    capped_resources = {}
+}
+
+STATE_TASHKENT = {
+    id = 3459
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x3D854F" "x4B7066" "x6D84D3" "xA3FA94" "xB24B12" "xC0D040" }
+    city = "xB24B12"
+    farm = "xA3FA94"
+    mine = "xC0D040"
+    wood = "x4B7066"
+    arable_land = 24
+    arable_resources = { "building_wheat_farm" "building_silk_plantation" "building_opium_plantation" "building_vineyard" }
+    capped_resources = {
+    #building_copper_mine = 50 #Dalnee copper field, doesn't seem relevant for the period?
+    #building_minor_metals_mine = 20 #lead/zinc, molybdenum
+    }
+}
+
+STATE_UZBEKIA = {
+    id = 443
+    subsistence_building = "building_subsistence_farm"
+    provinces = { x8A56DC xD87EBF xF5EF8A x417F81 xED1489 xA1DF6D x973B9F x865AAB x11BEB1 x8B8972 x8DE506 xD056DC x17227F xC89C46 x156B96 xFD2FE1 xF9BC1A x71F3E8 x367C49 xDC6A33 xA69FFF x6DD7B6 x224CB7 x1A750E xD767AD xD5BC6F }
+    city = "xD056DC"
+    farm = "x973B9F"
+    mine = "x156B96"
+    wood = "xD767AD"
+    arable_land = 100
+    arable_resources = { "building_wheat_farm" "building_silk_plantation" "building_opium_plantation" "building_cotton_plantation" "building_tobacco_plantation" "building_vineyard" } #Removed "building_livestock_ranch" to reduce resources to 6. Added "building_livestock_ranch" to Tajikstan as compensation.
+
+
+
+
+
+
+    capped_resources = {
+
+    }
+}
+
+STATE_TAJIKISTAN = {
+    id = 444
+    subsistence_building = "building_subsistence_farm"
+    provinces = { xCDD089 x6C9619 x2390CB x65165E x6DA038 x62B5FA x9856D4 xB09020 x94C7A6 xD84D24 x5B18B1 xC07A80 x20B021 xE72886 }
+    city = "x5B18B1"
+    farm = "x9856D4"
+    mine = "x6C9619"
+    wood = "x20B021"
+    arable_land = 38
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" }
+    capped_resources = {
+    #building_minor_metals_mine = 15 #aluminium, cadmium, wolfram, mercury, antimonium | all in Western Tajikistan
+    }
+}
+
+STATE_KIRGHIZIA = {
+    id = 445
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { "x01387D" "x080348" "x0B0E9E" "x0BD6F5" "x0FEA61" "x1AF55D" "x261D0F" "x30CC9D" "x3582E9" "x36EF23" "x384DCD" "x3EF868" "x3F077A" "x41EF15" "x4214B3" "x427426" "x480704" "x599B9D" "x5BFB6D" "x643CF5" "x6678CA" "x70C74E" "x71586F" "x7C21B1" "x7E2912" "x8B7EFD" "x99410F" "x999094" "xA20332" "xA2A052" "xA553A3" "xA9525C" "xAA16B7" "xAA36C3" "xB7562E" "xBA55E4" "xBE2F49" "xC45955" "xC863B0" "xC8CDED" "xCDA745" "xD0F675" "xED1DFF" "xF0EADF" "xF15FB9" "xF20193" "xF5C441" }
+    traits = { state_trait_cr_tien_shan }
+    city = "xAA16B7"
+    farm = "xC8CDED"
+    mine = "x080348"
+    wood = "x36EF23"
+    arable_land = 24
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" }
+    capped_resources = {
+    #building_minor_metals_mine = 20 #a huge diversity
+    }
+    resource = {
+        #lead/zinc
+        type = "building_iron_mine"
+        undiscovered_amount = 15
+    }
+    resource = {
+        #Also coal deep in the mountains
+        type = "building_coal_mine"
+        undiscovered_amount = 26
+    }
+    resource = {
+        type = "building_lead_mine"
+        undiscovered_amount = 15
+    }
+}
+
+STATE_BADAKHSHAN = {
+    id = 3455
+    subsistence_building = "building_subsistence_farm"
+    provinces = { xB7128C x6F2EC3 x527607 x151461 xE4D8D8 x42B020 xB36D9F xEF90FF xC1BBAD xFEB233 x68146B xB4B7D9 x596BB1 x2565D9 x8DFA40 xA94DAF x44A62C x85CE06 x4E989A xCA3319 xE1BF87 x596A90 x5DA229 }
+    traits = { state_trait_cr_pamir_mountains }
+    city = "x5DA229"
+    farm = "x42B020"
+    mine = "xB4B7D9"
+    wood = "x596A90"
+    arable_land = 20
+    arable_resources = { "building_livestock_ranch" "building_opium_plantation" }
+    capped_resources = {
+    #building_lead_mine = 5 #lead/zinc
+    }
+}
+
+STATE_ALAY = {
+    id = 3457
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { x180E7A x1C545C x2C5197 x3A3AE2 x3EA155 x5A2C97 x6A30D3 x7AAB55 x9B5DFD xA5418A xC78F24 xCE5CD4 xE5AD64 x48AE67 x7052F1 }
+    traits = { state_trait_cr_tien_shan }
+    city = "x3EA155"
+    farm = "xE5AD64"
+    mine = "x7AAB55"
+    wood = "x3A3AE2"
+    arable_land = 10
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" }
+    capped_resources = {
+    #building_minor_metals_mine = 15 #Also aluminium, antimonium and mercury
+    }
+    resource = {
+        type = "building_coal_mine"
+        undiscovered_amount = 18
+    }
+}
+
+STATE_TURKMENIA = {
+    id = 446
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { x4B2949 xF2391B x4C919C x5E1CDC x3AE9D8 x72E5D4 x18C1D8 x62E34E x6E6ED2 x645473 xEA083E xD00821 xE64B27 xBC072D xCF3B0F x21CDD7 x093730 x45531B xE4A58D x90EADD x1E5E98 x8011C0 xD81EAD x8D267A x9E20EF x476DEC x7FBBC9 x9B9882 xF0796E x0AE41D x9D4820 x59E155 x04E3CF xAD9C38 x9D2475 x7234E4 x9A0BDB x5C4C11 x87AA70 xC3C5CE xF3BF3F x07D17B x4758E8 x862BA1 x10D051 xD1F3DF x1F432E xBFAFA0 }
+    #impassable = { x4C919C x72E5D4 x18C1D8 xEA083E xD00821 x21CDD7 x90EADD x9A0BDB x4758E8 x62E34E }
+    city = "x3AE9D8"
+    farm = "xD1F3DF"
+    mine = "xE4A58D"
+    wood = "x5E1CDC"
+    arable_land = 35
+    arable_resources = { "building_wheat_farm" "building_opium_plantation" "building_tobacco_plantation" }
+    capped_resources = {
+
+    }
+    resource = {
+        #From oil?
+        type = "building_sulfur_mine"
+        undiscovered_amount = 40
+    }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 45
+    }
+}
+
+STATE_PASHTUNISTAN = {
+    id = 449
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "x076502" "x15A4E6" "x20B0A0" "x4C120A" "x54228F" "x54D767" "x69B8C7" "x7436D6" "x76933F" "x783680" "x8C9774" "x963360" "x9DA767" "xA96256" "xAAE0FA" "xAFD189" "xB8051E" "xB843AB" "xB943AF" "xC0234F" "xE9EA78" "xEC3398" "xF8FE8B" }
+    impassable = { "xE9EA78" "x69B8C7" }
+    traits = { "state_trait_indus_river" }
+    city = "x7436D6"
+    farm = "xEC3398"
+    mine = "x15A4E6"
+    wood = "xF8FE8B"
+    arable_land = 150
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_opium_plantation" }
+    capped_resources = {
+        building_logging_camp = 7
+        building_iron_mine = 10
+    }
+    resource = {
+        #Chamalang Coal Mines, high volatile C-A bituminous coal
+        type = "building_coal_mine"
+        undiscovered_amount = 20
+    }
+}
+
+STATE_CENTRAL_HIGHLANDS = {
+    id = 2010
+    subsistence_building = "building_subsistence_farm"
+    provinces = { xD37042 xE81774 xAD7935 x548EAA xE8122E x01CB5D xE0898D x05AA3A xA8DB52 xA45DA0 x8FACBC x16930C x87FE9C x2F26B8 xDC008F x6F8118 x5C6E60 x09828D x7FED21 xF36208 x0EE28B xF902AB x60B0A0 xA31731 x0487A7 x7AA1D1 x68901F x04B03F x27FE11 x4414C8 x8831D3 x6DBF4A xDB584F x938A92 xAF1A31 x4F1DA7 x99A835 xB6EB52 x42A020 x18B003 }
+    city = "xE0898D"
+    farm = "x68901F"
+    mine = "x0EE28B"
+    wood = "x99A835"
+    arable_land = 40
+    arable_resources = { "building_livestock_ranch" "building_opium_plantation" }
+    capped_resources = {
+    #building_iron_mine = 16
+    #building_lead_mine = 8
+    #building_logging_camp = 4
+    }
+    resource = {
+        #Balkhab
+        type = "building_copper_mine"
+        undiscovered_amount = 32
+    }
+}
+
+STATE_NORTHERN_BALUCHISTAN = {
+    id = 2005
+    subsistence_building = "building_subsistence_farm"
+    provinces = { x2E12A4 x1D8E81 x43A01E x8D8DC9 x60A1CC x0BD446 x21F614 x40F0E0 xECCEE2 xC0EF60 x5A406F x38045F x4DC5DC x412B8E x53CA4A x4D7261 xD8BDAE x81D144 xA868B0 x083D75 x1BC1AF xB10A2F x3991B0 x621FFA x349C39 x4D421F }
+    impassable = { x1D8E81 x2E12A4 x43A01E x0BD446 x40F0E0 xECCEE2 }
+    #prime_land = { x349C39 x1BC1AF x621FFA x3991B0 }
+    city = "x4D7261"
+    farm = "x349C39"
+    mine = "xC0EF60"
+    wood = "x60A1CC"
+    arable_land = 7
+    arable_resources = { "building_opium_plantation" "building_cotton_plantation" }
+    capped_resources = {}
+}
+
+STATE_HERAT = {
+    id = 3504
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { x052B79 x138C13 x1822B5 x3D1F65 x40F060 x472ED3 x58040A x737EB6 x7E8E00 x7FF5A4 x8C8BDF x8D8CED x959C8A xB850EC xC7AE53 xC83DD2 xD74653 xE9D45F xED5D50 xFCBB4D }
+    city = "x58040A"
+    farm = "x138C13"
+    mine = "x138C13"
+    wood = "x40F060"
+    arable_land = 50
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_silk_plantation" }
+    capped_resources = {
+
+    }
+
+
+    #Lead/zinc
+    resource = {
+        type = "building_lead_mine"
+        discovered_amount = 5
+        undiscovered_amount = 10
+    }
+}
+
+STATE_BALKH = {
+    id = 3505
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { x0E5E2E x11B523 x16620F x216DD8 x357612 x3672D9 x3C909A x4D6A94 x4D7E7C x54A683 x5A2C89 x5E6C67 x69FEB3 x7520FB x7D64E2 x854685 x8BB3DE x8C7935 x9B29C7 xA030A0 xA77FF1 xB1300D xB4E735 xB6BC96 xB7ED78 xBFE803 xD7BD36 xE63AF6 xE78EEE xEABDEE xEBA4E2 xEBD91F xF9780E }
+    traits = { "state_trait_cr_lapis_lazuli_deposits" }
+    city = "x7520FB"
+    farm = "x8C7935"
+    mine = "x0E5E2E"
+    wood = "xB7ED78"
+    arable_land = 40
+    arable_resources = { "building_wheat_farm" "building_vineyard" "building_cotton_plantation" "building_opium_plantation" "building_dye_plantation" } #"building_tobacco_plantation" 
+
+
+
+
+
+
+
+
+
+
+
+    capped_resources = {
+
+    }
+
+    #Shabashak/Dar-I-Suf
+    resource = {
+        type = "building_coal_mine"
+        undiscovered_amount = 32
+    }
+    resource = {
+        type = "building_oil_rig"
+        undiscovered_amount = 10
+    }
+}
+
+STATE_QUETTA = {
+    id = 2009
+    subsistence_building = "building_subsistence_farm"
+    provinces = { x1910AD x4DC3FF x34A39B x6F000D xDB0F57 x454FE3 x1DDD4D x7CA0E0 x5E7221 xC13040 x6EA076 x4AAAC0 x3C3D7F x8BB146 xB8655C xE7A309 xF78D0D }
+    impassable = { x1910AD x34A39B }
+    city = "x4DC3FF"
+    farm = "xB8655C"
+    mine = "x6EA076"
+    wood = "xC13040"
+    arable_land = 42
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_opium_plantation" }
+    capped_resources = {
+    #building_iron_mine = 4
+    #building_lead_mine = 8
+    #building_logging_camp = 2
+    }
+}
+
+STATE_KANDAHAR = {
+    id = 450
+    subsistence_building = "building_subsistence_farm"
+    provinces = { x1BF39F x3276E4 x41F4EB x52BEAF x55B1FD x64ABBA x83B3F5 x93A749 xAE8F58 xBBE7A9 xC446C2 xC57D6B xCB758F xDA8A5E xE7F59C xF0407A xF1FBC5 }
+    impassable = { xAE8F58 x64ABBA }
+    city = "x83B3F5"
+    farm = "x55B1FD"
+    mine = "x52BEAF"
+    wood = "x93A749"
+    arable_land = 50
+    arable_resources = { "building_livestock_ranch" "building_cotton_plantation" "building_opium_plantation" "building_silk_plantation" } #Also pistachios, almond, walnut
+
+
+
+
+
+
+
+
+
+
+
+
+
+    capped_resources = {
+    #building_copper_mine = 20
+    #building_minor_metals_mine = 20 #Tin, thugstun, REE
+    }
+    resource = {
+        type = "building_iron_mine"
+        undiscovered_amount = 20
+    }
+}
+
+STATE_KABUL = {
+    id = 451
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { x2130A0 x272245 x339975 x3ACBE0 x3D34F8 x3F6DF7 x401B5D x40F059 x4DE0D5 x5DF6B2 x6B01D6 x70FE4E x7C90B0 x885677 x8D643D x90FCC5 x91126C xA0B020 xA54030 xA89F7A xBAA598 xBB54C2 xDCB746 xDFF634 xE40309 xEF9ECA xF7D682 }
+    impassable = { "xA0B020" "x6B01D6" "xF7D682" "xDCB746" "xBAA598" "x70FE4E" "x8D643D" "xBB54C2" "x272245" }
+    prime_land = {}
+    city = "xEF9ECA"
+    farm = "x401B5D"
+    mine = "x3ACBE0"
+    wood = "x885677"
+    arable_land = 80
+    arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" "building_opium_plantation" } #also fruits
+
+
+
+
+
+
+
+
+
+
+
+
+
+    capped_resources = {
+        building_copper_mine = 45 #Mes Aynak
+
+
+
+
+
+
+
+
+
+
+
+
+
+        building_logging_camp = 4
+    #building_minor_metals_mine = 20 #Berrylium, lithium
+    }
+    resource = {
+        #Hajigak Mine
+        type = "building_iron_mine"
+        undiscovered_amount = 25
+    }
+}
+#x4B2EAD xE712E1 x954C12 x0279A0 xA55509 x35754E xF1414C x4070E0 x6D6D6B xA3655B x109CC0 xD575B0 xBB836E x5CBA3C x17D8AB xB2AAA7 x61D696 x3EFD1E x9EED5C xC6D9E8 xD4EC50 
+STATE_BALUCHISTAN = {
+    id = 452
+    subsistence_building = "building_subsistence_pasture"
+    provinces = { "x0279A0" "x0BAF8C" "x109CC0" "x113E0B" "x1161D9" "x17D8AB" "x1D0224" "x1EF53E" "x2B7441" "x2E7961" "x2FF46D" "x35754E" "x3C9B5F" "x3EFD1E" "x407060" "x4070E0" "x43F4B8" "x4529BD" "x45F2DD" "x4B2EAD" "x4E09C5" "x4F800F" "x556C63" "x56CF62" "x5CBA3C" "x61D696" "x626396" "x62BEAA" "x675BCE" "x6D6D6B" "x782112" "x7D60E7" "x7FE584" "x8DC922" "x8ED831" "x951063" "x954C12" "x968562" "x978421" "x97C017" "x9EED5C" "xA3655B" "xA55509" "xB0F79E" "xB2AAA7" "xB7B2BD" "xBAE3D2" "xBB836E" "xC070E0" "xC6D9E8" "xC6E602" "xCD77FD" "xD4EC50" "xD575B0" "xD6DD8A" "xDEE571" "xDF30A0" "xE712E1" "xE87BBF" "xE92A58" "xEC696F" "xF1414C" "xF9577D" }
+    #traits = { "state_trait_porphyry_copper" }
+    prime_land = { x978421 x113E0B x7FE584 xC6E602 x951063 x2E7961 xE87BBF x97C017 x3C9B5F xD6DD8A x56CF62 x2FF46D x675BCE x968562 x45F2DD xF9577D x8ED831 xB0F79E x407060 x4E09C5 x782112 x1161D9 x4F800F x8DC922 x556C63 xE92A58 xDEE571 x626396 x7D60E7 x0BAF8C x1D0224 xBAE3D2 x4529BD x62BEAA x1EF53E xCD77FD }
+    city = "xBAE3D2"
+    port = "xB7B2BD"
+    farm = "x8ED831"
+    mine = "x3C9B5F"
+    wood = "xCD77FD"
+    arable_land = 62
+    arable_resources = { "building_date_plantation" "building_opium_plantation" }
+    capped_resources = {
+        #building_lead_mine = 12 #Duddar mine
+        #building_copper_mine = 25 #Reko Diq mine, Saindak Copper Gold Project, porphyry deposit
+        building_fishing_wharf = 5
+    }
+    resource = {
+        #Duki district
+        type = "building_coal_mine"
+        undiscovered_amount = 28
+    }
+    #also potentially Disband and Nokkundi deposits
+    naval_exit_id = 3048
+}
+
+STATE_LHASA = {
+    #STATE_U_TSANG
+    id = 453
+    subsistence_building = "building_subsistence_farm"
+    impassable = { x4A0FD0 x71143F x422487 x207060 x2CE40E xCEA5FB x80DA49 x821542 xDE0FA1 x87A015 x0DDF07 x55DF74 x1FF09F x95F294 xDAE696 x082947 x099AD7 }
+    provinces = { x63DA08 xEC7BB2 x4E8A60 xF658E0 x92480A x656DDC x8D0D90 x216771 xCA11A0 xA21042 x286514 x2CE52F x1371AA x8A8982 xB02837 x4A0FD0 xD06F1B x9BEF82 x03644A x3A3E53 x80DA49 x06698A x4E1FF2 x1A5F8B xA07060 x4B57BE xBDF268 xC3B349 x4FD34F x1E3E6C x644AF9 x207060 x672210 xB2F3ED x099AD7 x2CE40E x4F2329 x082947 x2BB5C6 x15C347 x50C058 x8BB70D x0FA96A xE701F3 xF520AD xAC5C8D x3DD93C xEEE60B x422487 xCEA5FB x445E17 x61CFD5 x71143F xC17AA1 x020A13 x18089F x390A85 x1F1D7F x821542 x5118D9 x1D347B x6A1D9E xE6122E x3242A4 xDE0FA1 xBF3208 xB53246 x245D66 xBB32F7 x805380 xCE4141 xF33F0A xAF48A8 x079122 xC46618 x0CA02F xA070A0 x757EC9 xEC6359 x5D87C2 x8F8A0A x4EA762 x4CA3AB xEC796C x87A015 x06C5A5 xC39437 x46B9A4 x69B840 x2DCE44 x0DDF07 xCB9F59 x98B829 xB3B12D x26D4BC x63CF7D xDCB233 x55DF74 x2EED68 x1FF09F xC7C56B x48F15F xE4D2EB x95F294 xB1FB06 xDAE696 x3ABF14 x4C1EF6 x0A6115 x095F32 xCE3261 x9640C8 x6E4FEF xFC33A4 xBD45E4 x527BB9 xC268D2 xA78672 x2CC414 x72C382 x76E336 xD2D422 }
+    traits = { "state_trait_himalayas_mountains" }
+    city = "x06698A"
+    farm = "x92480A"
+    mine = "x63CF7D"
+    wood = "x8D0D90"
+    arable_land = 100
+    arable_resources = { "building_rye_farm" "building_kashmir_ranch" }
+    capped_resources = {
+    #building_logging_camp = 11
+    }
+    resource = {
+        type = "building_lead_mine"
+        undiscovered_amount = 18
+    }
+#resource = { #Jiama, also Yulong Mine. high altitude low quality porphyry deposit. Unlikely minable in the period.
+#    type = "building_copper_mine"
+#    undiscovered_amount = 56
+#}
+}
+
+STATE_NGARI = {
+    id = 454
+    subsistence_building = "building_subsistence_pasture"
+    impassable = { xA45941 x5FCA48 x1EE05B xB9B797 x2D753F }
+    provinces = { x49DA7A xCA8101 x0E1739 x0AF6C3 x92D428 x971123 xC5F98E x1F7ABA x8A52C8 x0C63E4 xAE2370 x4E0F52 xDB00C4 x47086E x7E6B07 x7F8A68 x319D88 x181275 x3673C3 x93B8A1 x0A15CB x1CFF92 x376EF5 xA2DDBC x76854B x57E79A x3B2A91 x712371 x5B57ED x91C023 xFF92B9 xC26410 x9DADD1 x0E4CEA x7F19F5 xBA5131 xF7AD84 xBFC102 x3CB9E1 x466E81 xE03D5D xAFCD47 xB48B92 xCA37D3 xF2DD04 xF43E98 xD131AF x3F45B6 x10A70E xF52146 x1AA558 x11E671 x347CA5 x79ACD9 xE89BB3 xAD51C7 x6E1A6F x834650 xEC07F3 xFC7168 xEC346C x6C636E xABBEE1 x5F0A6B x3ED427 xD0DEBB xDAA8C5 xF0E6C2 x48393E x5F0C75 x59FA24 xB02EEE x3F866E x1EE05B xC66B24 xC8A273 x068080 x41CAED xCC4CCB xFB8251 xC2996A xE1C6E3 xAD3B3E xEC9086 x51AF41 x85C67F x606587 x8847CC x5FCA48 x6DC955 x4F7572 x519C2B xA16534 x14902D x2D753F xA45941 xB9B797 x3B8905 x261B25 x5B1F64 xA800C9 x4C2C20 x601FB9 xB4123F x223BAB x853015 x7C27CC xF500F8 x6C3887 xE61F74 x8E4A2A x585488 xC13B45 xC8484F x4A7852 xBC5B3C x419A6F x3697CB xC78C2A x9DA059 x96A2EB x4FBEAA xB6A5A0 x68CBAC xE0A79F x0AFE38 x41E3BC x8EDC38 xDCF6B4 }
+    traits = { "state_trait_himalayas_mountains" }
+    city = "xE1C6E3"
+    farm = "x4F7572"
+    mine = "x606587"
+    wood = "x3F866E"
+    arable_land = 60
+    arable_resources = { "building_kashmir_ranch" }
+    capped_resources = {
+
+    }
+}
+
+STATE_HIMALAYAS = {
+    #Nepal
+    id = 455
+    subsistence_building = "building_subsistence_rice_farm"
+    provinces = { xBCD18E x29576A x4DE9D5 xC6179B x920B51 xC1C87A x812FBE xAF5B29 x25994F x11C815 x6E233E xE18F72 xAF11F0 x4874D9 x4D5FC1 xC13072 xA2C234 x605021 x833D63 x73C2C6 x23C36A xCE4DAE xA5D1EB x1C3876 xA228F8 x218FFE x515E66 x213060 x1619ED xDA8130 xC1DA32 xE51929 xC6D4A8 }
+    traits = { "state_trait_himalayas_mountains" "state_trait_himalayan_foothills" }
+    city = "x1619ED"
+    farm = "x605021"
+    mine = "x833D63"
+    wood = "x29576A"
+    arable_land = 130
+    arable_resources = { "building_rice_farm" "building_kashmir_ranch" "building_tobacco_plantation" "building_tea_plantation" "building_coffee_plantation" "building_sugar_plantation" }
+    capped_resources = {
+        building_logging_camp = 18
+    }
+}
+
+STATE_EASTERN_HIMALAYAS = {
+    #Sikkim, Bhutan, Himachal Pradesh
+    id = 3450
+    subsistence_building = "building_subsistence_rice_farm"
+    impassable = { x373402 xBC0BCD x673438 xD2139B xA1341A x186F38 x525CC9 xF8346B xD238D2 xEE6A3D x4CBB7C x7DC31D x28F81E xD2C34D xA5D54A x8FE067 xADDE52 xF5C0FC }
+    provinces = { xE0B0E0 x2070E0 x388D2C xDA7F32 x665E5B x01C109 xD10C8F x4F99DC x84F73C xE5D3E0 x60B0DF x373402 xBC0BCD x673438 xD2139B xA1341A x186F38 xEB2EA9 x525CC9 xF8346B xD238D2 xEE6A3D x4CBB7C x7DC31D x28F81E xD2C34D xA5D54A x8FE067 xADDE52 x83DFE3 xF5C0FC }
+    traits = { "state_trait_himalayas_mountains" "state_trait_himalayan_foothills" }
+    city = "xD10C8F"
+    farm = "xE0B0E0"
+    mine = "xEB2EA9"
+    wood = "x388D2C"
+    arable_land = 55
+    arable_resources = { "building_rice_farm" "building_kashmir_ranch" "building_tea_plantation" }
+
+    capped_resources = {
+        building_logging_camp = 18
+    }
+}
+
+STATE_WESTERN_HIMALAYAS = {
+    #Uttarakhand, Himachal Pradesh
+    id = 3451
+    subsistence_building = "building_subsistence_rice_farm"
+    provinces = { x0003C6 x251424 x572FB9 xF202E0 xE60F80 xE31B4E xD52082 x733AB7 x3264B7 x6B646E x607020 xF15B70 xE77282 x45AF2E x59BBCE xFBA109 xE3A5A5 xE0C455 xF4C868 x8FF69F x49337F xAD283F xCF1974 x584C9B x037AF5 x03A411 }
+    impassable = { x8FF69F x59BBCE xF202E0 xE0C455 } #Himachal Pradesh, don't forget to update 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    traits = { "state_trait_himalayas_mountains" "state_trait_himalayan_foothills" }
+    city = "x0003C6"
+    farm = "x03A411"
+    mine = "xE60F80"
+    wood = "xF4C868"
+    arable_land = 55
+    arable_resources = { "building_rice_farm" "building_kashmir_ranch" "building_tea_plantation" }
+
+    capped_resources = {
+        building_logging_camp = 19
+    }
+}

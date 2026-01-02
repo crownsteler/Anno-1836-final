@@ -1,0 +1,44 @@
+﻿#reduce_start_tags_effect = {
+#	c:SOK = {
+#		annex = c:ILR
+#	}
+#
+#	c:OVM = {
+#		annex = c:BIU
+#		annex = c:HUA
+#		annex = c:VIY
+#	}
+#
+#	c:ACE = {
+#		annex = c:SGK
+#	}
+#
+#	c:POE = {
+#		annex = c:TOB
+#	}
+#
+#	c:SLW = {
+#		annex = c:MDR
+#	}
+#
+#	c:BIM = {
+#		annex = c:END
+#	}
+#
+#	c:I30 = {
+#		annex = c:I33
+#	}
+#
+#	c:NNG = {
+#		annex = c:MRN
+#	}
+#
+#	c:BLA = {
+#		annex = c:HLA
+#	}
+#
+#	c:DST = {
+#		annex = c:WZR
+#		annex = c:ZHB
+#	}
+#}

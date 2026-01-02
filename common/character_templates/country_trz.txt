@@ -1,0 +1,114 @@
+﻿### Trarza character template file ###
+
+# Trarza - TRZ
+
+TRZ_mohammed_al_habib_ould_amar = {
+	first_name = Mohammed
+	last_name = Al_Habib_Ould_Amar
+	historical = yes
+	culture = primary_culture
+	ruler = yes
+	age = 37	#Random Age
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		
+	}
+}
+
+TRZ_sidi_mbairika_ould_mohammed = {
+	first_name = Sidi
+	last_name = Mbairika_Ould_Mohammed
+	historical = yes
+	culture = primary_culture
+	heir = yes
+	age = 8	#Random age
+	interest_group = ig_landowners
+	ideology = ideology_traditionalist
+	traits = {
+		honorable
+	}
+}
+
+#TRZ_ahmed_salum_i_ould_mohammed = {
+#	first_name = Ahmed
+#	last_name = Salum_I_Ould_Mohammed
+#	historical = yes
+#	culture = primary_culture
+#	heir = yes
+#	birth_date = 1830.7.6	#Random date
+#	interest_group = ig_landowners
+#	ideology = ideology_traditionalist
+#	traits = {
+#		wrathful
+#		ambitious
+#	}
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:TRZ
+#            this = c:TRZ
+#        }
+#        interest_group_trigger = {
+#            is_marginal = no
+#			is_interest_group_type = ig_landowners
+#        }
+#        earliest_usage_date = 1840.1.1
+#        latest_usage_date = 1872.1.1
+#        chance = 50
+#    }
+#}
+#
+#TRZ_ali_diombot_ould_mohammed = {
+#	first_name = Ahmed
+#	last_name = Salum_I_Ould_Mohammed
+#	historical = yes
+#	culture = primary_culture
+#	heir = yes
+#	birth_date = 1831.4.15	#Random date
+#	interest_group = ig_landowners
+#	ideology = ideology_traditionalist
+#	traits = {
+#		imposing
+#	}
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:TRZ
+#            this = c:TRZ
+#        }
+#        interest_group_trigger = {
+#            is_marginal = no
+#			is_interest_group_type = ig_landowners
+#        }
+#        earliest_usage_date = 1840.1.1
+#        latest_usage_date = 1886.1.1
+#        chance = 50
+#    }
+#}
+#
+#TRZ_mohammed_fal_ould_sidi = {
+#	first_name = Mohammed
+#	last_name = Fal_Ould_Sidi
+#	historical = yes
+#	culture = primary_culture
+#	heir = yes
+#	birth_date = 1848.4.15	#Random date
+#	interest_group = ig_landowners
+#	ideology = ideology_traditionalist
+#	traits = {
+#		wrathful
+#		ambitious
+#	}
+#    interest_group_leader_usage = {
+#        country_trigger = {
+#            exists = c:TRZ
+#            this = c:TRZ
+#        }
+#        interest_group_trigger = {
+#            is_marginal = no
+#			is_interest_group_type = ig_landowners
+#        }
+#        earliest_usage_date = 1864.1.1
+#        latest_usage_date = 1900.1.1
+#        chance = 50
+#    }
+#}

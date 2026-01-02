@@ -1,0 +1,27 @@
+﻿NEconomy = {
+	BASE_RESOURCE_DISCOVER_CHANCE = 0.0025		# Per day (1.0 = 1%)
+	EMPLOYMENT_RESOURCE_DEPLETE_CHANCE = 0.005	# Multiplied by number of fully employed levels of the building
+	RESOURCE_DISCOVER_MIN_FRACTION = 0.1		# Min fraction of resources that will be discovered for each successful roll
+	RESOURCE_DISCOVER_MAX_FRACTION = 0.4		# Max fraction of resources that will be discovered for each successful roll	
+	FULLY_DISCOVERED_RESOURCE_DEPLETE_CHANCE_MULT = 1.0 # The chance of a resource depleting is multiplied by this when all of the resource has been discovered
+	RESOURCE_DEPLETE_MIN_AMOUNT = 2				# Min amount of resources that will be depleted for each successful roll
+	RESOURCE_DEPLETE_MAX_AMOUNT = 5				# Max amount of resources that will be depleted for each successful roll
+} 
+
+#Had to rework the tension gain a bit to work with all the decentralised tags.
+NDiplomacy = {
+	# Tension is used instead of relations by colonizable countries
+	MIN_TENSION = 0
+	MAX_TENSION = 100
+	START_TENSION = 0
+	TENSION_THRESHOLD_UNEASY = 20
+	TENSION_THRESHOLD_TENSE = 50
+	TENSION_THRESHOLD_VOLATILE = 85
+	TENSION_DECAY_RATE = 15.0 # Per year
+	TENSION_INCREASE_MIN = 2.50 # Tension increases by a min of this when a province is colonized
+	TENSION_INCREASE_MAX = 5.50 # Tension increases by a max of this when a province is colonized
+	TENSION_NUM_PROVINCE_SCALING_BASE = 15 # Below this amount of provinces a decentralized country gets additional tension when their provinces are colonized
+	TENSION_NUM_PROVINCE_SCALING_RATE = 5.0 # Max multiplier increase in tension per province taken from having only a few provinces
+	TENSION_INCREASE_RATE_ADJACENT = 0.25 # Multiplied to tension increase when it is neighboring countries' provinces that are colonized
+	TENSION_UPRISING_CHANCE = 0.20 # Chance of war breaking out instead of the next province being colonized (base when tension is at least TENSION_THRESHOLD_VOLATILE)
+}

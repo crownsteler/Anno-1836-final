@@ -1,0 +1,265 @@
+﻿
+je_pacify_the_steppes = {
+    group = je_group_russia_expansion
+    icon = "gfx/interface/icons/event_icons/event_military.dds"
+
+    group = je_group_russia_expansion
+
+	scripted_button = je_pacify_the_steppes_sent_expedition_button
+	
+	modifiers_while_active = {
+		cr_taming_the_steppes_modifier
+	}
+
+    is_shown_in_lobby = {
+        has_dlc_feature = ep1_content #Spheres of Influence
+        c:RUS ?= THIS
+    }
+
+    possible = {
+        #triggered by event
+    }
+
+    immediate = {
+        c:RUS = {
+            save_scope_as = russia_scope
+        }
+        random_character_in_void = {
+            limit = {
+                has_variable = kenesary_variable
+            }
+            save_scope_as = kenesary_scope
+        }
+        #set_global_variable = kazakhstan_revolt_happened
+		trigger_event = { id = cr_kazakh_events.10 days = { 400 650 } }
+		if = {
+			limit = {
+				exists = c:BKH
+			}
+			c:BKH = {
+				trigger_event = { id = cr_bukey_events.1 days = { 90 210 } }
+			}
+		}
+		set_variable = {
+			name = cr_steppe_random_event_cooldown
+			days = { 60 120 }
+		}
+	}
+
+    complete = {
+		#NOT = {
+		#	exists = c:UZH	#Senior Zhuz
+		#	exists = c:OZH	#Middle Zhuz
+		#	exists = c:KZH	#Junior Zhuz
+		#}
+		country_or_subject_owns_entire_state_region = STATE_AKTOBE #STATE_KARAGANDA
+		country_or_subject_owns_entire_state_region = STATE_SEMIRECHE
+		#country_or_subject_owns_entire_state_region = STATE_JETISY
+		country_or_subject_owns_entire_state_region = STATE_AKMOLINSK
+		country_or_subject_owns_entire_state_region = STATE_URALSK
+		c:KZH = {
+			NOT = { any_scope_state = { state_region = s:STATE_SYRDARYA } }
+		}
+		c:OZH = {
+			NOT = { any_scope_state = { state_region = s:STATE_SYRDARYA } }
+		}
+		c:KZH = {
+			NOT = { any_scope_state = { state_region = s:STATE_SYRDARYA } }
+		}
+		NOT = { exists = c:KAZ } 
+		OR = {
+			c:KAZ ?= { exists = no }
+			c:KAZ ?= { 
+				exists = yes 
+				is_subject_of = ROOT 
+			}
+		}
+		
+		#STATE_SYRDARYA
+       #any_subject_or_below = {
+       #    filter = {
+       #        country_has_primary_culture = cu:kazak
+       #    }
+       #    is_subject_type = subject_type_puppet
+       #    liberty_desire <= 25
+       #    percent = 1
+       #}
+    }
+
+    on_complete = {
+        trigger_event = { id = kazakhstan_events.3 }
+        set_global_variable = kazakhstan_victory_var
+    }
+
+    event_outcome_completed_desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = event_effects_kazakhstan_events.3_tt
+            }
+        }
+    }
+
+    fail = {
+        OR = {
+            any_civil_war = {
+                civil_war_progress >= 0.75
+            }
+            country_rank < rank_value:great_power
+			any_diplomatic_play = {
+				initiator = c:KZH
+				target = c:RUS
+				has_play_goal = colonization_rights
+			}
+			any_diplomatic_play = {
+				initiator = c:UZH
+				target = c:RUS
+				has_play_goal = colonization_rights
+			}
+			any_diplomatic_play = {
+				initiator = c:OZH
+				target = c:RUS
+				has_play_goal = colonization_rights
+			}
+        }
+    }
+
+    on_fail = {
+        trigger_event = { id = cr_kazakh_events.2 popup = yes }
+        hidden_effect = {
+            random_character_in_void = {
+                limit = {
+                    has_variable = kenesary_variable
+                }
+                kill_character = {
+                    hidden = yes
+                }
+            }
+        }
+    }
+
+    event_outcome_failed_desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = event_effects_kazakhstan_events.1_tt
+            }
+        }
+    }
+
+    invalid = {
+		NOT = {
+			any_scope_state = {
+				region = sr:region_central_asia
+			}
+		}
+    }
+
+    timeout = 5110
+
+    on_timeout = {
+        trigger_event = { id = kazakhstan_events.3 }
+        hidden_effect = {
+            random_character_in_void = {
+                limit = {
+                    has_variable = kenesary_variable
+                }
+                kill_character = {
+                    hidden = yes
+                }
+            }
+        }
+    }
+
+    event_outcome_timeout_desc = {
+        first_valid = {
+            triggered_desc = {
+                desc = event_effects_kazakhstan_events.1_tt
+            }
+        }
+    }
+	on_yearly_pulse = { #Because a siberian revolt messes with the flow of this JE
+		effect = {
+			cr_decrease_siberian_tensions_effect = yes
+		}
+	}
+
+    on_monthly_pulse = {
+        effect = {
+			every_scope_state = {
+				limit = {
+					region = sr:region_central_asia
+					is_split_state = yes
+					NOT = {
+						has_modifier = cr_taming_the_steppes_state_modifier
+					}
+				}
+				add_modifier = cr_taming_the_steppes_state_modifier
+			}
+			if = {
+				limit = {
+					game_date > 1837.10.1
+					has_variable = cr_kenesary_has_appeared
+					NOT = { has_variable = cr_sack_of_akmolinsk_has_happened }
+					NOT = { has_variable = cr_kenesary_cooldown_var }
+				}
+				random_list = {
+					8 = {
+					
+					}
+					2 = {
+						trigger_event = { id = cr_kazakh_events.11 }
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_variable = cr_sack_of_akmolinsk_has_happened
+					NOT = {
+						has_variable = cr_kenesary_cooldown_var
+					}
+				}
+				random_list = {
+					140 = {
+					
+					}
+					10 = {
+						trigger_event = { id = cr_kazakh_events.12 }
+					}
+					10 = {
+						trigger_event = { id = kazakhstan_events.4 }
+					}
+					10 = {
+						trigger_event = { id = kazakhstan_events.5 }
+					}
+					10 = {
+						trigger_event = { id = kazakhstan_events.6 }
+					}
+					#10 = {
+					#	trigger_event = { id = kazakhstan_events.7 }
+					#}
+					10 = {
+						trigger_event = { id = kazakhstan_events.8 }
+					}
+				}
+			}
+        }
+        random_events = {
+            215 = 0
+            4 = cr_kazakh_events.30
+            4 = cr_kazakh_events.31
+            4 = cr_kazakh_events.32
+            4 = cr_kazakh_events.33
+            4 = cr_kazakh_events.34
+            #2 = cr_kazakh_events.35	#Need to test
+			
+            10 = cr_kazakh_events.40
+            4 = cr_kazakh_events.41
+            4 = cr_kazakh_events.42
+            4 = cr_kazakh_events.43
+            4 = cr_kazakh_events.44
+        }
+    }
+
+    weight = 100
+
+    should_be_pinned_by_default = yes
+}

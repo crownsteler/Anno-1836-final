@@ -1,0 +1,99 @@
+﻿#############################
+#							#
+#		  Indochina			#
+#							#
+#############################			
+
+HSW = {
+	color = { 138 193 120 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { shan }	
+	capital = STATE_SHAN_STATES
+}
+
+KGG = {
+	color = { 92 165 189 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { shan }	
+	capital = STATE_SHAN_STATES
+}
+
+NAN = {
+	color = { 164 132 24 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { thai shan }	
+	capital = STATE_CHIANG_MAI
+}
+
+RYU = {
+	color = { 98 130 207 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { japanese }	
+	capital = STATE_RYUKYU_ISLANDS
+}
+
+YGH = {
+	color = { 190 125 100 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { shan }	
+	capital = STATE_SHAN_STATES
+}
+
+#############################
+#							#
+#			China			#
+#							#
+#############################	
+#Kham state, removed to reduce tag number
+#HOR = {
+#	color = { 67 143 124 }
+#	
+#	country_type = unrecognized
+#	
+#	tier = principality
+#	
+#	cultures = { tibetan }	
+#	capital = STATE_KHAM
+#}
+
+TKH = {
+	color = { 55 155 255 }
+	
+	country_type = decentralized
+	
+	tier = principality
+	
+	cultures = { tibetan }	
+	capital = STATE_KHAM
+}
+
+#NYA = {
+#	color = { 125 98 231 }
+#	
+#	country_type = unrecognized
+#	
+#	tier = principality
+#	
+#	cultures = { tibetan }	
+#	capital = STATE_KHAM
+#}

@@ -1,0 +1,7 @@
+﻿COUNTRIES = {
+	c:BEN ?= {
+		effect_starting_technology_west_africa_urban = yes
+		effect_starting_politics_traditional = yes
+		effect_west_african_slave_trader = yes
+	}
+}

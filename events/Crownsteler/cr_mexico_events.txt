@@ -1,0 +1,1850 @@
+﻿namespace = cr_mexico_events
+
+cr_mexico_events.1 = { #MEXPLOSION!
+	type = country_event
+	placement = ROOT
+
+	title = cr_mexico_events.1.t
+	desc = cr_mexico_events.1.desc
+
+	flavor = cr_mexico_events.1.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		#Triggered only
+	}
+
+	immediate = {
+		cr_mexplosion_effect = yes
+	}
+
+	option = {
+		name = cr_mexico_events.1.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.1.a_tt
+	}
+
+	option = {
+		name = cr_mexico_events.1.b
+		trigger = {
+			is_ai = no
+			exists = c:ALC
+		}
+		if = {
+			limit = {
+				exists = c:ALC
+			}
+			play_as = c:ALC
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.1.c
+		trigger = {
+			is_ai = no
+			exists = c:RIO
+		}
+		if = {
+			limit = {
+				exists = c:RIO
+			}
+			play_as = c:RIO
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.1.d
+		trigger = {
+			is_ai = no
+			exists = c:YUC
+		}
+		if = {
+			limit = {
+				exists = c:YUC
+			}
+			play_as = c:YUC
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.1.e
+		trigger = {
+			is_ai = no
+			exists = c:PUE
+		}
+		if = {
+			limit = {
+				exists = c:PUE
+			}
+			play_as = c:PUE
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.1.f
+		trigger = {
+			is_ai = no
+			exists = c:TBS
+		}
+		if = {
+			limit = {
+				exists = c:TBS
+			}
+			play_as = c:TBS
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.1.g
+		trigger = {
+			is_ai = no
+			exists = c:GUE
+		}
+		if = {
+			limit = {
+				exists = c:GUE
+			}
+			play_as = c:GUE
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.1.h
+		trigger = {
+			is_ai = no
+			exists = c:OAX
+		}
+		if = {
+			limit = {
+				exists = c:OAX
+			}
+			play_as = c:OAX
+		}
+	}
+}
+cr_mexico_events.10 = { #The Siete Leyes
+	type = country_event
+	placement = ROOT
+
+	title = cr_mexico_events.10.t
+	desc = cr_mexico_events.10.desc
+
+	flavor = cr_mexico_events.10.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		ruler = {
+			has_ideology = ideology:ideology_centralist_leader
+		}
+		OR = {
+			has_law_or_variant = law_type:law_autocracy
+			has_law_or_variant = law_type:law_oligarchy
+		}
+		NOT = {
+			#has_law_or_variant = law_type:law_hereditary_bureaucrats 
+		}
+		is_at_war = no
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = cr_mexico_events.15.a
+		default_option = yes
+		#custom_tooltip = cr_mexico_events.15.a_tt
+		activate_law = law_type:law_unitary_state
+		every_scope_state = {
+			if = {
+				limit = {
+					has_modifier = cr_mexico_federalist_sympathies
+					NOT = { has_modifier = cr_mexico_centralist_sympathies }
+				}
+				add_radicals_in_state = {
+					value = large_radicals
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = cr_mexico_federalist_sympathies
+				}
+				add_radicals_in_state = {
+					value = small_radicals
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = cr_mexico_centralist_sympathies
+				}
+				add_loyalists_in_state = {
+					value = small_radicals
+				}
+			}
+		}
+		
+		
+		ai_chance = {
+			base = 100
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.15.b
+		every_scope_state = {
+			if = {
+				limit = {
+					has_modifier = cr_mexico_centralist_sympathies
+					NOT = { has_modifier = cr_mexico_federalist_sympathies }
+				}
+				add_radicals_in_state = {
+					value = large_radicals
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = cr_mexico_centralist_sympathies
+				}
+				add_radicals_in_state = {
+					value = small_radicals
+				}
+			}
+			else_if = {
+				limit = {
+					has_modifier = cr_mexico_federalist_sympathies
+				}
+				add_loyalists_in_state = {
+					value = small_radicals
+				}
+			}
+		}
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+cr_mexico_events.15 = { #The Laredo Convention
+	type = country_event
+	placement = p:xE222E2
+
+	title = cr_mexico_events.15.t
+	desc = cr_mexico_events.15.desc
+
+	flavor = cr_mexico_events.15.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "rp1_social_banditry"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		year >= 1838
+		any_scope_state = {
+			state_region = s:STATE_TEXAS
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_elected_bureaucrats 
+		}
+		OR = {
+			exists = c:TEX
+			exists = c:CAL
+			exists = c:CAL
+			exists = c:YUC
+			#exists = c:TBC	#Tabasco
+			#exists = c:SMS	#Guerrero / South Mexican States
+		}
+		NOT = { has_variable = cr_laredo_convention_var }
+		is_at_war = no
+	}
+
+	immediate = {
+		set_variable = cr_laredo_convention_var
+		s:STATE_TEXAS.region_state:MEX = {
+			save_scope_as = laredo_scope
+		}
+		s:STATE_RIO_GRANDE.region_state:MEX = {
+			save_scope_as = laredo_scope
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.15.a
+		default_option = yes
+		#custom_tooltip = cr_mexico_events.15.a_tt
+		scope:laredo_scope = {
+			add_modifier = {
+				name = cr_mexico_liberal_agitation
+				days = normal_modifier_time
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+		}
+		
+		
+		ai_chance = {
+			base = 70
+			#modifier = {
+			#	factor = 5
+			#	taking_loans = no
+			#}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.15.b
+		trigger = {
+			NOR = {
+				has_law_or_variant = law_type:law_guaranteed_liberties
+				has_law_or_variant = law_type:law_protected_speech
+			}
+		}
+		scope:laredo_scope = {
+			add_modifier = {
+				name = cr_mexico_liberal_agitation_crackdown
+				days = normal_modifier_time
+			}
+			add_radicals_in_state = {
+				value = medium_radicals
+			}
+		}
+		ai_chance = {
+			base = 30
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.15.c
+		trigger = {
+			NOR = {
+				has_law_or_variant = law_type:law_guaranteed_liberties
+				has_law_or_variant = law_type:law_protected_speech
+			}
+			OR = {
+				has_law_or_variant = law_type:law_secret_police
+				has_law_or_variant = law_type:law_outlawed_dissent
+			}
+		}
+		scope:laredo_scope = {
+			add_modifier = {
+				name = cr_mexico_liberal_crackdown
+				days = normal_modifier_time
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.15.d
+		trigger = {
+			AND = {
+				ig:ig_landowners = {
+					is_in_government = no
+				}
+				ig:ig_armed_forces = {
+					is_in_government = no
+				}
+				ig:ig_devout = {
+					is_in_government = no
+				}
+				ig:ig_intelligentsia = {
+					is_in_government = yes
+				}
+			}
+		}
+		add_modifier = {
+			name = cr_mexico_liberal_crackdown
+			days = normal_modifier_time
+		}
+		scope:laredo_scope = {
+			add_modifier = {
+				name = cr_mexico_liberal_agitation_crackdown
+				days = normal_modifier_time
+			}
+			add_loyalists_in_state = {
+				value = medium_radicals
+				interest_group = ig:ig_intelligentsia
+			}
+			add_radicals_in_state = {
+				value = very_large_radicals
+				interest_group = ig:ig_intelligentsia
+			}
+		}
+		ai_chance = {
+			base = 20
+		}
+	}
+}
+
+cr_mexico_events.30 = { #The Californian Revolt
+	type = country_event
+	placement = scope:rebellious_state_scope
+
+	title = cr_mexico_events.30.t
+	desc = cr_mexico_events.30.desc
+
+	flavor = cr_mexico_events.30.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "europenorthamerica_capitalists_meeting"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		NOT = { has_variable = cr_mexico_alvarados_california_has_happened }
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			turmoil >= 0.25
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_elected_bureaucrats 
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+
+	immediate = {
+		save_scope_as = mexico_scope
+		s:STATE_CALIFORNIA.region_state:MEX = {
+			save_scope_as = rebellious_state_scope
+		}
+		cr_mexico_create_california_rebellion_effect = yes
+		scope:rebellious_tag_scope = {
+			random_scope_state = {
+				limit = {
+					is_capital = yes
+				}
+				save_scope_as = rebellious_capital_scope
+			}
+			ruler = { save_scope_as = rebel_leader_scope }
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.30.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.30.a_tt
+		create_diplomatic_pact = {
+			country = scope:rebellious_tag_scope
+			type = puppet
+		}
+		if = {
+			limit = {
+				exists = s:STATE_BAJA_CALIFORNIA.region_state:MEX
+				NOT = { exists = s:STATE_BAJA_CALIFORNIA.region_state:ALC }
+			}
+			s:STATE_BAJA_CALIFORNIA.region_state:MEX = { set_state_owner = scope:rebellious_tag_scope }
+		}
+		cr_mexico_succesful_federalist_revolt_effect = yes
+		
+		ai_chance = {
+			base = 99
+			#modifier = {
+			#	factor = 5
+			#	taking_loans = no
+			#}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.30.b
+		create_diplomatic_play = {
+			target_country = scope:rebellious_tag_scope
+			type = dp_return_state
+			target_state = scope:rebellious_capital_scope
+			add_war_goal = { holder = scope:rebellious_tag_scope target_country = ROOT type = independence }
+		}
+
+		create_incident = {
+			country = ROOT
+			value = 5
+		}
+		change_relations = {
+			country = c:USA
+			value = -15
+		}
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.30.c
+		trigger = {
+			is_ai = no
+		}
+		cr_mexico_succesful_federalist_revolt_effect = yes
+		play_as = scope:rebellious_tag_scope
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+cr_mexico_events.31 = { #The Rio Arriba / New Mexico Rebellion
+	type = country_event
+	placement = scope:rebellious_state_scope
+
+	title = cr_mexico_events.31.t
+	desc = cr_mexico_events.31.desc
+
+	flavor = cr_mexico_events.31.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		NOT = { has_variable = cr_mexico_rio_arriba_rebellion_has_happened }
+		any_scope_state = {
+			state_region = s:STATE_NEW_MEXICO
+			turmoil >= 0.25
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_elected_bureaucrats 
+		}
+		OR = {
+			has_law_or_variant = law_type:law_professional_army
+			has_law_or_variant = law_type:law_mass_conscription
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+
+	immediate = {
+		s:STATE_NEW_MEXICO.region_state:MEX = {
+			save_scope_as = rebellious_state_scope
+		}
+		cr_mexico_create_sante_fe_rebellion_effect = yes
+		scope:rebellious_tag_scope = {
+			capital = {
+				save_scope_as = rebellious_capital_scope
+			}
+			ruler = { save_scope_as = rebel_leader_scope }
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.31.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.31.a_tt
+		create_diplomatic_play = {
+			target_country = scope:rebellious_tag_scope
+			type = dp_return_state
+			target_state = scope:rebellious_capital_scope
+			add_war_goal = { holder = scope:rebellious_tag_scope target_country = ROOT type = independence }
+		}
+
+		create_incident = {
+			country = ROOT
+			value = 5
+		}
+		change_relations = {
+			country = c:USA
+			value = -15
+		}
+		
+		ai_chance = {
+			base = 80
+			#modifier = {
+			#	factor = 5
+			#	taking_loans = no
+			#}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.31.b
+		create_diplomatic_pact = {
+			country = scope:rebellious_tag_scope
+			type = puppet
+		}
+		cr_mexico_succesful_federalist_revolt_effect = yes
+		ai_chance = {
+			base = 20
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.31.c
+		trigger = {
+			is_ai = no
+		}
+		cr_mexico_succesful_federalist_revolt_effect = yes
+		play_as = scope:rebellious_tag_scope
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+cr_mexico_events.32 = { #The Rio Grande Revolt
+	type = country_event
+	placement = scope:rebellious_state_scope
+
+	title = cr_mexico_events.32.t
+	desc = cr_mexico_events.32.desc
+
+	flavor = cr_mexico_events.32.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "southamerica_aristocrats"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		NOT = { has_variable = cr_mexico_alvarados_california_has_happened }
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_TEXAS
+				state_region = s:STATE_RIO_GRANDE
+			}
+			turmoil >= 0.25
+		}
+		year >= 1838
+		NOR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_elected_bureaucrats 
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+
+	immediate = {
+		save_scope_as = mexico_scope
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_TEXAS
+					state_region = s:STATE_RIO_GRANDE
+				}
+				#turmoil >= 0.25
+			}
+			save_scope_as = rebellious_state_scope
+		}
+		cr_mexico_create_rio_grande_rebellion_effect = yes
+		scope:rebellious_tag_scope = {
+			random_scope_state = {
+				limit = {
+					is_capital = yes
+				}
+				save_scope_as = rebellious_capital_scope
+			}
+			ruler = { save_scope_as = rebel_leader_scope }
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.32.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.30.a_tt
+		create_diplomatic_pact = {
+			country = scope:rebellious_tag_scope
+			type = puppet
+		}
+		#cr_set_borders_of_rebel_california_effect = yes
+		
+		ai_chance = {
+			base = 99
+			#modifier = {
+			#	factor = 5
+			#	taking_loans = no
+			#}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.32.b
+		create_diplomatic_play = {
+			target_country = scope:rebellious_tag_scope
+			type = dp_return_state
+			target_state = scope:rebellious_capital_scope
+			add_war_goal = { holder = scope:rebellious_tag_scope target_country = ROOT type = regime_change }
+		}
+
+		create_incident = {
+			country = ROOT
+			value = 5
+		}
+		change_relations = {
+			country = c:USA
+			value = -15
+		}
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.32.c
+		trigger = {
+			is_ai = no
+		}
+		play_as = scope:rebellious_tag_scope
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+cr_mexico_events.33 = { #The Sonora Revolt
+	type = country_event
+	placement = scope:rebellious_state_scope
+
+	title = cr_mexico_events.33.t
+	desc = cr_mexico_events.33.desc
+
+	flavor = cr_mexico_events.33.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		NOT = { has_variable = cr_mexico_sonora_rebellion_has_happened }
+		any_scope_state = {
+			OR = {
+				state_region = s:STATE_SONORA
+				state_region = s:STATE_SINALOA
+			}
+			#turmoil >= 0.25
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_elected_bureaucrats 
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+
+	immediate = {
+		save_scope_as = mexico_scope
+		random_scope_state = {
+			limit = {
+				OR = {
+					state_region = s:STATE_SONORA
+					state_region = s:STATE_SINALOA
+				}
+				#turmoil >= 0.25
+			}
+			save_scope_as = rebellious_state_scope
+		}
+		cr_mexico_create_sonora_rebellion_effect = yes
+		scope:rebellious_tag_scope = {
+			random_scope_state = {
+				limit = {
+					is_capital = yes
+				}
+				save_scope_as = rebellious_capital_scope
+			}
+			ruler = { save_scope_as = rebel_leader_scope }
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.33.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.33.a_tt
+		create_diplomatic_pact = {
+			country = scope:rebellious_tag_scope
+			type = puppet
+		}
+		#cr_set_borders_of_rebel_california_effect = yes
+		
+		ai_chance = {
+			base = 99
+			#modifier = {
+			#	factor = 5
+			#	taking_loans = no
+			#}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.33.b
+		create_diplomatic_play = {
+			target_country = scope:rebellious_tag_scope
+			type = dp_return_state
+			target_state = scope:rebellious_capital_scope
+			add_war_goal = { holder = scope:rebellious_tag_scope target_country = ROOT type = regime_change }
+		}
+
+		create_incident = {
+			country = ROOT
+			value = 5
+		}
+		change_relations = {
+			country = c:USA
+			value = -15
+		}
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.33.c
+		trigger = {
+			is_ai = no
+		}
+		play_as = scope:rebellious_tag_scope
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+cr_mexico_events.34 = { #The Tabasco Revolt
+	type = country_event
+	placement = scope:rebellious_state_scope
+
+	title = cr_mexico_events.34.t
+	desc = cr_mexico_events.34.desc
+
+	flavor = cr_mexico_events.34.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		NOT = { has_variable = cr_mexico_sonora_rebellion_has_happened }
+		any_scope_state = {
+			state_region = s:STATE_VERACRUZ
+			#turmoil >= 0.25
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_elected_bureaucrats 
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+
+	immediate = {
+		save_scope_as = mexico_scope
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_VERACRUZ
+				#turmoil >= 0.25
+			}
+			save_scope_as = rebellious_state_scope
+		}
+		cr_mexico_create_tabasco_rebellion_effect = yes
+		scope:rebellious_tag_scope = {
+			random_scope_state = {
+				limit = {
+					is_capital = yes
+				}
+				save_scope_as = rebellious_capital_scope
+			}
+			ruler = { save_scope_as = rebel_leader_scope }
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.34.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.34.a_tt
+		create_diplomatic_pact = {
+			country = scope:rebellious_tag_scope
+			type = puppet
+		}
+		#cr_set_borders_of_rebel_california_effect = yes
+		
+		ai_chance = {
+			base = 99
+			#modifier = {
+			#	factor = 5
+			#	taking_loans = no
+			#}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.34.b
+		create_diplomatic_play = {
+			target_country = scope:rebellious_tag_scope
+			type = dp_return_state
+			target_state = scope:rebellious_capital_scope
+			add_war_goal = { holder = scope:rebellious_tag_scope target_country = ROOT type = regime_change }
+		}
+
+		create_incident = {
+			country = ROOT
+			value = 5
+		}
+		change_relations = {
+			country = c:USA
+			value = -15
+		}
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.34.c
+		trigger = {
+			is_ai = no
+		}
+		play_as = scope:rebellious_tag_scope
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+cr_mexico_events.35 = { #The Yucatan Revolt
+	type = country_event
+	placement = scope:rebellious_state_scope
+
+	title = cr_mexico_events.35.t
+	desc = cr_mexico_events.35.desc
+
+	flavor = cr_mexico_events.35.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		NOT = { has_variable = cr_mexico_sonora_rebellion_has_happened }
+		any_scope_state = {
+			state_region = s:STATE_YUCATAN
+			#turmoil >= 0.25
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_elected_bureaucrats 
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+
+	immediate = {
+		save_scope_as = mexico_scope
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_YUCATAN
+				#turmoil >= 0.25
+			}
+			save_scope_as = rebellious_state_scope
+		}
+		cr_mexico_create_yucatan_rebellion_effect = yes
+		scope:rebellious_tag_scope = {
+			random_scope_state = {
+				limit = {
+					is_capital = yes
+				}
+				save_scope_as = rebellious_capital_scope
+			}
+			ruler = { save_scope_as = rebel_leader_scope }
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.35.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.35.a_tt
+		create_diplomatic_pact = {
+			country = scope:rebellious_tag_scope
+			type = puppet
+		}
+		#cr_set_borders_of_rebel_california_effect = yes
+		
+		ai_chance = {
+			base = 99
+			#modifier = {
+			#	factor = 5
+			#	taking_loans = no
+			#}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.35.b
+		create_diplomatic_play = {
+			target_country = scope:rebellious_tag_scope
+			type = dp_return_state
+			target_state = scope:rebellious_capital_scope
+			add_war_goal = { holder = scope:rebellious_tag_scope target_country = ROOT type = regime_change }
+		}
+
+		create_incident = {
+			country = ROOT
+			value = 5
+		}
+		change_relations = {
+			country = c:USA
+			value = -15
+		}
+		
+		ai_chance = {
+			base = 1
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.35.c
+		trigger = {
+			is_ai = no
+		}
+		play_as = scope:rebellious_tag_scope
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+cr_mexico_events.40 = { #Revolt Event
+	type = country_event
+	placement = scope:rebellious_state_scope
+
+	title = { 
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_CALIFORNIA
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_BAJA_CALIFORNIA
+					}
+					#NOT = { has_variable = cr_mexico_alvarados_california_has_happened }
+				}
+				desc = cr_mexico_events.30.t
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_NEW_MEXICO
+					#NOT = { has_variable = cr_mexico_rio_arriba_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.31.t
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_RIO_GRANDE
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_TEXAS
+					}
+					exists = c:RIO
+					#NOT = { has_variable = cr_mexico_rio_grande_republic_has_happened }
+				}
+				desc = cr_mexico_events.32.t
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_SONORA
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_SINALOA
+					}
+					#NOT = { has_variable = cr_mexico_sonora_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.33.t
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_VERACRUZ
+					exists = c:TBS
+					#NOT = {	has_variable = cr_mexico_tabasco_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.34.t
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_YUCATAN
+					#NOT = { has_variable = cr_mexico_yucatan_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.35.t
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = cr_mexico_events.40.t
+			}
+		}
+	}
+	
+	desc = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_CALIFORNIA
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_BAJA_CALIFORNIA
+					}
+					#NOT = { has_variable = cr_mexico_alvarados_california_has_happened }
+				}
+				desc = cr_mexico_events.30.desc
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_NEW_MEXICO
+					#NOT = { has_variable = cr_mexico_rio_arriba_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.31.desc
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_RIO_GRANDE
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_TEXAS
+					}
+					exists = c:RIO
+					#NOT = { has_variable = cr_mexico_rio_grande_republic_has_happened }
+				}
+				desc = cr_mexico_events.32.desc
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_SONORA
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_SINALOA
+					}
+					#NOT = { has_variable = cr_mexico_sonora_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.33.desc
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_VERACRUZ
+					exists = c:TBS
+					#NOT = {	has_variable = cr_mexico_tabasco_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.34.desc
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_YUCATAN
+					#NOT = { has_variable = cr_mexico_yucatan_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.35.desc
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = cr_mexico_events.40.desc
+			}
+		}
+	}
+
+	flavor = {
+		first_valid = {
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_CALIFORNIA
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_BAJA_CALIFORNIA
+					}
+					#NOT = { has_variable = cr_mexico_alvarados_california_has_happened }
+				}
+				desc = cr_mexico_events.30.flavour
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_NEW_MEXICO
+					#NOT = { has_variable = cr_mexico_rio_arriba_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.31.flavour
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_RIO_GRANDE
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_TEXAS
+					}
+					exists = c:RIO
+					#NOT = { has_variable = cr_mexico_rio_grande_republic_has_happened }
+				}
+				desc = cr_mexico_events.32.flavour
+			}
+			triggered_desc = {
+				trigger = {
+					OR = {
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_SONORA
+						scope:rebellious_tag_scope.capital.state_region = s:STATE_SINALOA
+					}
+					#NOT = { has_variable = cr_mexico_sonora_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.33.flavour
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_VERACRUZ
+					exists = c:TBS
+					#NOT = {	has_variable = cr_mexico_tabasco_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.34.flavour
+			}
+			triggered_desc = {
+				trigger = {
+					scope:rebellious_tag_scope.capital.state_region = s:STATE_YUCATAN
+					#NOT = { has_variable = cr_mexico_yucatan_rebellion_has_happened }
+				}
+				desc = cr_mexico_events.35.flavour
+			}
+			triggered_desc = {
+				trigger = {
+					always = yes
+				}
+				desc = cr_mexico_events.40.flavour
+			}
+		}
+	}
+	
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		trigger = {
+			OR = {
+				scope:rebellious_tag_scope.capital.state_region = s:STATE_CALIFORNIA
+				scope:rebellious_tag_scope.capital.state_region = s:STATE_RIO_GRANDE
+				scope:rebellious_tag_scope.capital.state_region = s:STATE_YUCATAN
+			}
+		}
+		video = "southamerica_aristocrats"
+	}
+	event_image = {
+		trigger = {
+			NOR = {
+				scope:rebellious_tag_scope.capital.state_region = s:STATE_CALIFORNIA
+				scope:rebellious_tag_scope.capital.state_region = s:STATE_RIO_GRANDE
+				scope:rebellious_tag_scope.capital.state_region = s:STATE_YUCATAN
+			}
+		}
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = 45 }
+
+	trigger = {
+		any_scope_state = {	#Hhmmmm, how do we prevent the same revolutionary state from triggering more than once? 
+			has_modifier = cr_mexico_federalist_sympathies
+			turmoil >= 0.25
+			NOT = {
+				state_region = { has_modifier = recent_mexican_rebellion }
+			}
+		}
+		NOR = {
+			has_law_or_variant = law_type:law_universal_suffrage
+			has_law_or_variant = law_type:law_census_voting
+			has_law_or_variant = law_type:law_elected_bureaucrats 
+		}
+		is_at_war = no
+		is_diplomatic_play_committed_participant = no
+	}
+
+	immediate = {
+		save_scope_as = mexico_scope
+		random_scope_state = {
+			limit = {
+				has_modifier = cr_mexico_federalist_sympathies
+				turmoil >= 0.25
+				NOT = {
+					state_region = { has_modifier = recent_mexican_rebellion }
+				}
+			}
+			save_scope_as = rebellious_state_scope
+		}
+		scope:rebellious_state_scope.state_region = {
+			set_variable = { name = recent_mexican_rebellion days = normal_modifier_time }
+		}
+		if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_YUCATAN
+			}
+			cr_mexico_create_yucatan_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_NEW_MEXICO
+				NOT = { exists = c:TBS }
+			}
+			cr_mexico_create_sante_fe_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:rebellious_state_scope.state_region = s:STATE_CALIFORNIA
+					scope:rebellious_state_scope.state_region = s:STATE_BAJA_CALIFORNIA
+				}
+			}
+			cr_mexico_create_california_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:rebellious_state_scope.state_region = s:STATE_SONORA
+					scope:rebellious_state_scope.state_region = s:STATE_SINALOA
+				}
+			}
+			cr_mexico_create_sonora_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				OR = {
+					scope:rebellious_state_scope.state_region = s:STATE_RIO_GRANDE
+					AND = {
+						scope:rebellious_state_scope.state_region = s:STATE_TEXAS
+						OR = {
+							exists = c:TEX
+							exists = s:STATE_TEXAS.region_state:USA
+							exists = s:STATE_TEXAS.region_state:CSA
+						}
+					}
+				}
+			}
+			cr_mexico_create_rio_grande_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_VERACRUZ
+				NOT = { exists = c:TBS }
+			}
+			cr_mexico_create_tabasco_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_VERACRUZ
+			}
+			cr_mexico_create_veracruz_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_ZACATECAS
+			}
+			cr_mexico_create_zacatecas_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_OAXACA
+			}
+			cr_mexico_create_oaxaca_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_GUERRERO
+			}
+			cr_mexico_create_guerrero_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_DURANGO
+			}
+			cr_mexico_create_durango_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_CHIHUAHUA
+			}
+			cr_mexico_create_chihuahua_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_CHIAPAS
+			}
+			cr_mexico_create_chiapas_rebellion_effect = yes
+		}
+		else_if = {
+			limit = {
+				scope:rebellious_state_scope.state_region = s:STATE_BAJIO
+			}
+			cr_mexico_create_bajio_rebellion_effect = yes
+		}
+		scope:rebellious_tag_scope = {
+			random_scope_state = {
+				limit = {
+					is_capital = yes
+				}
+				save_scope_as = rebellious_capital_scope
+			}
+			ruler = { save_scope_as = rebel_leader_scope }
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.35.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.35.a_tt
+		create_diplomatic_play = {
+			target_country = scope:rebellious_tag_scope
+			type = dp_annex_war
+			escalation = 60
+			target_state = scope:rebellious_capital_scope
+			add_war_goal = { holder = scope:rebellious_tag_scope target_country = ROOT type = regime_change }
+		}
+		#cr_set_borders_of_rebel_california_effect = yes
+		
+		ai_chance = {
+			base = 99
+			modifier = {	#California should be allowed to exist
+				factor = 0.1
+				scope:rebellious_tag_scope = c:ALC
+			}
+			modifier = {	#Yucatan should probably exist
+				factor = 0.2
+				scope:rebellious_tag_scope = c:YUC
+			}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.35.b
+		create_diplomatic_pact = {
+			country = scope:rebellious_tag_scope
+			type = puppet
+		}
+
+		create_incident = {
+			country = ROOT
+			value = 5
+		}
+		change_relations = {
+			country = c:USA
+			value = -15
+		}
+		
+		ai_chance = {
+			base = 1
+			modifier = {	#California should be allowed to exist
+				factor = 20
+				scope:rebellious_tag_scope = c:ALC
+			}
+			modifier = {	#Yucatan should probably exist
+				factor = 10
+				scope:rebellious_tag_scope = c:YUC
+			}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.35.c
+		trigger = {
+			is_ai = no
+		}
+		play_as = scope:rebellious_tag_scope
+		ai_chance = {
+			base = 0
+		}
+	}
+}
+
+
+###California Revolt Events
+cr_mexico_events.50 = { #Founding of Nueva Helvetia/John Sutter/American Immigration into California following the opening of the California Trail
+	type = country_event
+	placement = scope:california_state_scope
+
+	title = cr_mexico_events.50.t
+	desc = cr_mexico_events.50.desc
+
+	flavor = cr_mexico_events.50.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+	#on_opened_soundeffect = "event:/SFX/Events/africa/construction_colony"
+
+	icon = "gfx/interface/icons/event_icons/event_map.dds"
+
+	dlc = dlc_anno1836
+
+	#gui_window = event_window_1char_tabloid
+	#
+	#left_icon = scope:john_sutter_scope
+
+	event_image = {
+		texture = "gfx/event_pictures/cr_american_settlers_west.dds"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		has_global_variable = cr_road_to_california_is_open
+		OR = {
+			c:ALC ?= this
+			AND = {
+				c:MEX ?= this
+				NOT = { exists = c:ALC } 
+			}
+		}
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			is_split_state = yes
+		}
+	}
+
+	immediate = {
+		save_scope_as = california_owner_scope	
+		s:STATE_CALIFORNIA = {
+			set_owner_of_provinces = {
+				country = ROOT
+				provinces = {
+					x908000
+				}
+			}
+		}
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CALIFORNIA
+			}
+			save_scope_as = california_state_scope
+		
+		}
+		c:ALC ?= {
+			ruler = {
+				save_scope_as = california_governor_scope
+			}
+		}
+		c:USA ?= {
+			save_scope_as = usa_scope
+		}
+		cr_create_john_sutters_colony_effect = yes
+		c:CAL ?= {
+			ruler = { save_scope_as = john_sutter_scope } 
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.50.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.35.a_tt
+		create_diplomatic_pact = {
+			country = c:CAL
+			type = puppet
+		}
+		
+		ai_chance = {
+			base = 60
+			modifier = {
+				add = 20
+				this ?= c:ALC
+			}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.50.b
+		annex = c:CAL
+		scope:california_state_scope = {
+			create_mass_migration = {
+				origin = c:USA
+				culture = cu:yankee
+			}
+		}
+		
+		ai_chance = {
+			base = 40
+			modifier = {
+				add = -20
+				this ?= c:ALC
+			}
+		}
+	}
+}
+
+
+cr_mexico_events.60 = { #The Bear Flag Revolt - for California (c:ALC) or Nueva Helvetia (c:CAL). TEMP EVENT. Please replace by something better
+	type = country_event
+	placement = scope:california_state_scope
+
+	title = cr_mexico_events.60.t
+	desc = cr_mexico_events.60.desc
+
+	flavor = cr_mexico_events.60.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		has_global_variable = cr_road_to_california_is_open
+		OR = {
+			c:CAL ?= this
+			AND = {
+				c:ALC ?= this
+				NOT = { exists = c:CAL } 
+			}
+		}
+		top_overlord = { has_war_with = c:USA }
+		c:MEX ?= { NOT = { has_variable = bear_flag_revolt_happened } }
+		#c:USA ?= { has_journal_entry = je_manifest_destiny }	#Should probably be the case, but don't have time to test
+	}
+
+	immediate = {
+		save_scope_as = california_owner_scope
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CALIFORNIA
+			}
+			save_scope_as = california_state_scope
+		}
+		c:ALC ?= {
+			ruler = {
+				save_scope_as = california_governor_scope
+			}
+		}
+		c:USA ?= {
+			save_scope_as = usa_scope
+		}
+		c:MEX ?= { set_variable = bear_flag_revolt_happened }
+	}
+
+	option = {
+		name = cr_mexico_events.60.a
+		default_option = yes
+		custom_tooltip = cr_mexico_events.35.a_tt
+		cr_create_john_sutters_colony_effect = yes
+		create_diplomatic_pact = {
+			country = c:CAL
+			type = puppet
+		}
+		
+		ai_chance = {
+			base = 60
+			modifier = {
+				add = 20
+				this ?= c:ALC
+			}
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.60.b
+		
+		
+		ai_chance = {
+			base = 40
+			modifier = {
+				add = -20
+				this ?= c:ALC
+			}
+		}
+	}
+}
+
+
+cr_mexico_events.65 = { #The Bear Flag Revolt - For Mexico is there is no California (c:ALC) or Nueve Helvetia (c:CAL) tag. TEMP EVENT. Please replace by something better
+	type = country_event
+	placement = scope:california_state_scope
+
+	title = cr_mexico_events.65.t
+	desc = cr_mexico_events.65.desc
+
+	flavor = cr_mexico_events.65.flavour
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/event_newspaper.dds"
+
+	dlc = dlc_anno1836
+
+	event_image = {
+		video = "europenorthamerica_springtime_of_nations"
+	}
+	
+	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
+
+	trigger = {
+		has_global_variable = cr_road_to_california_is_open
+		c:MEX ?= this
+		has_war_with = c:USA
+		NOR = {
+			exists = c:CAL
+			exists = c:ALC
+		}
+		NOT = { has_variable = bear_flag_revolt_happened }
+		any_scope_state = {
+			state_region = s:STATE_CALIFORNIA
+			culture_percent_state = {	#Need at least 40% Mexicans to prevent revolt, should make the choice more interesting -NUMBER PROBABLY SHOULD BE TWEAKED
+				target = cu:mexican
+				value <= 0.40
+			}	
+		}
+		#c:USA ?= { has_journal_entry = je_manifest_destiny }	#Should probably be the case, but don't have time to test
+		p:x1116AA.owner = c:MEX	#San Fran should be Mexican
+		
+	}
+
+	immediate = {
+		save_scope_as = california_owner_scope
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_CALIFORNIA
+			}
+			save_scope_as = california_state_scope
+		}
+		save_scope_as = overlord_scope
+		c:USA ?= {
+			save_scope_as = usa_scope
+		}
+		create_country = {
+			tag = CAL
+			origin = this
+			state = s:STATE_CALIFORNIA.region_state:MEX
+			on_created = {
+				activate_law = law_type:law_national_militia
+				activate_law = law_type:law_frontier_colonization
+				activate_law = law_type:law_racial_segregation
+				activate_law = law_type:law_autocracy
+				activate_law = law_type:law_presidential_republic
+			}
+		}		
+	}
+
+	option = {
+		name = cr_mexico_events.65.a
+		default_option = yes
+		c:CAL ?= {
+			create_diplomatic_play = {
+				name = bear_flag_revolt
+				target_country = scope:overlord_scope
+				type = dp_independence
+				war = yes
+				add_war_goal = { holder = scope:overlord_scope target_country = ROOT type = annex_country }
+			}
+		}
+		ai_chance = {
+			base = 90
+		}
+	}
+
+	option = {
+		name = cr_mexico_events.65.b
+		s:STATE_CALIFORNIA = {
+			remove_claim = root
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+}

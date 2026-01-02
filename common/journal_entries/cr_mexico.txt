@@ -1,0 +1,352 @@
+﻿#This JE exists mostly to give the Mexican revolts a home whilst giving the player some direction of how to combat them.
+
+je_cr_reorganise_mexico= {
+	icon = "gfx/interface/icons/event_icons/event_scales.dds"
+	
+	group = je_group_historical_content
+	
+    is_shown_in_lobby = {
+        c:MEX ?= THIS
+    }
+	
+	on_monthly_pulse = {
+		random_events = {
+		}
+	}
+	
+	modifiers_while_active = {
+		cr_reorganising_mexico
+	}
+	
+	immediate = {
+		set_variable = cr_centralist_federalist_struggle
+		activate_law = law_type:law_federal_state #The Federal states were only abolished at the end of 1836 with the introduction of the Siete Leyes
+		
+		create_political_movement = { type = movement_federalist }
+		create_political_movement = { type = movement_centralist }
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_federalist
+			}
+			save_scope_as = federalist_movement
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_centralist
+			}
+			save_scope_as = centralist_movement
+		}
+		
+		
+		#set_variable = {
+		#	name = cr_mexico_mexplosion_counter
+		#	value = 0
+		#}
+		
+		
+		s:STATE_SONORA.region_state:MEX = {	#Revolt in 1837, and attempted filibuster in 1853
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = long_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+			}
+		}	
+		s:STATE_SINALOA.region_state:MEX = {	#Attempted to be added to revolt in 1837
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = normal_modifier_time
+			}
+			
+			
+			add_radicals_in_state = {
+				value = medium_radicals
+			}
+		}	
+		s:STATE_NEW_MEXICO.region_state:MEX = {	#Revolt in 1837
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = normal_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = very_large_radicals
+			}
+		}		
+		s:STATE_TEXAS.region_state:MEX = {	#Revolt in 1840
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = long_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+			}
+		}	
+		s:STATE_RIO_GRANDE.region_state:MEX = {	#Revolt in 1840
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = long_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+			}
+		}	
+		s:STATE_ZACATECAS.region_state:MEX = {	#Revolt in 1835
+			state_region = { add_devastation = 15 }
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = short_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+			}
+			
+			add_radicals_in_state = {	#Revolted because of the abolition of the militias
+				value = medium_radicals
+				pop_type = soldiers
+			}
+		}	
+		s:STATE_BAJIO.region_state:MEX = {	#Brief revolt in 1837
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = short_modifier_time
+			}
+			add_modifier = {
+				name = cr_mexico_centralist_sympathies
+				days = short_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+		}		
+		s:STATE_YUCATAN.region_state:MEX = {	#Revolt in 1839
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = short_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+			}
+		}		
+		s:STATE_VERACRUZ.region_state:MEX = {	#Tabasco revolted in 1839, part of Tabasco is in STATE_VERACRUZ
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = normal_modifier_time
+			}
+			add_modifier = {
+				name = cr_mexico_centralist_sympathies
+				days = normal_modifier_time
+			}
+		
+			add_radicals_in_state = {
+				value = medium_radicals
+			}
+		}	
+		s:STATE_GUERRERO.region_state:MEX = {	#Led the Plan of Ayutla
+			add_modifier = {
+				name = cr_mexico_centralist_sympathies
+				days = long_modifier_time
+			}
+		
+			add_radicals_in_state = {
+				value = medium_radicals
+			}
+		}		
+		s:STATE_CHIAPAS.region_state:MEX = { #didn't revolt, but internal tension between pro-mexican elites and less pro-mexican others
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = very_long_modifier_time
+			}
+			add_modifier = {
+				name = cr_mexico_centralist_sympathies
+				days = long_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = small_radicals
+			}
+			
+			add_loyalists_in_state = {
+				value = large_radicals
+				pop_type = aristocrats
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+				pop_type = farmers
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+				pop_type = peasants
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+				pop_type = laborers
+			}
+		}		
+		s:STATE_CALIFORNIA.region_state:MEX = {	#Revolt in 1836-1839, but full order not restored until American conquest
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = long_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = huge_radicals
+				culture = cu:mexican
+			}
+			
+			add_radicals_in_state = {
+				value = large_radicals
+				culture = cu:hokan
+			}
+		}
+		s:STATE_CHIHUAHUA.region_state:MEX = {	#No revolt, but makes sense
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = long_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:mexican
+			}
+		}
+		s:STATE_BAJA_CALIFORNIA.region_state:MEX = {	#No revolt, but makes sense
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = long_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = medium_radicals
+				culture = cu:mexican
+			}
+		}
+		s:STATE_CHIHUAHUA.region_state:MEX = {	#No revolt, but makes sense
+			
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:mexican
+			}
+		}
+		s:STATE_DURANGO.region_state:MEX = {	#No revolt, but makes sense
+			add_modifier = {
+				name = cr_mexico_federalist_sympathies
+				days = long_modifier_time
+			}
+			
+			add_radicals_in_state = {
+				value = small_radicals
+				culture = cu:mexican
+			}
+		}
+		s:STATE_JALISCO.region_state:MEX = {	#No revolt, but makes sense
+			add_modifier = {
+				name = cr_mexico_centralist_sympathies
+				days = long_modifier_time
+			}
+		}
+		s:STATE_OAXACA.region_state:MEX = {	#No revolt, but makes sense
+			add_modifier = {
+				name = cr_mexico_centralist_sympathies
+				days = long_modifier_time
+			}
+		}
+		#every_scope_state = {
+		#	limit = {
+		#		OR = {
+		#	
+		#		}
+		#	}
+		#	add_modifier = {
+		#		name = cr_mexico_centralist_sympathies
+		#		days = long_modifier_time
+		#	}
+		#}
+		every_scope_state = {
+			add_radicals_in_state = {
+				value = medium_radicals
+				interest_group = ig:ig_intelligentsia
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				interest_group = ig:ig_rural_folk
+			}
+			add_radicals_in_state = {
+				value = small_radicals
+				interest_group = ig:ig_petty_bourgeoisie
+			}
+			
+			add_loyalists_in_state = {
+				value = medium_radicals
+				pop_type = aristocrats
+			}
+			
+			add_loyalists_in_state = {
+				value = very_large_radicals
+				pop_type = officers
+			}
+		}
+	}
+	
+	on_monthly_pulse = {
+		#effect = {
+		#	change_variable = {
+		#		name = cr_mexico_mexplosion_counter
+		#		add = 1
+		#	}
+		#}
+		random_events = {
+			90 = 0
+			10 = cr_mexico_events.10	#The Siete Leyes
+			10 = cr_mexico_events.15	#The Laredo Convention
+			10 = cr_mexico_events.30	#The California Rebellion can trigger independently.
+			10 = cr_mexico_events.40	#Revolter State
+		}
+	}
+
+	complete = {
+		always = no
+	}
+	
+	on_complete = {
+		custom_tooltip = je_cr_reorganise_mexico_complete_tt
+		add_modifier = cr_mexico_centralist_victory_mod
+		custom_tooltip = {
+			text = je_cr_reorganise_mexico_complete_tt2
+			remove_variable = cr_centralist_federalist_struggle
+		}
+		activate_law = law_type:law_appointed_bureaucrats
+	}
+	
+	invalid = {
+	
+	}
+	
+	on_invalid = {
+	
+	
+	}
+	
+	weight = 200
+	
+	should_be_pinned_by_default = yes
+	
+	timeout = 11000
+
+	on_timeout = {
+		trigger_event = { id = cr_mexico_events.1 days = 0 popup = yes }
+	}
+	
+	
+	transferable = no
+}

@@ -1,0 +1,259 @@
+﻿# For on_actions launched by the code itself.
+on_monthly_pulse_country = {
+	on_actions = {
+		cr_on_monthly_pulse_country
+	}
+}
+
+cr_on_monthly_pulse_country = {
+	random_events = {
+		180 = 0
+		10 = cr_europe_events.5
+		40 = cr_minette_ores_events.4
+		20 = cr_canadian_indian_treaties.50	
+		10 = cr_american_events.1
+		20 = cr_mexico_events.50
+		10 = cr_central_asia_events.1
+		10 = cr_central_asia_events.5
+	}
+}
+
+on_half_yearly_pulse_country = {
+	on_actions = {
+		cr_on_monthly_pulse_country
+	}
+}
+
+cr_on_half_yearly_pulse_country = {
+	random_events = {
+		5 = 0
+		1 = cr_canadian_indian_treaties.96
+	}
+}
+
+# Root = attacker or defender country
+# scope:enemy_country = enemy of root
+# scope:battle = battle
+# scope:attacker = attacking commander
+# scope:defender = defending commander
+# scope:state = location state
+on_battle_lost = {
+	on_actions = {
+		cr_on_battle_lost
+	}
+}
+
+cr_on_battle_lost = {
+	events = {
+		texan_war_of_independence.5
+	}
+}
+
+on_wargoal_enforced = {
+	on_actions = {
+		cr_on_wargoal_enforced
+	}
+}
+cr_on_wargoal_enforced = {
+	effect = {
+        if = {
+        	limit = {
+        		owner = {
+        			game_date < 1850.1.1 # Just in case.
+        			NOT = {
+        				has_variable = cabanagem_defeat_var
+        				exists = c:PRA
+        			}
+	        		c:BRZ ?= this
+					p:xC413AA.owner = this #Belem
+					p:x5DB7DF.owner = this #Manaus
+					#any_scope_state = { state_region = s:STATE_AMAZONAS }
+				}
+        	}
+        	owner = {
+        		set_variable = cabanagem_defeat_var
+        		trigger_event = { id = brazilian_minors.2 days = 0 popup = yes }
+        	}
+        }	
+        if = { 
+        	limit = {
+        		owner = {
+					game_date < 1850.1.1 # Just in case.
+	        		c:USA ?= this
+					has_variable = cr_roanoke_massacre_has_happened
+					NOT = {
+						has_journal_entry = je_creek_removal
+					}
+				}
+				c:MSC = {
+					is_subject_of = c:USA
+				}
+        	}
+        	owner = {
+        		set_variable = cr_creek_removal_has_started
+        		trigger_event = { id = cr_indian_removal.7 days = 0 popup = yes }
+        	}
+        }
+        if = { 
+        	limit = {
+        		owner = {
+					game_date < 1850.1.1 # Just in case.
+	        		c:USA ?= this
+					has_variable = cr_seminole_war_micanopy_can_surrender
+				}
+				c:SML = {
+					is_subject_of = c:USA
+				}
+        	}
+        	owner = {
+        		remove_variable = cr_seminole_war_micanopy_can_surrender
+        		trigger_event = { id = cr_indian_removal.21 days = 0 popup = no }
+        	}
+        }
+        if = { 
+        	limit = {
+        		owner = {
+					game_date < 1850.1.1 # Just in case.
+	        		c:SPA ?= this
+					has_variable = cr_carlist_war_ongoing
+				}
+        	}
+			scope:target = {
+				remove_variable = cr_carlist_war_ongoing
+				ruler = {
+					save_scope_as = don_carlos_char
+					place_character_in_void = 600
+				}
+			}
+        	owner = {
+				remove_variable = cr_carlist_war_ongoing
+        		trigger_event = { id = cr_carlist_events.10 days = 0 popup = no }
+        	}
+        }	
+        if = { 
+        	limit = {
+        		owner = {
+					game_date < 1850.1.1 # Just in case.
+	        		c:SPC ?= this
+					has_variable = cr_carlist_war_ongoing
+				}
+        	}
+			scope:target = {
+				remove_variable = cr_carlist_war_ongoing
+				
+			}
+        	owner = {
+				remove_variable = cr_carlist_war_ongoing
+        		trigger_event = { id = cr_carlist_events.25 days = 0 popup = no }
+        	}
+        }	
+        if = { 
+        	limit = {
+        		owner = {
+					game_date < 1850.1.1 # Just in case.
+	        		c:SAF ?= this
+					has_variable = cr_sixth_xhosa_war_ongoing
+				}
+        	}
+			scope:target = {
+				remove_variable = cr_sixth_xhosa_war_ongoing
+				
+			}
+        	owner = {
+				remove_variable = cr_sixth_xhosa_war_ongoing
+        		trigger_event = { id = cr_south_africa_events.1 days = 0 popup = no }
+        	}
+        }
+        if = { 
+        	limit = {
+        		owner = {
+					game_date < 1850.1.1 # Just in case.
+	        		c:XHO ?= this
+					has_variable = cr_sixth_xhosa_war_ongoing
+				}
+        	}
+			scope:target = {
+				remove_variable = cr_sixth_xhosa_war_ongoing
+			}
+        	owner = {
+				remove_variable = cr_sixth_xhosa_war_ongoing
+        	}
+        }	
+        if = { 
+        	limit = {
+        		owner = {
+					game_date < 1850.1.1 # Just in case.
+	        		c:MEX ?= this
+					has_variable = cr_texas_revolution_ongoing
+					#c:TEX ?= {
+					#	is_subject_of = c:MEX
+					#}
+				}
+        	}
+			scope:target = {
+				remove_variable = cr_texas_revolution_ongoing
+			}
+        	owner = {
+				remove_variable = cr_texas_revolution_ongoing
+				create_diplomatic_pact = {
+					country = scope:target
+					type = puppet
+				}
+        		trigger_event = { id = texan_war_of_independence.6 days = 0 popup = no }
+        	}
+        }
+        if = { 
+        	limit = {
+        		owner = {
+					game_date < 1850.1.1 # Just in case.
+	        		c:TEX ?= this
+					NOT = {
+						is_subject_of = c:MEX
+					}
+					has_variable = cr_texas_revolution_ongoing
+				}
+        	}
+			scope:target = {
+				remove_variable = cr_texas_revolution_ongoing
+			}
+        	owner = {
+				remove_variable = cr_texas_revolution_ongoing
+        	}
+        }	
+	}
+}
+
+on_character_death = {
+	on_actions = {
+		cr_on_character_death
+	}
+}
+
+cr_on_character_death = {
+	effect = {
+		save_scope_as = last_bukey_sultan
+		if = {
+			limit = {
+				owner = {
+					c:BKH ?= this
+				}
+				is_ruler = yes
+				#has_template = BKH_zhangir_kerei
+			}
+			trigger_event = { id = cr_bukey_events.3 }
+		}
+	}
+}
+
+on_resource_discovered = {
+	on_actions = {
+		cr_on_resource_discovered
+	}
+}
+
+cr_on_resource_discovered = {
+	events = {
+		cr_canadian_indian_treaties.98
+		cr_minette_ores_events.20
+	}
+}

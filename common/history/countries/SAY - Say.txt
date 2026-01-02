@@ -1,0 +1,9 @@
+﻿COUNTRIES = {
+	c:SAY ?= {
+		effect_starting_technology_west_africa_rural = yes
+		effect_starting_politics_traditional = yes
+		effect_west_african_slavery = yes
+		effect_west_african_centre_of_learning = yes
+
+	}
+}

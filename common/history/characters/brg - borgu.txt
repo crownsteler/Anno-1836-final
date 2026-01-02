@@ -1,0 +1,17 @@
+﻿CHARACTERS = {
+	c:BRG ?= {
+		create_character = {
+			first_name = Siru
+			last_name = Kpera
+			historical = yes
+			ruler = yes
+			culture = cu:bariba
+			age = 47
+			interest_group = ig_landowners
+			ideology = ideology_moderate
+			traits = {
+
+			}
+		}
+	}
+}

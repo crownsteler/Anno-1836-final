@@ -1,0 +1,560 @@
+﻿movement_carlists = {
+	category = movement_category_ideological
+
+	ideology = ideology_carlist_movement	
+	character_ideologies = {
+		ideology_traditionalist
+		ideology_royalist
+		ideology_authoritarian
+	}
+	
+	disband_trigger = {
+		has_variable = cr_carlists_question_ended_var
+	}
+	on_disbanded = {
+		owner = {
+			create_political_movement = { 
+				type = movement_religious_majority
+				religion = owner.religion 
+			}
+		}
+	}
+	
+	creation_trigger = {
+		always = no
+	}
+	creation_weight = {
+		value = 100
+	}	
+	on_created = {
+		if = {
+			limit = {
+				c:SPA ?= owner
+			}
+			set_suppression = yes
+		}
+		if = {
+			limit = {
+				c:SPC ?= owner
+			}
+			set_bolstering = yes
+		}
+	}
+	
+	character_support_trigger = {
+		OR = {
+			has_ideology = ideology:ideology_traditionalist
+			has_ideology = ideology:ideology_royalist
+			has_ideology = ideology:ideology_authoritarian
+			#has_ideology = ideology:ideology_carlist
+		}
+	}
+	character_support_weight = {
+		value = 100
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					OR = {
+						is_interest_group_type = ig_devout
+						is_interest_group_type = ig_landowners
+					}
+				}
+			}
+			multiply = {
+				value = 2
+			}
+		}
+		if = {
+			limit = {
+				scope:interest_group ?= {
+					is_interest_group_type = ig_rural_folk
+				}
+			}
+			multiply = {
+				value = 1.5
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_ideology = ideology:ideology_royalist
+					has_ideology = ideology:ideology_authoritarian
+				}
+			}
+			multiply = {
+				value = 5
+			}
+		}
+	}
+	
+	pop_support_factors = {
+		movement_support_catalan
+		movement_support_basque
+		movement_support_galician
+		movement_support_low_urbanization
+		movement_support_clergymen
+		movement_support_aristocrats
+		movement_support_peasants
+		movement_support_laborers
+		movement_support_nationalism_tech
+		movement_support_ruler_impopularity
+	}	
+
+	pop_support_weight = {	
+		if = {
+			limit = {
+				exists = scope:political_movement
+				scope:political_movement ?= {
+					OR = {
+						is_being_suppressed = yes
+						is_being_bolstered = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					scope:political_movement = {
+						is_being_suppressed = yes
+					}
+				}
+				add = {
+					value = suppression_base_value
+					multiply = {
+						value = -0.5
+						add = owner.modifier:country_suppression_attraction_factor
+					}
+					desc = "concept_suppressed"
+				}
+			}
+			else = {
+				add = {
+					value = bolstering_base_value
+					multiply = {
+						value = 0.5
+						add = owner.modifier:country_bolster_attraction_factor
+					}
+					desc = "concept_bolstered"
+				}
+			}
+		}
+		add = {
+			desc = "URBAN_STATE" # Increases support in rural states, decreases in urban
+			value = 0.5
+			subtract = state.state_urbanization_rate
+			multiply = 10
+		}
+
+		add = {
+			value = 5
+			desc = "POP_BASE_SUPPORT"
+		}		
+		
+		if = {
+			limit = {
+				culture = cu:basque
+				#owner = { #Switching laws should make the minorities less likely to support
+				#	NOR = { 
+				#		has_law_or_variant = law_type:law_state_religion 
+				#	}
+				#}
+			}
+			add = {
+				value = 40
+				desc = "POP_MINORITY"
+			}
+			if = { #If the Basques have local rule they should be far less interested in supporting the Carlists
+				limit = {
+					exists = c:CAT
+					c:CAT = {
+						is_subject_of = c:SPA
+					}
+				}
+				multiply = {
+					value = 0.25
+					desc = "NATIONALISM_TECH"
+				}
+				
+			}
+
+			else_if = {
+				limit = {
+					owner ?= {
+						has_technology_researched = nationalism
+					}
+				}
+				multiply = {
+					value = 2.0
+					desc = "NATIONALISM_TECH"
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				culture = cu:catalan
+				#owner = { #Switching laws should make the minorities less likely to support
+				#	NOR = { 
+				#		has_law_or_variant = law_type:law_state_religion
+				#	}
+				#}
+			}
+			add = {
+				value = 30
+				desc = "POP_MINORITY"
+			}
+			if = { #If Catalonia has local rule Catalans should be far less interested in supporting the Carlists
+				limit = {
+					exists = c:CAT
+					c:CAT = {
+						is_subject_of = c:SPA
+					}
+				}
+				multiply = {
+					value = 0.25
+					desc = "NATIONALISM_TECH"
+				}
+				
+			}
+
+			else_if = {
+				limit = {
+					owner ?= {
+						has_technology_researched = nationalism
+					}
+				}
+				multiply = {
+					value = 2.0
+					desc = "NATIONALISM_TECH"
+				}
+			}
+		}
+		
+		else_if = {
+			limit = {
+				culture = cu:galician
+				#owner = { #Switching laws should make the minorities less likely to support
+				#	NOR = { 
+				#		has_law_or_variant = law_type:law_state_religion
+				#	}
+				#}
+			}
+			add = {
+				value = 15
+				desc = "POP_MINORITY"
+			}
+			
+			if = { #If Galicia has local rule Galicians should be far less interested in supporting the Carlists
+				limit = {
+					exists = c:GLI
+					c:GLI = {
+						is_subject_of = c:SPA
+					}
+				}
+				multiply = {
+					value = 0.25
+					desc = "NATIONALISM_TECH"
+				}
+				
+			}
+
+			else_if = {
+				limit = {
+					owner ?= {
+						has_technology_researched = nationalism
+					}
+				}
+				multiply = {
+					value = 2.0
+					desc = "NATIONALISM_TECH"
+				}
+			}
+		}
+		
+		if = {
+			limit = {
+				is_pop_type = clergymen
+			}
+			add = {
+				value = 35
+				desc = "POP_CLERGYMEN"
+			}
+			if = {
+				limit = {
+					owner ?= {
+						has_variable = cr_desamortizacions_halted
+					}
+				}
+				multiply = {
+					value = 0.5
+					desc = "DESAMORTIZACIONS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = aristocrats
+			}
+			add = {
+				value = 25
+				desc = "POP_ARISTOCRATS"
+			}
+			if = {
+				limit = {
+					owner = {
+						has_variable = cr_desamortizacions_upper
+					}
+				}
+				multiply = {
+					value = 0.5
+					desc = "DESAMORTIZACIONS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				strata = upper
+			}
+			add = {
+				value = 15
+				desc = "POP_UPPER"
+			}
+			if = {
+				limit = {
+					owner = {
+						has_variable = cr_desamortizacions_upper
+					}
+				}
+				multiply = {
+					value = 0.5
+					desc = "DESAMORTIZACIONS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 35
+				desc = "POP_PEASANTS"
+			}
+			if = {
+				limit = {
+					owner = {
+						has_variable = cr_desamortizacions_lower
+					}
+				}
+				multiply = {
+					value = 0.5
+					desc = "DESAMORTIZACIONS"
+				}
+			}
+		}	
+		else_if = {
+			limit = {
+				is_pop_type = peasants
+			}
+			add = {
+				value = 15
+				desc = "POP_FARMERS"
+			}
+			if = {
+				limit = {
+					owner = {
+						has_variable = cr_desamortizacions_lower
+					}
+				}
+				multiply = {
+					value = 0.5
+					desc = "DESAMORTIZACIONS"
+				}
+			}
+		}	
+		else_if = {
+			limit = {
+				is_pop_type = laborers
+			}
+			add = {
+				value = 15
+				desc = "POP_LABORERS"
+			}
+			if = {
+				limit = {
+					owner = {
+						has_variable = cr_desamortizacions_lower
+					}
+				}
+				multiply = {
+					value = 0.5
+					desc = "DESAMORTIZACIONS"
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				is_pop_type = academics
+			}
+			subtract = 10
+		}
+		else_if = {
+			limit = {
+				is_pop_type = clerks
+			}
+			subtract = 5
+		}
+		else_if = {
+			limit = {
+				is_pop_type = engineers
+			}
+			subtract = 5
+		}
+
+		#if = {
+		#	limit = {
+		#		owner = {
+		#			NOT = { 
+		#				has_law_or_variant = law_type:law_state_religion
+		#			}
+		#		}
+		#	}
+		#	multiply = 1.1
+		#}
+		#
+		#if = {
+		#	limit = {
+		#		owner = {
+		#			NOT = { 
+		#				has_law_or_variant = law_type:law_monarchy
+		#			}
+		#		}
+		#	}
+		#	multiply = 2.0
+		#}
+		#
+		#if = {
+		#	limit = {
+		#		owner = {
+		#			NOT = { 
+		#				has_law_or_variant = law_type:law_autocracy
+		#			}
+		#		}
+		#	}
+		#	multiply = 1.1
+		#}
+
+		if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_monarchy
+				}
+			}
+			multiply = { # A succession crisis, unpopular monarchs should see a rise in support for the pretender
+				add = owner.ruler.popularity
+				multiply = -0.01
+				add = 1.25
+				min = 0.5
+				max = 2.5
+				desc = "RULER_POPULARITY"
+			}
+		}
+		else = {
+			multiply = 2
+		}
+		
+		if = {
+			limit = {
+				owner ?= {
+					has_law_or_variant = law_type:law_monarchy
+				}
+				owner.ruler ?= {
+					has_trait = trait_child				
+				}
+			}
+			multiply = {
+				value = 1.5
+				desc = "RULER_IS_CHILD"
+			}			
+		}
+	}
+
+	revolution = {
+		possible = {
+			political_movement_support >= 0.05
+		}
+		
+		weight = {
+			value = 100
+		}
+	
+		state_weight = {
+			value = 1			
+		}
+		
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					state_region = { is_homeland = cu:catalan }
+			   }
+				multiply = 1.5
+			}
+			if = {
+			   limit = { 
+					state_region = { is_homeland = cu:basque }
+			   }
+				multiply = 2.0
+			}	
+			if = {
+			   limit = { 
+					state_region = { is_homeland = cu:galician }
+			   }
+				multiply = 1.25
+			}	
+		}
+	}
+
+	secession = {
+		possible = {
+			political_movement_support >= 0.05
+		}	
+	
+		weight = {
+			value = 50
+		}	
+		
+		forced_tags = {
+			SPC = {
+				trigger = {
+					owner ?= { c:SPA ?= this  }
+					NOT = { exists = c:SPC }
+				}
+				weight = 1000
+			}
+		}
+
+		state_weight = {
+			value = 1
+			if = {
+			   limit = { 
+					state_region = { is_homeland = cu:catalan }
+			   }
+				multiply = 1.5
+			}
+			if = {
+			   limit = { 
+					state_region = { is_homeland = cu:basque }
+			   }
+				multiply = 2.0
+			}	
+			if = {
+			   limit = { 
+					state_region = { is_homeland = cu:galician }
+			   }
+				multiply = 1.25
+			}		
+		}		
+	}	
+	
+	additional_radicalism_factors = {	
+	}
+}

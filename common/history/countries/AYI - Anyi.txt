@@ -1,0 +1,9 @@
+﻿COUNTRIES = {
+	c:AYI ?= {
+		effect_starting_politics_traditional = yes		
+		effect_starting_technology_west_africa_rural = yes
+		effect_west_african_slavery = yes
+		
+		#effect_native_conscription_2 = yes
+	}
+}

@@ -1,0 +1,76 @@
+﻿ALC = {
+	states = {
+		STATE_CALIFORNIA
+		STATE_BAJA_CALIFORNIA
+	}
+	
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+}
+
+BAJ = {
+	states = {
+		STATE_BAJIO
+	}
+	
+	ai_will_do = { always = no }
+}
+
+CPS = {
+	states = {
+		STATE_CHIAPAS
+	}
+	
+	ai_will_do = { always = no }
+}
+
+CUA = {
+	states = {
+		STATE_CHIHUAHUA
+	}
+	
+	ai_will_do = { always = no }
+}
+
+DUR = {
+	states = {
+		STATE_DURANGO
+	}
+	
+	ai_will_do = { always = no }
+}
+
+GUE = {
+	states = {
+		STATE_GUERRERO
+	}
+	
+	ai_will_do = { always = no }
+}
+
+MCO = {
+	provinces = { x41E3BB xE26CDE xCE2837 x52E09C xC1F60B x107001 x725961 x80B8A5 } #x8CC01A xA80151 x10EF01 X4606C7 xBFDB49 x829A25
+	ai_will_do = { always = no }
+}
+
+SON = {
+	states = {
+		STATE_SONORA
+		STATE_SINALOA
+	}
+	
+	required_num_states = 1
+	
+	ai_will_do = { always = no }
+}
+
+TBS = {
+	provinces = { xDC714A x10B0C0 x5CE75E x1B2176 x067F2A x253627 }
+	ai_will_do = { always = no }
+}
+
+PEI = {
+	provinces = { x70C040 x8D0F89 x1C5C74 }
+	ai_will_do = { always = no }
+}

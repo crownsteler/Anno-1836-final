@@ -1,0 +1,8 @@
+﻿COUNTRIES = {
+	c:DFR ?= {
+		effect_starting_technology_west_africa_rural = yes
+		effect_starting_politics_traditional = yes
+		effect_west_african_slave_trader = yes
+		effects_slave_armies = yes
+	}
+}
