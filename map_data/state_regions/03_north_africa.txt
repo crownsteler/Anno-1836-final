@@ -158,6 +158,7 @@ STATE_ERITREA = {
 
 
 
+
     }
     resource = {
         type = "building_copper_mine"
@@ -236,6 +237,7 @@ STATE_KORDOFAN = {
 
 
 
+
     capped_resources = {
 
     }
@@ -257,6 +259,7 @@ STATE_DARFUR = {
     wood = "x3B2BDC"
     arable_land = 20
     arable_resources = { "building_livestock_ranch" "building_dye_plantation" } #dye_plantation = gum arabic
+
 
 
 
@@ -305,6 +308,7 @@ STATE_MARRAKECH = {
     wood = "xA71D65"
     arable_land = 60
     arable_resources = { "building_wheat_farm=" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" } #Most wine in Fez. Sugar is also produced from Rabat northwards
+
 
 
 
@@ -368,6 +372,7 @@ STATE_AL_RIF = {
 
 
 
+
     capped_resources = {
         building_logging_camp = 6
         building_fishing_wharf = 7
@@ -398,6 +403,7 @@ STATE_TAZA = {
     arable_resources = { "building_date_plantation" }
     capped_resources = {
         building_lead_mine = 18 #Lead/silver
+
 
 
 
@@ -764,6 +770,7 @@ STATE_MAURITANIA = {
 
 
 
+
     capped_resources = {
         building_fishing_wharf = 6
     }
@@ -832,6 +839,7 @@ STATE_EASTERN_MALI = {
 
 
 
+
     capped_resources = {}
 }
 
@@ -849,6 +857,7 @@ STATE_WESTERN_MALI = {
     arable_resources = { "building_millet_farm=" "building_livestock_ranch" "building_opium_plantation" }
     capped_resources = {
         building_gold_mine = 3 #Set to mine from gold fields because people can't eat gold.
+
 
 
 

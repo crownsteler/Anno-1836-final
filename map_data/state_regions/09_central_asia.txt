@@ -12,6 +12,7 @@
 
 
 
+
     capped_resources = {
         building_logging_camp = 10
     #building_lead_mine = 22
@@ -35,6 +36,7 @@ STATE_KUBAN = {
     wood = "x405000"
     arable_land = 105
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_vineyard" } #Some minor tea production around Sochi, didn't find it to be too relevant.
+
 
 
 
@@ -64,6 +66,7 @@ STATE_ARMENIA = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_silk_plantation" "building_cotton_plantation" }
     capped_resources = {
         building_copper_mine = 27 #Kajaran & Alaverdi
+
 
 
 
@@ -216,6 +219,7 @@ STATE_UZBEKIA = {
     wood = "xD767AD"
     arable_land = 100
     arable_resources = { "building_wheat_farm" "building_silk_plantation" "building_opium_plantation" "building_cotton_plantation" "building_tobacco_plantation" "building_vineyard" } #Removed "building_livestock_ranch" to reduce resources to 6. Added "building_livestock_ranch" to Tajikstan as compensation.
+
 
 
 
@@ -438,6 +442,7 @@ STATE_BALKH = {
 
 
 
+
     capped_resources = {
 
     }
@@ -495,6 +500,7 @@ STATE_KANDAHAR = {
 
 
 
+
     capped_resources = {
     #building_copper_mine = 20
     #building_minor_metals_mine = 20 #Tin, thugstun, REE
@@ -530,8 +536,10 @@ STATE_KABUL = {
 
 
 
+
     capped_resources = {
         building_copper_mine = 45 #Mes Aynak
+
 
 
 
@@ -667,6 +675,7 @@ STATE_WESTERN_HIMALAYAS = {
     subsistence_building = "building_subsistence_rice_farm"
     provinces = { x0003C6 x251424 x572FB9 xF202E0 xE60F80 xE31B4E xD52082 x733AB7 x3264B7 x6B646E x607020 xF15B70 xE77282 x45AF2E x59BBCE xFBA109 xE3A5A5 xE0C455 xF4C868 x8FF69F x49337F xAD283F xCF1974 x584C9B x037AF5 x03A411 }
     impassable = { x8FF69F x59BBCE xF202E0 xE0C455 } #Himachal Pradesh, don't forget to update 
+
 
 
 

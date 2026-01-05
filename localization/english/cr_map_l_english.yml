@@ -62,7 +62,7 @@
  
  #States
  STATE_BRABANT:0 "Brabant"
- STATE_BRUSSELS:0 "Brussels"
+ #STATE_BRUSSELS:0 "Brussels"
  STATE_FINNMARK:0 "Finnmark"
  STATE_SOUTH_SWITZERLAND:0 "Ticino"
  STATE_PALEMBANG:0 "Palembang"
@@ -139,6 +139,7 @@
  STATE_THURINGIA:0 "Thuringia"
  STATE_EAST_SLOVAKIA:0 "East Slovakia"
  STATE_KIVU: "Kivu"
+ STATE_GAMBIA: "Gambia"
  
  #TAGs
  ADA:0 "Adamawa"

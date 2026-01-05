@@ -11,9 +11,6 @@
     arable_land = 35
     arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_sugar_plantation" "building_banana_plantation" } #spices
 
-
-
-
     capped_resources = {
         building_lead_mine = 38
         building_logging_camp = 17
@@ -45,9 +42,6 @@ STATE_SARAWAK = {
     arable_land = 14
     arable_resources = { "building_rice_farm" "building_banana_plantation" } #Removed "building_dye_plantation" "building_tobacco_plantation"
 
-
-
-
     capped_resources = {
         building_logging_camp = 20
         building_fishing_wharf = 8
@@ -56,7 +50,7 @@ STATE_SARAWAK = {
     resource = {
         type = "building_gold_field"
         depleted_type = "building_gold_mine"
-        undiscovered_amount = 8
+        undiscovered_amount = 6
     }
     resource = {
         type = "building_oil_rig"
@@ -100,7 +94,7 @@ STATE_NORTH_BORNEO = {
 STATE_WEST_BORNEO = {
     id = 542
     subsistence_building = "building_subsistence_farm"
-    provinces = { "x029E85" "x04BB3B" "x1C7417" "x2A3D46" "x42973E" "x4408AB" "x445D59" "x477680" "x4DD36E" "x56FE77" "x60FDC2" "x638173" "x6D4CDF" "x706E00" "x71D428" "x76E306" "x7FFBF0" "x8A69A7" "x939612" "x9910E9" "xA5A916" "xA67A6E" "xA6D36E" "xA91194" "xAD54BC" "xB7B05B" "xBC374E" "xC29C28" "xCF4105" "xD735DB" "xE02CB6" "xE3C4F2" "xF37396" "xF8375D" "xF9BDCB" "xFCFD83" "xFF8539" "xFFE074" }
+    provinces = { "x04BB3B" "x1C7417" "x2A3D46" "x42973E" "x4408AB" "x445D59" "x477680" "x4DD36E" "x56FE77" "x60FDC2" "x6D4CDF" "x706E00" "x71D428" "x7FFBF0" "x939612" "x9910E9" "xA5A916" "xA6D36E" "xA91194" "xAD54BC" "xB7B05B" "xBC374E" "xCF4105" "xE02CB6" "xF8375D" "xFFE074" }
     #impassable = { x56FE77 x9910E9 x8A69A7 xFCFD83 xF37396 x029E85 xFF8539 x445D59 xA5A916 xBC374E x638173 xCF4105 x477680 xF9BDCB } #Removed because it messes with arable land allocation
     prime_land = { "xE02CB6" "x60FDC2" "x42973E" }
     traits = { "state_trait_kapuas_river" "state_trait_borneo_rainforest" "state_trait_severe_malaria" }
@@ -123,7 +117,7 @@ STATE_WEST_BORNEO = {
     }
     resource = {
         type = "building_rubber_plantation"
-        undiscovered_amount = 12
+        undiscovered_amount = 13
     }
     naval_exit_id = 3052
 }
@@ -131,7 +125,7 @@ STATE_WEST_BORNEO = {
 STATE_EAST_BORNEO = {
     id = 543
     subsistence_building = "building_subsistence_farm"
-    provinces = { "x018070" "x0596C2" "x0A7250" "x0A8175" "x0E858D" "x0ED6AA" "x0FFCAE" "x10645D" "x13DD1D" "x1DF499" "x1F6009" "x2695FB" "x2D539F" "x330B36" "x3631B8" "x3660F5" "x38416A" "x3BE572" "x3E96AF" "x3EE142" "x413B50" "x496AEF" "x4D4D9B" "x4F7415" "x527DD4" "x672606" "x6728CB" "x69AF77" "x6A70EA" "x718F24" "x71A232" "x7BA8AD" "x88A1EC" "x8B8321" "x8B9E4E" "x8BD8AF" "x8D8D4A" "x8F8FDE" "x952BEE" "x9B7A4D" "x9C48FE" "x9ED038" "x9F4941" "xA57C37" "xAC440F" "xB8D3B7" "xC03A53" "xC72ED3" "xC7410C" "xCC69E2" "xD5155A" "xD6E8B0" "xDB778E" "xDF0BCF" "xDFE51D" "xE49DDE" "xE9E984" "xEA35E9" "xF6BB4E" "xF8DD56" "xFBB6C2" "xFD2E40" "xFF0B89" }
+    provinces = { "x018070" "x0596C2" "x0A7250" "x0A8175" "x0E858D" "x0ED6AA" "x0FFCAE" "x10645D" "x13DD1D" "x1DF499" "x1F6009" "x2695FB" "x2D539F" "x330B36" "x3631B8" "x3660F5" "x38416A" "x3BE572" "x3E96AF" "x3EE142" "x413B50" "x496AEF" "x4D4D9B" "x4F7415" "x527DD4" "x672606" "x6728CB" "x69AF77" "x6A70EA" "x718F24" "x71A232" "x7BA8AD" "x88A1EC" "x8B8321" "x8B9E4E" "x8BD8AF" "x8D8D4A" "x8F8FDE" "x952BEE" "x9B7A4D" "x9C48FE" "x9ED038" "x9F4941" "xA57C37" "xAC440F" "xB8D3B7" "xC03A53" "xC72ED3" "xC7410C" "xCC69E2" "xD5155A" "xD6E8B0" "xDB778E" "xDF0BCF" "xDFE51D" "xE49DDE" "xE9E984" "xEA35E9" "xF6BB4E" "xF8DD56" "xFBB6C2" "xFD2E40" "xFF0B89" "x76E306" "xA67A6E" "xC29C28" "xD735DB" "x638173" "xE3C4F2" "xFCFD83" "xF9BDCB" "x8A69A7" "xFF8539" "xF37396" "x029E85" }
     #impassable = { xFBB6C2 x69AF77 x330B36 x3BE572 x6728CB xE49DDE x1DF499 x3EE142 x1F6009 x9ED038 x2D539F x71A232 x8F8FDE x8D8D4A x8B9E4E x3E96AF xC72ED3 xC7410C x6A70EA x7BA8AD xFF0B89 x10645D x413B50 x8B8321 } #Removed because it messes with arable land allocation
     traits = { "state_trait_borneo_rainforest" "state_trait_severe_malaria" }
     city = "xDB778E"
@@ -141,8 +135,6 @@ STATE_EAST_BORNEO = {
     wood = "xF6BB4E"
     arable_land = 48
     arable_resources = { "building_rice_farm" "building_tobacco_plantation" "building_banana_plantation" } #Rice, maise, coconuts, pepper, tobacco, coffee, sugar, rubber #Removed building_coffee_plantation because it is barely in the agroclimatic zone for it. Also makes room for spices when I get around to adding those.
-
-
 
 
     capped_resources = {
@@ -176,9 +168,6 @@ STATE_WEST_JAVA = {
     wood = "xB944CF"
     arable_land = 185
     arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" } #Removed "building_livestock_ranch" to make room for Palm Oil should I get round to adding it.
-
-
-
 
     capped_resources = {
         building_fishing_wharf = 11
@@ -229,9 +218,6 @@ STATE_CENTRAL_JAVA = {
     arable_land = 185
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_dye_plantation" "building_tea_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" } #Removed "building_livestock_ranch" to make room for spices should I get round to adding it.
 
-
-
-
     capped_resources = {
         building_sulfur_mine = 32
         building_fishing_wharf = 8
@@ -262,9 +248,6 @@ STATE_NORTH_SUMATRA = {
     arable_land = 55
     arable_resources = { building_rice_farm building_tea_plantation building_tobacco_plantation building_sugar_plantation building_banana_plantation } #Removed coffee because medan is not in the agroclimatic zone for coffee. Added it to Aceh instead.
 
-
-
-
     capped_resources = {
         building_fishing_wharf = 4
     }
@@ -282,14 +265,14 @@ STATE_NORTH_SUMATRA = {
 STATE_SOUTH_SUMATRA = {
     id = 914
     subsistence_building = "building_subsistence_rice_farm"
-    provinces = { "x01317D" "x03CEC7" "x067967" "x3099D2" "x339E85" "x3441E9" "x35213F" "x3F7EA0" "x42D05B" "x48428B" "x5157D3" "x5BE3D2" "x6021D0" "x677AA6" "x6ED39E" "x7AC280" "x7C7431" "x7D6D54" "x8171EA" "x8527A9" "x87F7B6" "x8B7A14" "x8FBCF4" "x983FEB" "xA0CEED" "xA1341F" "xA2F773" "xAE71B4" "xB0F538" "xCC1A24" "xD10CCE" "xD2193E" "xD3A66E" "xDA82F4" "xEC5DEA" "xFB099E" }
+    provinces = { "x01317D" "x03CEC7" "x067967" "x3099D2" "x339E85" "x3441E9" "x35213F" "x42D05B" "x48428B" "x5157D3" "x5BE3D2" "x6021D0" "x677AA6" "x6ED39E" "x7AC280" "x7C7431" "x7D6D54" "x8171EA" "x8527A9" "x87F7B6" "x8B7A14" "x8FBCF4" "x983FEB" "xA0CEED" "xA1341F" "xA2F773" "xAE71B4" "xB0F538" "xCC1A24" "xD10CCE" "xD2193E" "xD3A66E" "xDA82F4" "xEC5DEA" "xFB099E" "x847F76" "xE962F4" "x7FFD6B" "xEAF2DC" "xE4C2D6" "x00F15A" "x3D488C" "x4CF770" }
     traits = { state_trait_cr_sumatran_alluvial_swamps state_trait_severe_malaria }
     city = "x8B7A14"
     port = "x3099D2"
     farm = "x5157D3"
     mine = "xFB099E"
     wood = "x6ED39E"
-    arable_land = 35
+    arable_land = 40
     arable_resources = { "building_rice_farm" "building_dye_plantation" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 19
@@ -332,7 +315,7 @@ STATE_BILLITON = {
 STATE_MINANGKABAU = {
     id = 3943
     subsistence_building = "building_subsistence_rice_farm"
-    provinces = { "x00F15A" "x1F6A11" "x257D2C" "x4CF770" "x4E9BC1" "x79A66E" "x85B004" "x8A3E15" "x9D4BD1" "xD2D88C" "xDC4677" "xE0A0F0" "xE4C2D6" "xEAF2DC" "x3D488C" "x9EAF45" }
+    provinces = { "x1F6A11" "x257D2C" "x4E9BC1" "x79A66E" "x85B004" "x8A3E15" "x9D4BD1" "xD2D88C" "xDC4677" "xE0A0F0" "x9EAF45" } 
     prime_land = { "x4E9BC1" }
     traits = { state_trait_cr_barisan_mountains }
     city = "x257D2C"
@@ -377,17 +360,6 @@ STATE_ACEH = {
     arable_resources = { "building_rice_farm" "building_sugar_plantation" "building_coffee_plantation" "building_banana_plantation" } #spices, spices, spices
 
 
-
-
-
-
-
-
-
-
-
-
-
     capped_resources = {
         building_logging_camp = 8
         building_fishing_wharf = 8
@@ -406,7 +378,7 @@ STATE_ACEH = {
 STATE_THE_LAMPONGS = {
     id = 3944
     subsistence_building = "building_subsistence_rice_farm"
-    provinces = { "x0D0BEB" "x174432" "x31E5B1" "x74812B" "x7945C0" "x7FFD6B" "x847F76" "xA97585" "xDBE794" "xE226FB" "xE49A2F" "xE962F4" }
+    provinces = { "x0D0BEB" "x174432" "x31E5B1" "x74812B" "x7945C0" "xA97585" "xDBE794" "xE226FB" "xE49A2F" }
     traits = { state_trait_cr_sumatran_alluvial_swamps state_trait_cr_barisan_mountains state_trait_severe_malaria }
     city = "xA97585"
     port = "xA97585"
@@ -414,7 +386,8 @@ STATE_THE_LAMPONGS = {
     mine = "x7945C0"
     wood = "x31E5B1"
     arable_land = 35
-    arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_dye_plantation" }
+    arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_dye_plantation" } #Spices
+
     capped_resources = {
         building_logging_camp = 9
         building_fishing_wharf = 7
@@ -434,7 +407,7 @@ STATE_THE_LAMPONGS = {
 STATE_TAPANULI = {
     id = 3945
     subsistence_building = "building_subsistence_rice_farm"
-    provinces = { "x1F689A" "x30AED9" "x388ABB" "x4F7793" "x549D80" "x60E050" "x9A7E0B" "xAB0290" "xBE17D2" "xE3CB2E" }
+    provinces = { "x1F689A" "x30AED9" "x388ABB" "x4F7793" "x549D80" "x60E050" "x9A7E0B" "xAB0290" "xBE17D2" "xE3CB2E" "x3F7EA0" }
     traits = { state_trait_cr_barisan_mountains state_trait_malaria }
     city = "x549D80"
     port = "x9A7E0B"
@@ -499,15 +472,7 @@ STATE_MOLUCCAS = {
     mine = "xD3A69B"
     wood = "xD986F1"
     arable_land = 35
-    arable_resources = { "building_rice_farm" "building_tea_plantation" "building_cotton_plantation" "building_banana_plantation" } #spices!!, coconuts, rice, millet, vegetables, cotton
-
-
-
-
-
-
-
-
+    arable_resources = { "building_rice_farm" "building_tea_plantation" "building_cotton_plantation" "building_banana_plantation" } #spices!!, coconuts, rice, millet, vegetables, cotton #tea = spices
 
 
     capped_resources = {
@@ -561,15 +526,10 @@ STATE_SOUTH_CELEBES = {
     arable_resources = { building_rice_farm building_livestock_ranch building_coffee_plantation building_banana_plantation building_cotton_plantation building_tobacco_plantation } #rice, maise, coconuts, coffee, nutmeg, tobacco, cotton, sugar, horses
 
 
-
-
     capped_resources = {
         building_fishing_wharf = 8
         building_logging_camp = 6
         building_iron_mine = 8 #were known, but not exploited
-
-
-
 
     }
     #wood, iron, wildlife (pearls, turtles, birdsnests)
@@ -597,10 +557,10 @@ STATE_EASTERN_NEW_GUINEA = {
         building_logging_camp = 16
         building_fishing_wharf = 10
     }
-    resource = {
-        type = "building_gold_field"
-        undiscovered_amount = 4
-    }
+    #resource = {	#Import gold rush here?
+    #    type = "building_gold_field"
+    #    undiscovered_amount = 4
+    #}
     #resource = {	#Removed, because 4 resources
     #    type = "building_sulfur_mine" 
     #    undiscovered_amount = 32
@@ -735,6 +695,7 @@ STATE_BALI = {
 
 
 
+
     capped_resources = {
         building_sulfur_mine = 12
         building_fishing_wharf = 8
@@ -758,9 +719,6 @@ STATE_MINDANAO = {
     wood = "xCAFE73"
     arable_land = 40
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" } #removed "building_coffee_plantation" and "building_banana_plantation"  to reduce resource count to 4. 
-
-
-
 
     capped_resources = {
         building_logging_camp = 10
@@ -804,7 +762,7 @@ STATE_VISAYAS = {
     id = 554
     subsistence_building = "building_subsistence_rice_farm"
     provinces = { "x02E634" "x05FD19" "x223245" "x46EA60" "x48B8C8" "x591034" "x8001F0" "x8ABD23" "x90F80A" "xB4699E" "xB971C4" "xCFAFEE" "xD2CA4A" "xE2086C" "xF001E2" }
-    city = "xD2CA4A"
+    city = "xB971C4"
     port = "x90F80A"
     farm = "x90F80A"
     mine = "x46EA60"
@@ -841,7 +799,9 @@ STATE_WEST_MICRONESIA = {
 
 
 
+
     port = "xc0426b" #Agana
+
 
 
 
@@ -851,12 +811,15 @@ STATE_WEST_MICRONESIA = {
 
 
 
+
     mine = "xc9d00f" #Palau
 
 
 
 
+
     wood = "x341aba" #Ponape
+
 
 
 
@@ -881,7 +844,9 @@ STATE_EAST_MICRONESIA = {
 
 
 
+
     port = "x9ee29c" #Tarawa
+
 
 
 
@@ -891,12 +856,15 @@ STATE_EAST_MICRONESIA = {
 
 
 
+
     mine = "x1e6c78" #Enewetak
 
 
 
 
+
     wood = "x5fc9c8" #Majuro
+
 
 
 
@@ -923,6 +891,7 @@ STATE_SOLOMON_ISLANDS = {
     wood = "xD04090"
     arable_land = 5
     arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_banana_plantation" } #Copra, Palm oild, Cacoa
+
 
 
 
@@ -966,7 +935,9 @@ STATE_FIJI = {
 
 
 
+
     farm = "xAED14B" #Lautoka
+
 
 
 
@@ -1086,6 +1057,7 @@ STATE_TUAMOTES = {
 
 
 
+
     capped_resources = {
         #Also Pearl Diving
         building_whaling_station = 6
@@ -1106,7 +1078,9 @@ STATE_TONGA = {
 
 
 
+
     port = "xf76494" #Neiafu
+
 
 
 
@@ -1116,12 +1090,15 @@ STATE_TONGA = {
 
 
 
+
     mine = "xA7F8A1" #Salelologa
 
 
 
 
+
     wood = "x8b868d" #Avarua
+
 
 
 
@@ -1145,7 +1122,9 @@ STATE_SAMOA = {
 
 
 
+
     port = "xA7F8A1" #Pago Pago
+
 
 
 
@@ -1155,12 +1134,15 @@ STATE_SAMOA = {
 
 
 
+
     mine = "x555258" #Luma
 
 
 
 
+
     wood = "xd98cda" #Salelologa
+
 
 
 

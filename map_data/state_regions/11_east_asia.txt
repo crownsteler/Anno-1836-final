@@ -99,6 +99,7 @@ STATE_SICHUAN = {
 
 
 
+
     }
 }
 
@@ -138,6 +139,7 @@ STATE_GUIZHOU = {
     wood = "xE0F060"
     arable_land = 110
     arable_resources = { "building_rice_farm" "building_dye_plantation" "building_opium_plantation" "building_tea_plantation" } #Removed "building_tobacco_plantation"  to reduce resources to 4.
+
 
 
 
@@ -217,6 +219,7 @@ STATE_HINGGAN = {
 
 
 
+
     city = "x777A4F"
     farm = "x132B15"
     mine = "x2AD313"
@@ -256,6 +259,7 @@ STATE_BEIJING = {
     wood = "x166F01"
     arable_land = 340
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" } #too far north for tea really
+
 
 
 
@@ -368,6 +372,7 @@ STATE_SOUTHERN_MANCHURIA = {
     wood = "xBAD550"
     arable_land = 220
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_tobacco_plantation" } #Cotton = flax
+
 
 
 
@@ -539,6 +544,7 @@ STATE_CHONGQING = {
 
 
 
+
     subsistence_building = "building_subsistence_rice_farm"
     provinces = { x5C003D x243438 x283D57 xBE05F5 x7B51C8 xC64D28 x645EEC xC35036 xAF5569 x509000 xBD8F39 xD09000 x6CAE25 xDBB445 xCABB49 xD5B480 x98D5B2 x98EF3E xE0F0E0 xDBFEDF xC8F378 }
     traits = { "state_trait_yangtze_river" "state_trait_the_red_basin" }
@@ -550,6 +556,7 @@ STATE_CHONGQING = {
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_silk_plantation" "building_tea_plantation" }
     capped_resources = {
         building_logging_camp = 4 #already mostly deforested
+
 
 
 
@@ -907,6 +914,7 @@ STATE_FORMOSA = {
 
 
 
+
     capped_resources = {
         #also copper but by 1880 only coal and sulfur were know to exist in economic quantities 
         building_logging_camp = 9
@@ -954,6 +962,7 @@ STATE_SUZHOU = {
     subsistence_building = "building_subsistence_rice_farm"
     provinces = { "x301000" "x61F061" "x6E575B" "x86FF7E" "xB01101" "xD0D0C0" "xE9E92E" }
     traits = { "state_trait_yangtze_river" } #Shanghai isn't a particularly great natural harbour IMHO
+
 
 
 
@@ -1055,6 +1064,7 @@ STATE_BANGKOK = {
     subsistence_building = "building_subsistence_rice_farm"
     provinces = { x5B0F13 x154B0D x742F1F x2C4B2F x9030DF x4B58FD x10AFE0 x23B4B7 x62B39D xA4A851 x20DFD0 xEEFF94 xA0084E x541AFB x194621 x552E9A xAA42AD xDF3CAD xCE49D1 x118CA3 x99A1C0 x30EF20 }
     traits = { "state_trait_chao_phraya_delta" } #Bangkok doesn't have a particularly great natural harbour IMHO
+
 
 
 
@@ -1242,6 +1252,7 @@ STATE_CHIANG_MAI = {
 
 
 
+
     capped_resources = {
         #building_coal_mine = 32 #Mae Mo Mine discovered 1917, lignite
         building_logging_camp = 26
@@ -1278,8 +1289,10 @@ STATE_NAKHON_RATCHASIMA = {
 
 
 
+
     capped_resources = {
         building_logging_camp = 8 #Large deforested already
+
 
 
 
@@ -1386,6 +1399,7 @@ STATE_HOKKAIDO = {
 
 
 
+
     capped_resources = {
         #building_coal_mine = 45
         #building_iron_mine = 20
@@ -1468,6 +1482,7 @@ STATE_KANTO = {
 
 
 
+
     capped_resources = {
         #building_iron_mine = 10
         #building_coal_mine = 15
@@ -1502,9 +1517,11 @@ STATE_CHUBU = {
 
 
 
+
     capped_resources = {
         #Gold on Sado (Kinzan)
         building_lead_mine = 14 #lead/zinc, Kamioka 
+
 
 
 
@@ -1696,6 +1713,7 @@ STATE_BUSAN = {
 
 
 
+
     capped_resources = {
         #building_coal_mine = 10 #Lignite
         building_copper_mine = 18
@@ -1719,6 +1737,7 @@ STATE_YANGHO = {
     wood = "xB0D000"
     arable_land = 110
     arable_resources = { "building_rice_farm" "building_cotton_plantation" "building_silk_plantation" "building_tea_plantation" } #Tea has been produced here for centuries, but first plantations date to the 20th century according to wikipedia
+
 
 
 
@@ -1785,6 +1804,7 @@ STATE_PYONGYANG = {
     wood = "x47D537"
     arable_land = 100
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_cotton_plantation" "building_silk_plantation" "building_tobacco_plantation" } #spices / gingseng
+
 
 
 

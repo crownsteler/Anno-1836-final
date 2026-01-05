@@ -109,7 +109,9 @@ STATE_GREATER_POLAND = {
 
 
 
+
         building_lead_mine = 18 #Olkusz, Zawiercie
+
 
 
 
@@ -298,6 +300,7 @@ STATE_BEKES = {
 
 
 
+
     }
 }
 
@@ -369,7 +372,9 @@ STATE_BANAT = {
 
 
 
+
         building_coal_mine = 24 #Anina Mine, opened 1790
+
 
 
 
@@ -459,6 +464,7 @@ STATE_RUTHENIA = {
 
 
 
+
     capped_resources = {
         building_logging_camp = 18
     }
@@ -477,6 +483,7 @@ STATE_SOUTHERN_TRANSYLVANIA = {
     capped_resources = {
         #building_lead_mine = 20 #Moved to Northern Transylvania
         building_iron_mine = 45 #Hunedoara; Ghelar, Teliuc, Birtin, 
+
 
 
 
@@ -514,6 +521,7 @@ STATE_SOUTHERN_TRANSYLVANIA = {
 
 
 
+
     }
 }
 
@@ -530,6 +538,7 @@ STATE_NORTHERN_TRANSYLVANIA = {
     capped_resources = {
         #Iron mining at Căpușu Mic and Rodna
         building_lead_mine = 20 #Rodna
+
 
 
 

@@ -18,6 +18,7 @@
 
 
 
+
         building_logging_camp = 27
     }
     #building_coal_mine = 35 #Chelyabinsk, lignite but discovered in 1832 exploitation started in 1907

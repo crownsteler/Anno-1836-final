@@ -35,6 +35,7 @@ STATE_GUATEMALA = {
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_sugar_plantation" "building_banana_plantation" "building_dye_plantation" } #spices
 
 
+
     capped_resources = {
         #building_minor_metals_mine = 30 #nickel
         building_logging_camp = 17
@@ -59,6 +60,7 @@ STATE_HONDURAS = {
     wood = "xC77E76"
     arable_land = 35
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_banana_plantation" } #palm oil
+
 
 
     capped_resources = {
@@ -91,6 +93,7 @@ STATE_NICARAGUA = {
     arable_resources = { "building_maize_farm" "building_coffee_plantation" "building_cotton_plantation" "building_sugar_plantation" "building_banana_plantation" } #palm oil
 
 
+
     capped_resources = {
         building_logging_camp = 14
         building_fishing_wharf = 5
@@ -116,6 +119,7 @@ STATE_COSTA_RICA = {
     arable_resources = { "building_maize_farm" "building_coffee_plantation" "building_sugar_plantation" "building_banana_plantation" } #palm oil
 
 
+
     capped_resources = {
         building_logging_camp = 8
         building_fishing_wharf = 3
@@ -136,6 +140,7 @@ STATE_PANAMA = {
     subsistence_building = "building_subsistence_farm"
     provinces = { "x30B080" "x357099" "x47C5F8" "x50C29C" "x717275" "x8537FE" "x8A8A20" "x910E14" "xB0A911" "xB0B080" "xBB820B" "xC650E1" "xD0EF40" "xEE835F" }
     impassable = { xB0B080 xB0A911 xEE835F } #Darian Gap
+
 
 
     city = "x8A8A20"
@@ -175,6 +180,7 @@ STATE_HAITI = {
 
 
 
+
     capped_resources = {
         #building_logging_camp = 4	#Only wood exported from Haiti was logwood, a dyewood.
         building_fishing_wharf = 8
@@ -198,6 +204,7 @@ STATE_SANTO_DOMINGO = {
     wood = "x317080"
     arable_land = 30
     arable_resources = { "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" } #banana = cacao, removed "building_rice_farm" to reduce resources
+
 
 
 
@@ -228,6 +235,7 @@ STATE_PUERTO_RICO = {
 
 
 
+
     capped_resources = {
         building_fishing_wharf = 4
     }
@@ -249,6 +257,7 @@ STATE_BAHAMAS = {
     mine = "x4EBC79"
     arable_land = 5
     arable_resources = { "building_sugar_plantation" "building_banana_plantation" } #Banana = pineapple
+
 
 
     capped_resources = {
@@ -291,6 +300,7 @@ STATE_JAMAICA = {
     wood = "x535B49"
     arable_land = 23
     arable_resources = { "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" } #potentially spices, removed building_rice_farm to reduce resources to 4. Sorry Jamaica!
+
 
 
     capped_resources = {
@@ -369,6 +379,7 @@ STATE_EASTERN_CUBA = {
         building_logging_camp = 10
         building_fishing_wharf = 7
         building_copper_mine = 13 #El Cobre
+
 
 
     }

@@ -339,7 +339,7 @@
 		region_state:DYK = {
 			create_pop = {
 				culture = dayak
-				size = 123158
+				size = 63158
 			}
 			create_pop = {
 				culture = malay #was bornean, but removed because why is there a difference here?
@@ -461,7 +461,7 @@
 		region_state:DYK = {
 			create_pop = {
 				culture = dayak
-				size = 329131
+				size = 389131
 			}
 			create_pop = {
 				culture = malay #was bornean, but removed because why is there a difference here?
@@ -784,7 +784,7 @@
 		region_state:POE = {
 			create_pop = {
 				culture = malay #was bornean, but removed because why is there a difference here?
-				size = 21150
+				size = 72150
 			}
 		}
 	}
@@ -861,7 +861,7 @@
 			}
 			create_pop = {
 				culture = minangkabau
-				size = 113200
+				size = 13200
 			}
 		}
 		region_state:NIS = {
@@ -923,7 +923,7 @@
 		region_state:POE = {
 			create_pop = {
 				culture = malay #was bornean, but removed because why is there a difference here?
-				size = 32900
+				size = 24900
 			}
 			create_pop = {
 				culture = yue
@@ -992,6 +992,12 @@
 			create_pop = {
 				culture = malay #was bornean, but removed because why is there a difference here?
 				size = 13543
+			}
+		}
+		region_state:POE = {
+			create_pop = {
+				culture = malay
+				size = 3250
 			}
 		}
 	}

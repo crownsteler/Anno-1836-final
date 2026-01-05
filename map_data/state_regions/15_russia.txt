@@ -158,6 +158,7 @@ STATE_UUSIMAA = {
 
 
 
+
         #building_copper_mine = 5 #intermittent copper mining at Orijarvi
         building_logging_camp = 36
         building_fishing_wharf = 8
@@ -264,6 +265,7 @@ STATE_EAST_KARELIA = {
     wood = "xE6B3AA"
     arable_land = 7
     arable_resources = {} #"building_livestock_ranch", I know reindeer herds, but better represented as subsistence
+
 
 
 
@@ -701,6 +703,7 @@ STATE_PERM = {
 
 
 
+
     }
     resource = {
         type = "building_copper_mine"
@@ -757,6 +760,7 @@ STATE_URALSK = {
 
 
 
+
     resource = {
         type = "building_oil_rig"
         undiscovered_amount = 60
@@ -791,6 +795,7 @@ STATE_SEMIRECHE = {
     wood = "x650F60"
     arable_land = 40
     traits = { "state_trait_western_steppe" "state_trait_irtysh_river" } #"state_trait_porphyry_copper"
+
 
 
 

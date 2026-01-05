@@ -157,12 +157,14 @@ STATE_WESTERN_NORWAY = {
 
 
 
+
         building_logging_camp = 16
         building_fishing_wharf = 15
     }
     resource = {
         type = "building_copper_mine"
         undiscovered_amount = 36 #Visnes, discovered 1860s
+
 
 
 
@@ -211,6 +213,7 @@ STATE_FINNMARK = {
 
 
 
+
         building_fishing_wharf = 8
     }
     naval_exit_id = 3039
@@ -239,7 +242,9 @@ STATE_EASTERN_NORWAY = {
 
 
 
+
         building_iron_mine = 24 #Åmdals Verk, Odals Verk, Lesja Ironwork, Hassel Iron Works, Bærums Verk
+
 
 
 
@@ -528,6 +533,7 @@ STATE_MUNSTER = {
 
 
 
+
         #building_minor_metals_mine = 10
         building_fishing_wharf = 12
     }
@@ -547,6 +553,7 @@ STATE_LEINSTER = {
     arable_resources = { "building_rye_farm" "building_livestock_ranch" }
     capped_resources = {
         building_coal_mine = 17 #Deerpark Mines, but also included Ballingarry Coal Mines and Arigna, which are near the border with Leinster, to simplify the map.
+
 
 
 
@@ -689,6 +696,7 @@ STATE_FRENCH_LOW_COUNTRIES = {
 
 
 
+
     subsistence_building = "building_subsistence_farm"
     provinces = { x5362AC xA0A080 xD0854D xE0A0C0 }
     traits = { "state_trait_good_soils" "state_trait_nord_pas_de_calais_coalfield" }
@@ -745,12 +753,14 @@ STATE_ALSACE_LORRAINE = {
 
 
 
+
     wood = "xCC3250"
     arable_land = 67
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_vineyard" }
     capped_resources = {
         building_coal_mine = 60
         building_iron_mine = 115 #Largest iron mines of Europe
+
 
 
 
@@ -807,6 +817,7 @@ STATE_AUVERGNE_LIMOUSIN = {
 
 
 
+
     subsistence_building = "building_subsistence_farm"
     provinces = { x01FD5F x07BCC1 x306000 x368F00 x3FE149 x50A0C0 x61609A x70C060 x90E000 xA27EFD xA8AE71 xABE045 xAF89BC xD020C0 xE7B296 xF080E0 }
     city = "x07BCC1"
@@ -822,7 +833,9 @@ STATE_AUVERGNE_LIMOUSIN = {
 
 
 
+
         building_sulfur_mine = 40 #? I forgot what this is.
+
 
 
 
@@ -836,6 +849,7 @@ STATE_BRITTANY = {
     subsistence_building = "building_subsistence_farm"
     provinces = { x10A040 x2368E7 x2BD902 x32C2E2 x50F4A7 x55607E x706000 x85E5AC xA0B0D1 xABF468 xC4D7A2 xD0E080 xD584A0 xF91DD2 }
     traits = { "state_trait_loire_river" "state_trait_natural_harbors" } #Brest is quite the natural harbour
+
 
 
 
@@ -917,6 +931,7 @@ STATE_LORRAINE = {
 
 
 
+
     subsistence_building = "building_subsistence_farm"
     provinces = { x282DCC x3080E0 x4B7684 x70BFA0 x7FC1E6 xB080E0 xC5F13A }
     traits = {} #state_trait_minette_ore added via event
@@ -924,9 +939,11 @@ STATE_LORRAINE = {
 
 
 
+
     city = "xB080E0"
     farm = "x7FC1E6"
     mine = "xC5F13A" #Do not forget to update cr_minette_ores_events.1 and cr_minette_ores_events.20
+
 
 
 
@@ -1073,6 +1090,7 @@ STATE_WALLONIA = {
 
 
 
+
         building_logging_camp = 14
     }
 }
@@ -1128,6 +1146,7 @@ STATE_AUSTRIA = {
 
 
 
+
         building_logging_camp = 7
     }
 }
@@ -1149,12 +1168,15 @@ STATE_BOHEMIA = {
 
 
 
+
         building_iron_mine = 38 #Also small amount of tin
 
 
 
 
+
         building_lead_mine = 8 #Lead/zinc, Ševčiny mine
+
 
 
 
@@ -1199,6 +1221,7 @@ STATE_STYRIA = {
 
 
 
+
         building_logging_camp = 10
     }
 }
@@ -1237,6 +1260,7 @@ STATE_SOUTH_TYROL = {
         #building_copper_mine = 12 #included in Tyrol
         #building_minor_metals_mine = 10 #zinc/lead mine
         building_lead_mine = 7 #zinc/lead mine
+
 
 
 
@@ -1307,6 +1331,7 @@ STATE_EAST_SWITZERLAND = {
 
 
 
+
         building_logging_camp = 17
     }
 }
@@ -1326,6 +1351,7 @@ STATE_WEST_SWITZERLAND = {
         #building_minor_metals_mine = 16 #nickel
         building_logging_camp = 8
         building_iron_mine = 14 #"The iron ores of Switzerland are of more interest to the historian than to the economist, for most of the deposits are so situated that they can not be exploited economically" -The Iron-Ore Resources of Europe 1921
+
 
 
 
@@ -1389,6 +1415,7 @@ STATE_ANHALT = {
 
 
 
+
     }
     resource = {
         type = "building_sulfur_mine"
@@ -1414,6 +1441,7 @@ STATE_RHINELAND = {
 
 
 
+
         #building_lead_mine = 20 #Wiesloch? Moved to Baden
         building_logging_camp = 12
     }
@@ -1432,6 +1460,7 @@ STATE_NORTH_RHINE = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_dye_plantation" }
     capped_resources = {
         building_coal_mine = 35 #lignite not included, 10 to Rhineland (Saar), 20 to Westphalia
+
 
 
 
@@ -1509,6 +1538,7 @@ STATE_BADEN = {
 
 
 
+
         building_iron_mine = 15
         building_logging_camp = 16
     }
@@ -1555,6 +1585,7 @@ STATE_BRUNSWICK = {
     capped_resources = {
         #building_coal_mine = 25 #Lignite
         building_lead_mine = 14 #Rammelsberg
+
 
 
 
@@ -1621,6 +1652,7 @@ STATE_SAXONY = {
 
 
 
+
     capped_resources = {
         building_coal_mine = 90
         building_logging_camp = 8
@@ -1664,13 +1696,16 @@ STATE_HESSE = {
 
 
 
+
         building_sulfur_mine = 35 #Goldgrube/Lahn-Dill
+
 
 
 
 
         building_logging_camp = 10
         building_copper_mine = 30 #Lahn-Dill 
+
 
 
 
@@ -1712,6 +1747,7 @@ STATE_RUHR = {
     capped_resources = {
         building_coal_mine = 40
         building_iron_mine = 50 #Siegerland, Bergische Land, Westerwald
+
 
 
 

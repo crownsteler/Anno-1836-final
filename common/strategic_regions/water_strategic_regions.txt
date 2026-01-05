@@ -30,6 +30,14 @@ region_indian_ocean_lane_06 = {
 	states = { STATE_INDIAN_OCEAN_LANE_06 }
 }
 
+region_indian_ocean_lane_07 = {
+	states = { STATE_INDIAN_OCEAN_LANE_07 }
+}
+
+region_indian_ocean_lane_08 = {
+	states = { STATE_INDIAN_OCEAN_LANE_08 }
+}
+
 region_south_atlantic_sea_lane_01 = {
 	states = { STATE_SOUTH_ATLANTIC_SEA_LANE_01 }
 }
@@ -52,6 +60,18 @@ region_south_pacific_lane_01 = {
 
 region_south_pacific_lane_02 = {
 	states = { STATE_SOUTH_PACIFIC_LANE_2 }
+}
+
+region_south_pacific_lane_03 = {
+	states = { STATE_SOUTH_PACIFIC_LANE_3 }
+}
+
+region_australian_west_coast = {
+	states = { STATE_AUSTRALIAN_WEST_COAST }
+}
+
+region_cape_leeuwin = {
+	states = { STATE_CAPE_LEEUWIN }
 }
 
 region_easter_island_lane_01 = {
@@ -410,6 +430,14 @@ region_central_atlantic_ocean = {
 	states = { STATE_CENTRAL_ATLANTIC_OCEAN }
 }
 
+region_central_atlantic_ocean_01 = {
+	states = { STATE_CENTRAL_ATLANTIC_OCEAN_01 }
+}
+
+region_central_atlantic_ocean_lane_01 = {
+	states = { STATE_CENTRAL_ATLANTIC_OCEAN_LANE_01 }
+}
+
 region_gulf_of_guinea = {
 	states = { STATE_GULF_OF_GUINEA }
 }
@@ -442,6 +470,10 @@ region_angolan_sea = {
 	states = { STATE_ANGOLAN_SEA }
 }
 
+region_skeleton_coast = {
+	states = { STATE_SKELETON_COAST }
+}
+
 region_cape_of_good_hope = {
 	states = { STATE_CAPE_OF_GOOD_HOPE }
 }
@@ -472,6 +504,14 @@ region_indian_ocean_02 = {
 
 region_indian_ocean_03 = {
 	states = { STATE_INDIAN_OCEAN_03 }
+}
+
+region_indian_ocean_04 = {
+	states = { STATE_INDIAN_OCEAN_04 }
+}
+
+region_indian_ocean_05 = {
+	states = { STATE_INDIAN_OCEAN_05 }
 }
 
 region_sea_of_okhotsk = {

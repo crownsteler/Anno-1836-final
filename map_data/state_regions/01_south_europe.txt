@@ -11,6 +11,7 @@
     arable_resources = { "building_wheat_farm" "building_cotton_plantation" "building_vineyard" "building_silk_plantation" } #Removed "building_livestock_ranch" to reduce to 4
 
 
+
     capped_resources = {
         building_lead_mine = 19
         building_logging_camp = 9
@@ -28,6 +29,7 @@ STATE_PIEDMONT = {
     traits = { "state_trait_great_terroir" "state_trait_po_river" } #I love Barolo
 
 
+
     city = "xA9397D"
     port = "x904061"
     farm = "x11C061"
@@ -37,6 +39,7 @@ STATE_PIEDMONT = {
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_dye_plantation" "building_vineyard" }
     capped_resources = {
         building_iron_mine = 18 #Val d'Aosta
+
 
 
         building_logging_camp = 12
@@ -201,6 +204,7 @@ STATE_ABRUZZO = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_vineyard" } #potentially saffran
 
 
+
     capped_resources = {
         building_logging_camp = 12
         building_fishing_wharf = 7
@@ -219,6 +223,7 @@ STATE_SAVOY = {
     wood = "xD000E0"
     arable_land = 20
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" } #about 300 hectares of vineyards, too insignificant to include
+
 
 
     capped_resources = {
@@ -262,9 +267,11 @@ STATE_TUSCANY = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_silk_plantation" "building_vineyard" } #Could also get dyes, but as it already has 4 resources decided against it.
 
 
+
     capped_resources = {
         building_iron_mine = 68
         building_sulfur_mine = 25 #sulfur = pyrite
+
 
 
         building_logging_camp = 13
@@ -447,6 +454,7 @@ STATE_BASQUE_COUNTRY = {
     traits = { "state_trait_basque_iron_ore" } #La Rioja is part of STATE_OLD_CASTILE so no state_trait_great_terroir
 
 
+
     city = "xABE0B3"
     port = "x48868C"
     farm = "x10E0C0"
@@ -525,6 +533,7 @@ STATE_LOWER_ANDALUSIA = {
     subsistence_building = "building_subsistence_farm"
     provinces = { "x2B6ABC" "x3C4E5B" "x4A1438" "x4E5464" "x53634F" "x58E3EB" "x59202C" "x801020" "x809020" "x911497" "xB1108A" "xD06000" }
     traits = { "state_trait_guadalquivir" "state_trait_bay_of_cadiz" "state_trait_iberian_pyrite_belt" } #removed "state_trait_great_terroir" (sherry) because of state_trait_guadalquivir
+
 
 
     city = "x4A1438"
@@ -635,6 +644,7 @@ STATE_ESTREMADURA = {
     traits = { "state_trait_tagus_estuary" } #"state_trait_tagus_river" 
 
 
+
     city = "xD0A080"
     port = "xD0A080"
     farm = "xA0F6EC"
@@ -710,6 +720,7 @@ STATE_CANARY_ISLANDS = {
     arable_resources = { "building_banana_plantation" "building_sugar_plantation" "building_dye_plantation" "building_vineyard" } #dyes plantations = roccella tinctoria and cochineal
 
 
+
     capped_resources = {
         building_fishing_wharf = 4
     }
@@ -768,6 +779,7 @@ STATE_EASTERN_THRACE = {
         building_iron_mine = 18 #deposit of Cam Dagi across the Bosphorus. Moved here to make industrialising Istanbul slightly easier 
 
 
+
         building_logging_camp = 4
         building_fishing_wharf = 10
     }
@@ -812,6 +824,7 @@ STATE_ALBANIA = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_vineyard" } #should also have spices
 
 
+
     capped_resources = {
         building_logging_camp = 6
         building_fishing_wharf = 8
@@ -843,6 +856,7 @@ STATE_BOSNIA = {
         building_iron_mine = 48 #Ljubija mine
 
 
+
         #building_lead_mine = 39
 
         building_logging_camp = 14
@@ -860,6 +874,7 @@ STATE_NORTHERN_THRACE = {
     wood = "x6E7192"
     arable_land = 45
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_cotton_plantation" } #Plenty of wine here, but removed "building_vineyard" to reduce resources to 4.
+
 
 
 
@@ -1040,6 +1055,7 @@ STATE_MONTENEGRO = {
 
 
 
+
     capped_resources = {
         building_lead_mine = 24
         building_logging_camp = 7
@@ -1156,6 +1172,7 @@ STATE_WEST_AEGEAN_ISLANDS = {
         building_sulfur_mine = 10 #Milos, historical an important source of sulfur
 
 
+
     }
     naval_exit_id = 3034
 }
@@ -1171,6 +1188,7 @@ STATE_EAST_AEGEAN_ISLANDS = {
     mine = "xC56452"
     arable_land = 5
     arable_resources = { "building_livestock_ranch" "building_dye_plantation" "building_vineyard" } #Dye_plantation = mastic
+
 
 
     capped_resources = {
@@ -1217,6 +1235,7 @@ STATE_THESSALIA = {
         building_sulfur_mine = 20 #What is sulfur here supposed to represent???
 
 
+
     }
     naval_exit_id = 3034
 }
@@ -1231,6 +1250,7 @@ STATE_SKOPIA = {
     wood = "x494421"
     arable_land = 33
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_tobacco_plantation" "building_opium_plantation" } #removed vinyards to reduce resources to 4
+
 
 
     capped_resources = {
@@ -1255,6 +1275,7 @@ STATE_MACEDONIA = {
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_vineyard" } #Removed building_tobacco_plantation to reduce resources to 4 and abundance of tobacco resources in the region
 
 
+
     #Lead/Zinc
     capped_resources = {
         building_logging_camp = 9
@@ -1276,6 +1297,7 @@ STATE_WESTERN_THRACE = {
     wood = "xBE51B7"
     arable_land = 25
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_silk_plantation" "building_tobacco_plantation" } #Silk = Soufli. Removed cotton due to the number of resources and cotton potential in the region. Moved building_vineyard to Macedonia to reduce number of resources to 4
+
 
 
     capped_resources = {
@@ -1360,6 +1382,7 @@ STATE_LEON = {
         building_iron_mine = 34 #Ponferrada, Astoria, Valle del Sabero
 
 
+
         #building_coal_mine = 30
         building_logging_camp = 6
     }
@@ -1372,6 +1395,7 @@ STATE_ENTRE_DOURO_E_MINHO = {
     traits = { "state_trait_great_terroir" } #"state_trait_port_of_porto"
 
 
+
     city = "xD0A000"
     farm = "xA64B2E"
     mine = "x37ADD8"
@@ -1381,6 +1405,7 @@ STATE_ENTRE_DOURO_E_MINHO = {
     arable_resources = { building_wheat_farm building_livestock_ranch building_vineyard }
     capped_resources = {
         building_iron_mine = 8 #Torre de Moncorvo
+
 
 
         building_logging_camp = 5

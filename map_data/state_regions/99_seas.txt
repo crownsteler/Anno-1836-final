@@ -23,6 +23,11 @@ STATE_SOUTH_PACIFIC_LANE_2 = {
     provinces = { "xE10DAD" }
 }
 
+STATE_SOUTH_PACIFIC_LANE_3 = {
+    id = 7004
+    provinces = { "xC551C4" }
+}
+
 STATE_EASTER_ISLAND_LANE_1 = {
     id = 3005
     provinces = { "xDB3CA3" }
@@ -474,10 +479,21 @@ STATE_MACARONESIAN_SEA = {
     provinces = { "x5FDDFB" }
 }
 
+STATE_CENTRAL_ATLANTIC_OCEAN_LANE_01 = {
+    id = 7089
+    provinces = { "x7579EE" }
+}
+
 STATE_CENTRAL_ATLANTIC_OCEAN = {
     id = 3090
     provinces = { "x6DC9F4" }
     impassable = { "x6DC9F4" }
+}
+
+STATE_CENTRAL_ATLANTIC_OCEAN_01 = {
+    id = 7090
+    provinces = { "x689DC6" }
+    impassable = { "x689DC6" }
 }
 
 STATE_GULF_OF_GUINEA = {
@@ -546,6 +562,11 @@ STATE_ANGOLAN_SEA = {
     provinces = { "x51B8B8" }
 }
 
+STATE_SKELETON_COAST = {
+    id = 7105
+    provinces = { "x5AC3DF" }
+}
+
 STATE_CAPE_OF_GOOD_HOPE = {
     id = 3105
     provinces = { "x56C9FB" }
@@ -584,6 +605,18 @@ STATE_INDIAN_OCEAN_03 = {
     impassable = { "x49C9C9" }
 }
 
+STATE_INDIAN_OCEAN_04 = {
+    id = 7108
+    provinces = { "x3B9CC7" }
+    impassable = { "x3B9CC7" }
+}
+
+STATE_INDIAN_OCEAN_05 = {
+    id = 7111
+    provinces = { "x51C7E2" }
+    impassable = { "x51C7E2" }
+}
+
 STATE_MASCARENES = {
     id = 3111
     provinces = { "x6EDBDB" }
@@ -607,6 +640,26 @@ STATE_INDIAN_OCEAN_LANE_05 = {
 STATE_INDIAN_OCEAN_LANE_06 = {
     id = 3117
     provinces = { "x6640E1" }
+}
+
+STATE_INDIAN_OCEAN_LANE_07 = {
+    id = 7117
+    provinces = { "x2AA5A5" }
+}
+
+STATE_INDIAN_OCEAN_LANE_08 = {
+    id = 7110
+    provinces = { "x5D9AC8" }
+}
+
+STATE_CAPE_LEEUWIN = {
+    id = 7118
+    provinces = { "x3BC1E4" }
+}
+
+STATE_AUSTRALIAN_WEST_COAST = {
+    id = 7119
+    provinces = { "x4DD3F7" }
 }
 
 STATE_SEA_OF_OKHOTSK = {

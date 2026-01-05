@@ -8,6 +8,7 @@
 
 
 
+
     city = "xFDFB3F"
     port = "xAEFFEB"
     farm = "x8B56F5"
@@ -15,6 +16,7 @@
     wood = "x799B34"
     arable_land = 40
     arable_resources = { "building_wheat_farm" "building_livestock_ranch" "building_cotton_plantation" "building_vineyard" } #removed "building_tea_plantation" to reduce resources to 4, tea production is very large and tea productions seems to have been more important in Queensland
+
 
 
 
@@ -51,6 +53,7 @@ STATE_VICTORIA = {
     provinces = { "x068859" "x0AE686" "x0B39E0" "x0F45F1" "x11C030" "x157463" "x1B76C4" "x1BC4A6" "x225917" "x2FC68B" "x30B20D" "x3127E5" "x3AEC95" "x3C498D" "x3EB730" "x4696AD" "x49E501" "x4F1BC4" "x506E5E" "x5BCE47" "x5DBF9E" "x687ABB" "x749129" "x7A4A07" "x85CB5B" "x86A5AA" "x86C79A" "x880696" "x8C4823" "x904030" "x983611" "xA01399" "xA03BDF" "xA6F6C3" "xA72C70" "xAB42CE" "xADAFB1" "xB6C06E" "xB905E5" "xBC29F3" "xBD6CF3" "xBE99E0" "xC04012" "xC0CE2A" "xC21B54" "xC312BF" "xC47E1B" "xC60700" "xC67774" "xCA6547" "xCC9C60" "xCCBB53" "xCDE174" "xE0D3F9" "xE0D9AF" "xE4ADFB" "xE86E1F" "xE94E09" "xEA051E" "xF4CEF3" "xF4CF14" "xF835BF" }
     traits = { "state_trait_great_terroir" }
     prime_land = { x3127E5 x1BC4A6 xC60700 x068859 x904030 } #Some random provinces to increase arable land in the starting provinces of New South Wales (the colony)
+
 
 
 
@@ -217,7 +220,7 @@ STATE_WESTERN_AUSTRALIA = {
         depleted_type = "building_gold_mine"
         undiscovered_amount = 8
     }
-    naval_exit_id = 3123
+    naval_exit_id = 7119
 }
 
 STATE_NORTHERN_TERRITORY = {

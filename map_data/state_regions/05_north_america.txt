@@ -140,7 +140,9 @@ STATE_WASHINGTON = {
 
 
 
+
     port = "x7147A2" #Seattle. Could also be Tacoma, but I had to pick one. Switching is possible but would mean redrawing the railroad: the Northern Pacific ran from Wallula to Tacoma (Wala-Wala), while the Great Northern ran from Spokane to Seattle.
+
 
 
 
@@ -150,12 +152,15 @@ STATE_WASHINGTON = {
 
 
 
+
     mine = "xA92FD8" #Spokane
 
 
 
 
+
     wood = "xCECA62" #Fort Nisqually near Tacoma. Could be moved north to Everett or Mt Vernon if Tacoma is made the port
+
 
 
 
@@ -184,7 +189,9 @@ STATE_OREGON = {
 
 
 
+
     port = "x4A00D8" #Astoria. Could also be Portland. Would mean some effort to fit the harbour hub to the map
+
 
 
 
@@ -194,12 +201,15 @@ STATE_OREGON = {
 
 
 
+
     mine = "x9B28DC" #Pendleton. Used, but needed a hub in its rough position
 
 
 
 
+
     wood = "x516EE9" #Eugene
+
 
 
 
@@ -427,6 +437,7 @@ STATE_OKLAHOMA = {
 
 
 
+
     traits = { "state_trait_comancheria" "state_trait_indian_territory" }
     city = "xD6ADF2"
     farm = "xEB66DA"
@@ -646,7 +657,9 @@ STATE_OHIO = {
 
 
 
+
     farm = "xD0C0C0" #Toledo
+
 
 
 
@@ -670,7 +683,9 @@ STATE_OHIO = {
 
 
 
+
     wood = "xA73D1F" #Columbus
+
 
 
 
@@ -745,6 +760,7 @@ STATE_TENNESSEE = {
 
 
 
+
     traits = { "state_trait_mississippi_river" "state_trait_american_chestnuts" }
     city = "x454965"
     farm = "xC85BEB"
@@ -787,6 +803,7 @@ STATE_MISSISSIPPI = {
 
 
 
+
     traits = { "state_trait_mississippi_river" "state_trait_american_chestnuts" }
     city = "x4BD19A"
     port = "xE41653"
@@ -812,6 +829,7 @@ STATE_ALABAMA = {
     subsistence_building = "building_subsistence_farm"
     provinces = { "x00F000" "x12DEAF" "x168AE9" "x20B000" "x31044F" "x3837AA" "x3E5AFE" "x40A911" "x43AAC6" "x489DF2" "x492B79" "x53C044" "x5462C6" "x6510ED" "x656E7D" "x6D9811" "x807000" "x8E9218" "x913125" "x966D03" "x98A56F" "x9DD556" "xA50BE3" "xBD9F23" "xC8BB61" "xCC3103" "xCDE01B" "xE8D1CA" "xEE9129" }
     prime_land = { x492B79 x40A911 xCDE01B x6510ED xEE9129 xC8BB61 xBD9F23 x8E9218 x31044F } #Just so to make annexing the native minors more appealing
+
 
 
 
@@ -901,6 +919,7 @@ STATE_GEORGIA = {
 
 
 
+
     city = "xCD4C42"
     port = "x13B302"
     farm = "xABCC5E"
@@ -954,6 +973,7 @@ STATE_MARYLAND = {
     wood = "x708080"
     arable_land = 25
     arable_resources = { "building_maize_farm" "building_cotton_plantation" "building_tobacco_plantation" "building_vineyard" } #Removed "building_livestock_ranch" to reduce resources to 4
+
 
 
 
@@ -1124,6 +1144,7 @@ STATE_MASSACHUSETTS = {
 
 
 
+
         building_iron_mine = 18
         building_logging_camp = 14
         building_whaling_station = 8
@@ -1206,6 +1227,7 @@ STATE_NORTH_CAROLINA = {
 
 
 
+
     traits = { "state_trait_appalachian_coal" "state_trait_american_chestnuts" }
     city = "xA59977"
     port = "x00F040"
@@ -1214,6 +1236,7 @@ STATE_NORTH_CAROLINA = {
     wood = "x0F9A00"
     arable_land = 175
     arable_resources = { "building_maize_farm" "building_cotton_plantation" "building_tobacco_plantation" "building_vineyard" } #Removed "building_livestock_ranch" to reduce resources to 4
+
 
 
 
@@ -1281,6 +1304,7 @@ STATE_SOUTH_CAROLINA = {
     wood = "x31E5D4"
     arable_land = 100
     arable_resources = { "building_maize_farm" "building_cotton_plantation" "building_tobacco_plantation" "building_dye_plantation" } #Removed "building_livestock_ranch" to reduce resources to 4
+
 
 
 
@@ -1454,6 +1478,7 @@ STATE_UNGAVA = {
 
 
 
+
     }
     resource = {
         type = "building_iron_mine"
@@ -1517,6 +1542,7 @@ STATE_ALBERTA = {
 
 
 
+
     }
     resource = {
         type = "building_coal_mine"
@@ -1553,6 +1579,7 @@ STATE_BRITISH_COLUMBIA = {
         #building_whaling_station = 6			#Removed to reduce resources to 4
         building_fishing_wharf = 9
         building_fur_trading_post = 235 #Will be removed by event, so doesn't count for the 4 resource limit
+
 
 
 
@@ -1604,6 +1631,7 @@ STATE_SASKATCHEWAN = {
 
 
 
+
     }
     resource = {
         type = "building_oil_rig"
@@ -1628,6 +1656,7 @@ STATE_MANITOBA = {
         building_logging_camp = 27
         building_fishing_wharf = 5
         building_fur_trading_post = 25 #Will be removed by event, so doesn't count for the 4 resource limit
+
 
 
 
@@ -1724,6 +1753,7 @@ STATE_BERMUDA = {
     wood = "x169E2D"
     arable_land = 3
     arable_resources = { "building_dye_plantation" "building_tobacco_plantation" "building_sugar_plantation" } #Should have flower export. dye plantations as substitute
+
 
 
 
@@ -1858,6 +1888,7 @@ STATE_CALIFORNIA = {
 
 
 
+
     city = "x5EF8F5"
     port = "x1116AA"
     farm = "x7A5DA6"
@@ -1877,11 +1908,13 @@ STATE_CALIFORNIA = {
 
 
 
+
     capped_resources = {
         #Still 6 resources, but it is california, so meh, it should be valuable.
         building_logging_camp = 17
         building_fishing_wharf = 14
         building_fur_trading_post = 50 #Will be removed by event, so doesn't count for the 4 resource limit
+
 
 
 
@@ -2081,6 +2114,7 @@ STATE_YUCATAN = {
 
 
 
+
     capped_resources = {
         building_logging_camp = 24
         building_fishing_wharf = 9
@@ -2103,6 +2137,7 @@ STATE_MEXICO = {
     wood = "x10B080"
     arable_land = 160
     arable_resources = { "building_maize_farm" "building_tobacco_plantation" "building_coffee_plantation" "building_dye_plantation" } #Removed building_livestock_ranch because according to the economic history of mexico on wikipedia ranching had been driven north by this time.
+
 
 
 
@@ -2149,6 +2184,7 @@ STATE_VERACRUZ = {
 
 
 
+
     capped_resources = {
         #5 resources, 1 too many, but what to remove?
         building_logging_camp = 12
@@ -2156,6 +2192,7 @@ STATE_VERACRUZ = {
     }
     resource = {
         type = "building_sulfur_mine" #southeastern Salt Basin
+
 
 
 
@@ -2192,6 +2229,7 @@ STATE_GUERRERO = {
     wood = "x600DE6"
     arable_land = 120
     arable_resources = { "building_maize_farm" "building_coffee_plantation" "building_dye_plantation" "building_banana_plantation" } #Removed "building_tobacco_plantation" to reduce number of resources / doesn't seem important. According to wikipedia livestock raising is limited due to soil conditions. So removed it.
+
 
 
 
@@ -2247,6 +2285,7 @@ STATE_OAXACA = {
 
 
 
+
     capped_resources = {
         #building_coal_mine = 24 #Some coal mining here, but fields in the north are the most relevant
         #building_lead_mine = 15 #
@@ -2277,6 +2316,7 @@ STATE_JALISCO = {
     wood = "x907001"
     arable_land = 80
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" } #Nayarit currently main tobacco producing region
+
 
 
 
@@ -2326,6 +2366,7 @@ STATE_ZACATECAS = {
 
 
 
+
     capped_resources = {
 
     }
@@ -2356,6 +2397,7 @@ STATE_CHIAPAS = {
     wood = "x1030C0"
     arable_land = 40
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_banana_plantation" } #Sistal, removed building_dye_plantation in favour of adding it to Guatamala where it became an important industry by the 1820s.
+
 
 
 
