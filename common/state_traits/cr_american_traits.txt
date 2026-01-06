@@ -51,3 +51,16 @@ state_trait_indian_territory = {
 		
 	}
 }
+
+state_trait_great_american_desert = {
+	icon = "gfx/interface/icons/state_trait_icons/dry_climate.dds"
+	disabling_technologies = { "nitrogen_fixation" }
+	
+	modifier = {
+		state_migration_pull_mult = -0.25
+		state_colony_growth_speed_mult = -0.50
+		building_group_bg_agriculture_throughput_add = -0.15
+		building_group_bg_plantations_throughput_add = -0.15
+		
+	}
+}

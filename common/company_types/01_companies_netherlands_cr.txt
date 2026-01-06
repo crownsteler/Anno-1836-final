@@ -158,6 +158,7 @@ company_nederlandse_handelmaatschappij = {
 	extension_building_types = {
 		building_tobacco_plantation
 		building_banana_plantation
+		building_railway			#Later got into banking, providing financing for railways and textile industry amongst others
 	}
 
 	possible_prestige_goods = {
@@ -783,7 +784,7 @@ company_wilton_fijenoord = {
 	prosperity_modifier = {
 		unit_navy_defense_mult = 0.05 #specialised in naval repair, but couldn't find a suitable modifier
 		unit_combat_unit_type_submarine_offense_mult = 0.1
-		building_group_bg_sugar_plantations_throughput_add = 0.1 #Fijenoord used to be specialised in building sugar refining equipment. Weird, right.
+		building_sugar_plantation_throughput_add = 0.1 #Fijenoord used to be specialised in building sugar refining equipment. Weird, right.
 	}
 
 	ai_will_do = {
@@ -964,7 +965,8 @@ company_particuliere_landerijen = {
 	}
 	
 	prosperity_modifier = {
-		interest_group_ig_industrialists_pol_str_mult = 0.10		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.35
+		interest_group_ig_industrialists_pol_str_mult = 0.10
+		interest_group_ig_petty_bourgeoisie_pol_str_mult = 0.35
 	}	
 
 	ai_will_do = {

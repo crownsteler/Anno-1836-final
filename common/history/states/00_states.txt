@@ -6665,7 +6665,7 @@ STATES = {
 	s:STATE_CELEBES = {
 		create_state = {
 			country = c:SLW
-			owned_provinces = { x8080F0 xC04B6D x886F1C x4DA1DC x79D69A xE82A26 x10547F x0CA6B2 xC00170 xA22F3F xD12748 x08BE67 x613129 x7EF242 }
+			owned_provinces = { x8080F0 xC04B6D x886F1C x4DA1DC x79D69A xE82A26 x10547F x0CA6B2 xC00170 xA22F3F xD12748 x08BE67 x613129 x7EF242 xC0AA56 }
 		}
 		create_state = {
 			country = c:DEI
@@ -6744,9 +6744,8 @@ STATES = {
 	}
 	s:STATE_EAST_BORNEO = {
 		create_state = {
-			country = c:DEI
-			owned_provinces = { x9B7A4D x496AEF xDF0BCF xE9E984 x9C48FE xD5155A }
-			state_type = unincorporated
+			country = c:PDA
+			owned_provinces = { x9B7A4D x496AEF xDF0BCF x9C48FE xD5155A x2695FB }
 		}
 		create_state = {
 			country = c:BLG
@@ -6757,7 +6756,7 @@ STATES = {
 		create_state = {
 			country = c:BNJ
 			owned_provinces = { 
-				xDB778E x88A1EC x0A7250 x0596C2 x0A8175 x3660F5 x0ED6AA x0E858D x2695FB x38416A 
+				xDB778E x88A1EC x0A7250 x0A8175 x3660F5 x0ED6AA x38416A xE9E984 x7F2A32 
 			}
 		}
 		create_state = {
@@ -6783,7 +6782,7 @@ STATES = {
 		create_state = {
 			country = c:DYK
 			owned_provinces = {
-				xF8DD56 xB8D3B7 x0FFCAE xFBB6C2 x69AF77 x330B36 x3BE572 x6728CB xE49DDE x1DF499 x3EE142 x1F6009 x9ED038 x2D539F xEA35E9 x71A232 x8F8FDE x8D8D4A x8B9E4E x3E96AF xC72ED3 xC7410C x6A70EA x7BA8AD xFF0B89 x10645D x413B50 x8B8321 x76E306 xA67A6E xC29C28 xD735DB x638173 xE3C4F2 xFCFD83 xF9BDCB x8A69A7 xFF8539 xF37396 x029E85 
+				xF8DD56 xB8D3B7 x0FFCAE xFBB6C2 x69AF77 x330B36 x3BE572 x6728CB xE49DDE x1DF499 x3EE142 x1F6009 x9ED038 x2D539F xEA35E9 x71A232 x8F8FDE x8D8D4A x8B9E4E x3E96AF xC72ED3 xC7410C x6A70EA x7BA8AD xFF0B89 x10645D x413B50 x8B8321 x76E306 xA67A6E xC29C28 xD735DB x638173 xE3C4F2 xFCFD83 xF9BDCB x8A69A7 xFF8539 xF37396 x029E85 x0E858D x0596C2 
 			}
 		
 		}
@@ -6917,7 +6916,7 @@ STATES = {
 		}
 		create_state = {
 			country = c:SUL
-			owned_provinces = { x0180F0 x99D030 }
+			owned_provinces = { x0180F0 x99D030 x337B5C }
 		}
 		create_state = {
 			country = c:MGD

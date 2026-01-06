@@ -59,6 +59,9 @@
  region_hungary:0 "Hungary"
  region_patagonia:0 "Patagonia"
  
+ #Geographic Regions
+ geographic_region_indonesia: "Indonesia"
+ geographic_region_insulinda: "Insulinda"
  
  #States
  STATE_BRABANT:0 "Brabant"
@@ -509,6 +512,8 @@
  OTB_ADJ:0 "Otaibah"
  PAA:0 "Paakintyi"
  PAA_ADJ:0 "Paakintyi"
+ PDA: "Paser"   #Paser Darul Aman
+ PDA_ADJ: "Paseran"
  PIU:0 "Paiute"
  PIU_ADJ:0 "Paiute"
  PMN:0 "Paman"

@@ -425,6 +425,26 @@ LDK = { #absolute_monarchy
 	
 }
 
+PDA = { #Based on flag shown in Indonesian Wikipedia 
+	pattern = "pattern_solid.tga"
+	color1 = "yellow_dark"
+
+	
+	colored_emblem = {
+		texture = "ce_sun_radiant.dds"
+		color1 = "red_dark"	
+		color3 = "yellow"
+        instance = { position = { 0.5 0.50 } scale = { 1.0 1.0	} }	
+	}
+	
+	colored_emblem = {
+		texture = "ce_gandaberunda.dds"
+		color1 = "teal"	
+        instance = { position = { 0.5 0.5 } scale = { 0.33 0.33 } }	
+	}	
+	
+}
+
 PTU = { #Fictional
 	pattern = "pattern_solid.tga"
 	color1 = "yellow_dark"

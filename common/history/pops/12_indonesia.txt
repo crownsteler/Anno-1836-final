@@ -473,29 +473,24 @@
 				size = 2500
 			}
 		}
-		region_state:DEI = {
+		region_state:PDA = {	#Had about 30.000 people in 1853
 			create_pop = {
 				culture = malay #was bornean, but removed because why is there a difference here?
-				size = 10200
+				size = 15200
 			}
 			create_pop = {
 				pop_type = slaves
 				culture = malay #was bornean, but removed because why is there a difference here?
-				size = 2000
+				size = 4000
 			}
 			create_pop = {
 				culture = dayak
-				size = 5000
+				size = 2000
 			}
 			create_pop = {
 				culture = dayak
 				religion = sunni
 				size = 3000
-			}
-			create_pop = {
-				culture = dayak
-				religion = protestant
-				size = 500
 			}
 		}
 	}

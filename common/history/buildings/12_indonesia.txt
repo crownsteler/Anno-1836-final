@@ -379,19 +379,19 @@
 		}
 	}
 	s:STATE_EAST_BORNEO={
-		region_state:DEI={
-			create_building={
-				building="building_port"
-				add_ownership={
-					country={
-						country="c:DEI"
-						levels=1
-					}
-				}
-				reserves=1
-				activate_production_methods={ "pm_anchorage" }
-			}
-		}
+		#region_state:DEI={
+		#	create_building={
+		#		building="building_port"
+		#		add_ownership={
+		#			country={
+		#				country="c:DEI"
+		#				levels=1
+		#			}
+		#		}
+		#		reserves=1
+		#		activate_production_methods={ "pm_anchorage" }
+		#	}
+		#}
 		region_state:BLG={
 			#create_building={
 			#	building="building_barrack"
@@ -1444,12 +1444,25 @@
 	s:STATE_SUNDA_ISLANDS={
 		region_state:BIM={
 			create_building={
+				building="building_rice_farm"
+				add_ownership={
+					building={
+						type="building_rice_farm"
+						country="c:BIM"
+						levels=1
+						region="STATE_SUNDA_ISLANDS"
+					}
+				}
+				reserves=1
+				activate_production_methods={ "pm_simple_farming_building_rice_farm" "pm_no_secondary" "pm_tools_disabled"  }
+			}
+			create_building={
 				building="building_dye_plantation"
 				add_ownership={
 					building={
 						type="building_manor_house"
 						country="c:BIM"
-						levels=2
+						levels=1
 						region="STATE_SUNDA_ISLANDS"
 					}
 				}

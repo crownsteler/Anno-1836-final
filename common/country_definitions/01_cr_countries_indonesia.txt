@@ -79,6 +79,17 @@ DYK = {
 	capital = STATE_EAST_BORNEO
 }
 
+GTB= {
+	color = { 81 157 106 }
+	
+	country_type = unrecognized
+	
+	tier = principality
+	
+	cultures = { malay }
+	capital = STATE_EAST_BORNEO
+}
+
 LDK= {
 	color = { 107 201 217 }
 	
@@ -101,8 +112,8 @@ MTN= {
 	capital = STATE_WEST_BORNEO
 }
 
-GTB= {
-	color = { 81 157 106 }
+PDA= {
+	color = { 160 85 107 }
 	
 	country_type = unrecognized
 	

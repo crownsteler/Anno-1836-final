@@ -103,7 +103,7 @@ STATE_WEST_BORNEO = {
     farm = "x939612"
     mine = "x42973E"
     wood = "x6D4CDF"
-    arable_land = 28
+    arable_land = 38
     arable_resources = { "building_rice_farm" "building_tobacco_plantation" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 24
@@ -125,15 +125,16 @@ STATE_WEST_BORNEO = {
 STATE_EAST_BORNEO = {
     id = 543
     subsistence_building = "building_subsistence_farm"
-    provinces = { "x018070" "x0596C2" "x0A7250" "x0A8175" "x0E858D" "x0ED6AA" "x0FFCAE" "x10645D" "x13DD1D" "x1DF499" "x1F6009" "x2695FB" "x2D539F" "x330B36" "x3631B8" "x3660F5" "x38416A" "x3BE572" "x3E96AF" "x3EE142" "x413B50" "x496AEF" "x4D4D9B" "x4F7415" "x527DD4" "x672606" "x6728CB" "x69AF77" "x6A70EA" "x718F24" "x71A232" "x7BA8AD" "x88A1EC" "x8B8321" "x8B9E4E" "x8BD8AF" "x8D8D4A" "x8F8FDE" "x952BEE" "x9B7A4D" "x9C48FE" "x9ED038" "x9F4941" "xA57C37" "xAC440F" "xB8D3B7" "xC03A53" "xC72ED3" "xC7410C" "xCC69E2" "xD5155A" "xD6E8B0" "xDB778E" "xDF0BCF" "xDFE51D" "xE49DDE" "xE9E984" "xEA35E9" "xF6BB4E" "xF8DD56" "xFBB6C2" "xFD2E40" "xFF0B89" "x76E306" "xA67A6E" "xC29C28" "xD735DB" "x638173" "xE3C4F2" "xFCFD83" "xF9BDCB" "x8A69A7" "xFF8539" "xF37396" "x029E85" }
+    provinces = { "x018070" "x0596C2" "x0A7250" "x0A8175" "x0E858D" "x0ED6AA" "x0FFCAE" "x10645D" "x13DD1D" "x1DF499" "x1F6009" "x2695FB" "x2D539F" "x330B36" "x3631B8" "x3660F5" "x38416A" "x3BE572" "x3E96AF" "x3EE142" "x413B50" "x496AEF" "x4D4D9B" "x4F7415" "x527DD4" "x672606" "x6728CB" "x69AF77" "x6A70EA" "x718F24" "x71A232" "x7BA8AD" "x88A1EC" "x8B8321" "x8B9E4E" "x8BD8AF" "x8D8D4A" "x8F8FDE" "x952BEE" "x9B7A4D" "x9C48FE" "x9ED038" "x9F4941" "xA57C37" "xAC440F" "xB8D3B7" "xC03A53" "xC72ED3" "xC7410C" "xCC69E2" "xD5155A" "xD6E8B0" "xDB778E" "xDF0BCF" "xDFE51D" "xE49DDE" "xE9E984" "xEA35E9" "xF6BB4E" "xF8DD56" "xFBB6C2" "xFD2E40" "xFF0B89" "x76E306" "xA67A6E" "xC29C28" "xD735DB" "x638173" "xE3C4F2" "xFCFD83" "xF9BDCB" "x8A69A7" "xFF8539" "xF37396" "x029E85" "x7F2A32" }
     #impassable = { xFBB6C2 x69AF77 x330B36 x3BE572 x6728CB xE49DDE x1DF499 x3EE142 x1F6009 x9ED038 x2D539F x71A232 x8F8FDE x8D8D4A x8B9E4E x3E96AF xC72ED3 xC7410C x6A70EA x7BA8AD xFF0B89 x10645D x413B50 x8B8321 } #Removed because it messes with arable land allocation
+	prime_land = { xDB778E x88A1EC x0A7250 x0A8175 x3660F5 x018070 x9F4941 } #Added some prime land to Banjar. Random provinces. #And to Gunung Tabur and Sambaliung
     traits = { "state_trait_borneo_rainforest" "state_trait_severe_malaria" }
     city = "xDB778E"
     port = "x4D4D9B"
     farm = "xCC69E2"
     mine = "xAC440F"
     wood = "xF6BB4E"
-    arable_land = 48
+    arable_land = 60
     arable_resources = { "building_rice_farm" "building_tobacco_plantation" "building_banana_plantation" } #Rice, maise, coconuts, pepper, tobacco, coffee, sugar, rubber #Removed building_coffee_plantation because it is barely in the agroclimatic zone for it. Also makes room for spices when I get around to adding those.
 
 
@@ -486,7 +487,7 @@ STATE_CELEBES = {
     #STATE_NORTH_CELEBES
     id = 913
     subsistence_building = "building_subsistence_rice_farm"
-    provinces = { "x08BE67" "x0C7820" "x0CA6B2" "x10547F" "x4DA1DC" "x613129" "x79D69A" "x7A4DF4" "x7BD240" "x7EF242" "x8080F0" "x886F1C" "xA22F3F" "xC00170" "xC04B6D" "xD12748" "xE82A26" }
+    provinces = { "x08BE67" "x0C7820" "x0CA6B2" "x10547F" "x4DA1DC" "x613129" "x79D69A" "x7A4DF4" "x7BD240" "x7EF242" "x8080F0" "x886F1C" "xA22F3F" "xC00170" "xC04B6D" "xD12748" "xE82A26" "xC0AA56" }
     traits = { "state_trait_malaria" }
     city = "x0CA6B2"
     port = "x0C7820"

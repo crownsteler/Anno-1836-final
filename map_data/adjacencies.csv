@@ -170,12 +170,15 @@ x2ee734;x946a22;sea;-1;6769;1678;6768;1699;;
 x7a4df4;xf94d86;sea;-1;6919;1465;6930;1468;;Banggai-Taliabu
 xf94d86;xF0CE19;sea;-1;6952;1469;6957;1469;;Taliabu-Mangoli
 xf0ce19;xf88172;sea;-1;6968;1456;6976;1438;;Buru-Mangoli
+x0c7820;xc0aa56;sea;-1;6943;1549;6957;1592;;Manado (Celebes)-Talaud Islands
 xaf6607;x7a7a6e;sea;-1;7018;1443;7013;1475;;
 x908010;x58a658;sea;-1;6874;1394;6874;1403;;
 xb14d58;x63e362;sea;-1;6842;1376;6837;1388;;
 x93b883;xc0d06e;sea;-1;6750;1315;6760;1313;;Lombok-Sumbawa
 xEDDB5F;xF0B767;sea;-1;6891;1413;6891;1405;;Celebes-Buton
-xCED863;x0180F0;sea;-1;6812;1631;6828;1628;;North Borneo-Sulu islands
+xCED863;x337b5c;sea;-1;6812;1631;6828;1628;;North Borneo-Sulu islands
+x337b5c;x0180F0;sea;-1;6837;1630;6852;1648;;Sulu islands
+x0180F0;x99D030;sea;-1;6862;1648;6875;1661;;Sulu islands
 x496aef;x9b7a4d;sea;-1;6738;1432;6743;1429;;Borneo-Laut Island
 x4ebc79;x72c072;sea;-1;2320;2087;2332;2094;;
 x1e761e;x535b49;sea;-1;2244;1957;2314;1933;;
@@ -339,7 +342,7 @@ xba6e55;xf1dbf3;sea;-1;813;857;821;857;;Tahiti
 x643424;xba6e55;sea;-1;806;850;810;857;;Tahiti
 x37058f;xb19fd2;sea;-1;5286;1791;5261;1780;;
 x1b9953;xb0f0b0;sea;-1;6819;1769;6830;1780;;
-x99d030;xf0014a;sea;-1;6878;1664;6879;1671;;
+x99d030;xf0014a;sea;-1;6878;1664;6879;1671;;Mindanao-Sulu Islands
 x007040;xc58daf;sea;-1;2366;2346;2360;2355;;Outer Banks
 xad6f70;xfc7f77;sea;-1;3521;3593;3522;3587;;Greenland
 x20083f;x705adb;sea;-1;3555;3575;3555;3570;;Greenland

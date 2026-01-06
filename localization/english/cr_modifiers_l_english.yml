@@ -64,6 +64,7 @@
  state_trait_cr_humboldt_current:0 "Humboldt Current"
  state_trait_cr_gateway_to_the_mississippi:0 "The Mississippi Gateway"
  state_trait_cr_cerrado:0 "Cerrado"
+ state_trait_great_american_desert: "The Great American Desert"
  
  ### Movement Modifier Type Definitions ###
  state_pop_support_movement_carlists_add: "$movement_carlists$ $concept_pop$ Attraction"
