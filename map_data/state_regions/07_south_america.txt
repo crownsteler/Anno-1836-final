@@ -1160,9 +1160,10 @@ STATE_ATACAMA = {
         undiscovered_amount = 24
     }
     resource = {
-        type = "building_gold_mine"
+        type = "building_gold_field"
         discovered_amount = 2
         undiscovered_amount = 3
+		depleted_type = "building_gold_mine"
     }
     resource = {
         type = "building_copper_mine"
