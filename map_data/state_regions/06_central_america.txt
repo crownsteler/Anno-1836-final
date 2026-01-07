@@ -33,9 +33,6 @@ STATE_GUATEMALA = {
     wood = "xFA4B41"
     arable_land = 40
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_sugar_plantation" "building_banana_plantation" "building_dye_plantation" } #spices
-
-
-
     capped_resources = {
         #building_minor_metals_mine = 30 #nickel
         building_logging_camp = 17
@@ -60,9 +57,6 @@ STATE_HONDURAS = {
     wood = "xC77E76"
     arable_land = 35
     arable_resources = { "building_maize_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_banana_plantation" } #palm oil
-
-
-
     capped_resources = {
         building_logging_camp = 15
         building_fishing_wharf = 8
@@ -91,9 +85,6 @@ STATE_NICARAGUA = {
     wood = "x9CDB2B"
     arable_land = 50
     arable_resources = { "building_maize_farm" "building_coffee_plantation" "building_cotton_plantation" "building_sugar_plantation" "building_banana_plantation" } #palm oil
-
-
-
     capped_resources = {
         building_logging_camp = 14
         building_fishing_wharf = 5
@@ -117,9 +108,6 @@ STATE_COSTA_RICA = {
     wood = "x478109"
     arable_land = 15
     arable_resources = { "building_maize_farm" "building_coffee_plantation" "building_sugar_plantation" "building_banana_plantation" } #palm oil
-
-
-
     capped_resources = {
         building_logging_camp = 8
         building_fishing_wharf = 3
@@ -169,7 +157,7 @@ STATE_HAITI = {
     id = 344
     subsistence_building = "building_subsistence_farm"
     provinces = { "x0E35C0" "x1A20A4" "x2FC1FC" "x4FE008" "xB0B001" "xC6C663" "xEA2C2D" }
-    #traits = { "state_trait_malaria" }
+    traits = { "state_trait_volcanic_soil" }
     city = "xC6C663"
     port = "x1A20A4"
     farm = "x2FC1FC"
@@ -177,10 +165,6 @@ STATE_HAITI = {
     wood = "x4FE008"
     arable_land = 35
     arable_resources = { "building_rice_farm" "building_coffee_plantation" "building_cotton_plantation" "building_sugar_plantation" "building_banana_plantation" "building_dye_plantation" } #banana = cacao #building_dye_plantation = logwood, a dyewood and the only noteworthy wood exported from Haiti in the period
-
-
-
-
     capped_resources = {
         #building_logging_camp = 4	#Only wood exported from Haiti was logwood, a dyewood.
         building_fishing_wharf = 8
@@ -196,7 +180,7 @@ STATE_SANTO_DOMINGO = {
     id = 345
     subsistence_building = "building_subsistence_farm"
     provinces = { "x1785E8" "x317080" "x41A862" "x7252EC" "x877F90" "x907A0C" "x961483" "xACBDD9" "x91496D" }
-    #traits = { "state_trait_malaria" }
+    traits = { "state_trait_volcanic_soil" }
     city = "x7252EC"
     port = "x91496D"
     farm = "x1785E8"
@@ -232,10 +216,6 @@ STATE_PUERTO_RICO = {
     wood = "xB07080"
     arable_land = 22
     arable_resources = { "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" } #spices, cacao, removed building_rice_farm to reduce resources to 4. Sorry Puerto Rico!
-
-
-
-
     capped_resources = {
         building_fishing_wharf = 4
     }
@@ -257,9 +237,6 @@ STATE_BAHAMAS = {
     mine = "x4EBC79"
     arable_land = 5
     arable_resources = { "building_sugar_plantation" "building_banana_plantation" } #Banana = pineapple
-
-
-
     capped_resources = {
         building_fishing_wharf = 5
     }
@@ -271,6 +248,7 @@ STATE_WEST_INDIES = {
     subsistence_building = "building_subsistence_fishing_village"
     provinces = { "x30B09D" "x30F080" "x335389" "x33895B" "x43853B" "x445B6C" "x446C63" "x5299CA" "x606060" "x707080" "x70F001" "x89334D" "x89337A" "x9C52CA" "xA79640" "xAB37B5" "xD496B1" "xECC061" "xF0F001" }
     prime_land = { "x9C52CA" "x33895B" "x30F080" }
+    traits = { "state_trait_volcanic_soil" }
     city = "x9C52CA"
     port = "x5299CA"
     farm = "x30F080"
@@ -292,7 +270,7 @@ STATE_JAMAICA = {
     id = 349
     subsistence_building = "building_subsistence_farm"
     provinces = { "x1E761E" "x535B49" "x7070B8" }
-    traits = { "state_trait_natural_harbors" }
+    traits = { "state_trait_kingston_harbour" "state_trait_volcanic_soil" }
     city = "x7070B8"
     port = "x7070B8"
     farm = "x535B49"
@@ -314,18 +292,21 @@ STATE_JAMAICA = {
     }
     naval_exit_id = 3061
 }
+
 #Cuban coal was of such poor quality that it couldn't be used in any process -https://www.mprl-series.mpg.de/proceedings/10/12/index.html
+
+
 STATE_WESTERN_CUBA = {
     id = 350
     subsistence_building = "building_subsistence_farm"
-    provinces = { "x4DD008" "x61FC10" "xB325C7" "xDCAB5D" "xFCDEED" "xF3F2C9" "x4432A9" }
-    traits = { "state_trait_natural_harbors" }
+    provinces = { "x4DD008" "x61FC10" "xB325C7" "xDCAB5D" "xF3F2C9" "xFCDEED" "x4432A9" }
+    traits = { "state_trait_havana_harbor" "state_trait_tierra_roja" }
     city = "xFCDEED"
     port = "x4432A9"
     farm = "xB325C7"
     mine = "xB325C7"
     wood = "xF3F2C9"
-    arable_land = 105
+    arable_land = 92
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 7
@@ -344,43 +325,22 @@ STATE_WESTERN_CUBA = {
     naval_exit_id = 3060
 }
 
-STATE_CENTRAL_CUBA = {
-    id = 3350
-    subsistence_building = "building_subsistence_farm"
-    provinces = { "xC3EB7D" "xFE4123" "xA70607" "x58C211" "x20EFEA" "xC464AE" "x9957D8" "xEBE1C7" "x152D1C" "xD810EC" "x8D4790" }
-    traits = { "state_trait_natural_harbors" }
-    city = "xFCDEED"
-    port = "x8D4790"
-    farm = "x152D1C"
-    mine = "x69C041"
-    wood = "x58C211"
-    arable_land = 105
-    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
-    capped_resources = {
-        building_logging_camp = 8
-        building_fishing_wharf = 7
-    }
-    naval_exit_id = 3061
-}
-
 STATE_EASTERN_CUBA = {
     id = 3351
     subsistence_building = "building_subsistence_farm"
-    provinces = { "x0DA38C" "x30B001" "x519343" "xB48FF1" "xE70FA4" "x69C041" }
-    traits = { "state_trait_natural_harbors" }
+    provinces = { "x0DA38C" "x30B001" "x519343" "x69C041" "xB48FF1" "xE70FA4"  }
+    traits = { "state_trait_guantanamo_bay" "state_trait_sierra_maestra" }
     city = "xB48FF1"
     port = "xE70FA4"
     farm = "x519343"
     mine = "x30B001"
     wood = "x69C041"
-    arable_land = 105
+    arable_land = 40
     arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
     capped_resources = {
         building_logging_camp = 10
         building_fishing_wharf = 7
         building_copper_mine = 13 #El Cobre
-
-
 
     }
     resource = {
@@ -391,3 +351,21 @@ STATE_EASTERN_CUBA = {
     naval_exit_id = 3061
 }
 
+STATE_CENTRAL_CUBA = {
+    id = 3350
+    subsistence_building = "building_subsistence_farm"
+    provinces = { "xC3EB7D" "xFE4123" "xA70607" "x58C211" "x20EFEA" "xC464AE" "x9957D8" "xEBE1C7" "x152D1C" "xD810EC" "x8D4790" }
+    traits = { "state_trait_tierra_roja" "state_trait_camaguey_plains" }
+    city = "xFCDEED"
+    port = "x8D4790"
+    farm = "x152D1C"
+    mine = "x69C041"
+    wood = "x58C211"
+    arable_land = 71
+    arable_resources = { "building_rice_farm" "building_livestock_ranch" "building_coffee_plantation" "building_tobacco_plantation" "building_sugar_plantation" "building_banana_plantation" }
+    capped_resources = {
+        building_logging_camp = 8
+        building_fishing_wharf = 7
+    }
+    naval_exit_id = 3061
+}
