@@ -288,3 +288,37 @@ cr_not_paid_noble_debt_negative = {
 	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_negative.dds
 	interest_group_approval_add = -1
 }
+
+#Netherlands
+cr_sint_maarten_border_patrol_colonial = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_institution_cost_institution_colonial_affairs_mult = 0.10
+}
+cr_sint_maarten_border_patrol_police = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_institution_cost_institution_police_mult = 0.10
+}
+cr_sint_maarten_border_patrol_generic = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_bureaucracy_mult = -0.05
+}
+
+cr_sint_maarten_border_patrol_movement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	political_movement_pop_attraction_mult = 0.05
+}
+
+cr_sint_maarten_slavery_abolished_movement = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	political_movement_radicalism_add = 0.05
+}
+
+cr_sint_maarten_emancipator = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_documents_negative.dds
+	country_prestige_mult = 0.025
+}
+
+cr_resettling_freed_slaves = {
+	icon = gfx/interface/icons/timed_modifier_icons/modifier_flag_positive.dds
+	state_colony_growth_speed_mult = 0.10
+}

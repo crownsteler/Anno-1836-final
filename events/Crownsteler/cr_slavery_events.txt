@@ -1,0 +1,1080 @@
+﻿namespace = cr_slavery_events
+
+cr_slavery_events.10 = { #A Tale of Two Islands
+	type = country_event
+	placement = p:x30b09d
+
+	title = cr_slavery_events.10.t
+	desc = cr_slavery_events.10.desc
+
+	flavor = cr_slavery_events.10.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	event_image = {
+		video = "southamerica_slaves_night"
+	}
+	
+	duration = 3
+
+	trigger = {
+		c:NET ?= this
+		NOT = {
+			has_law_or_variant = law_type:law_slavery_banned
+		}
+		any_scope_state = {
+			state_region = s:STATE_WEST_INDIES
+			any_scope_pop = {
+				is_pop_type = slaves
+			}
+		}
+		c:FRA ?= {
+			has_law_or_variant = law_type:law_slavery_banned
+			any_scope_state = {
+				state_region = s:STATE_WEST_INDIES
+			}
+		}
+	}
+
+	immediate = {
+		save_scope_as = slave_country
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_WEST_INDIES
+				#any_scope_pop = {
+				#	is_pop_type = slaves
+				#}
+			}
+			save_scope_as = slavery_state
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_anti_slavery
+			}
+			save_scope_as = abolitionist_movement
+		}
+		random_political_movement = {
+			limit = {
+				is_political_movement_type = movement_pro_slavery
+			}
+			save_scope_as = pro_slavery_movement
+		}
+		c:FRA ?= {
+			save_scope_as = slave_emancipator
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_WEST_INDIES
+				}
+				save_scope_as = emancipated_state
+			}
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.10.a	#Increased border patrols
+		if = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_colonial_affairs
+					value >= 1
+				}
+			}
+			add_modifier = {
+				name = cr_sint_maarten_border_patrol_colonial
+				days = normal_modifier_time
+			}
+		}
+		else_if = {
+			limit = {
+				institution_investment_level = {
+					institution = institution_police
+					value >= 1
+				}
+			}
+			add_modifier = {
+				name = cr_sint_maarten_border_patrol_police
+				days = normal_modifier_time
+			}
+		}
+		else = {
+			add_modifier = {
+				name = cr_sint_maarten_border_patrol_generic
+				days = normal_modifier_time
+			}
+		}
+		scope:slavery_state = {
+			add_radicals_in_state = {
+				value = very_large_radicals
+				pop_type = slaves
+			}
+		}
+		scope:abolitionist_movement= { 
+			add_modifier = {
+				name = cr_sint_maarten_border_patrol_movement
+				days = normal_modifier_time
+			}
+		}
+		scope:slavery_state = {
+			every_scope_pop = {
+				limit = {
+					is_pop_type = slaves
+				}
+				move_partial_pop = {
+					state = scope:emancipated_state
+					population_ratio = 0.25
+				}
+			}
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = 15
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = 20
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value > neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = 10
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value > neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = -20
+			}
+			modifier = {
+				trigger = {
+					scope:abolitionist_movement = {
+						political_movement_radicalism >50
+					}
+				}
+				add = -15
+			}
+			modifier = {
+				trigger = {
+					scope:abolitionist_movement = {
+						political_movement_radicalism >75
+					}
+				}
+				add = -20
+			}
+			modifier = {
+				trigger = {
+					scope:pro_slavery_movement = {
+						political_movement_radicalism >50
+					}
+				}
+				add = 15
+			}
+			modifier = {
+				trigger = {
+					scope:pro_slavery_movement = {
+						political_movement_radicalism >75
+					}
+				}
+				add = 20
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_pro_slavery
+					}
+				}
+				add = 20
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_abolitionist
+					}
+				}
+				add = -19
+			}
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.10.b
+		custom_tooltip = {
+			text = cr_slaves_freed_in_state_tt
+			scope:slavery_state = {
+				every_scope_pop = {
+					limit = {
+						is_pop_type = slaves
+					}
+					change_poptype = pop_type:laborers
+				}
+			}
+		}
+		scope:pro_slavery_movement = { 
+			add_modifier = {
+				name = cr_sint_maarten_slavery_abolished_movement
+				days = normal_modifier_time
+			}
+		}
+		scope:slavery_state = {
+			add_radicals_in_state = {
+				value = large_radicals
+				pop_type = aristocrats
+			}
+			every_scope_pop = {
+				limit = {
+					is_pop_type = slaves
+				}
+				move_partial_pop = {
+					state = scope:emancipated_state
+					population_ratio = 0.15
+				}
+			}
+		}
+		scope:slave_emancipator = {
+			trigger_event = {
+				id = cr_slavery_events.11
+				days = 7
+			}
+		}
+		
+		default_option = yes
+		ai_chance = {
+			base = 60
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = -15
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = -20
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value > neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = -10
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value > neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = 20
+			}
+			modifier = {
+				trigger = {
+					scope:abolitionist_movement = {
+						political_movement_radicalism >50
+					}
+				}
+				add = 15
+			}
+			modifier = {
+				trigger = {
+					scope:abolitionist_movement = {
+						political_movement_radicalism >75
+					}
+				}
+				add = 20
+			}
+			modifier = {
+				trigger = {
+					scope:pro_slavery_movement = {
+						political_movement_radicalism >50
+					}
+				}
+				add = -15
+			}
+			modifier = {
+				trigger = {
+					scope:pro_slavery_movement = {
+						political_movement_radicalism >75
+					}
+				}
+				add = -20
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_pro_slavery
+					}
+				}
+				add = -19
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_abolitionist
+					}
+				}
+				add = 20
+			}
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.10.c
+		trigger = { is_owed_obligation_by = scope:slave_emancipator }
+		scope:slave_emancipator = {
+			trigger_event = {
+				id = cr_slavery_events.12
+			}
+		}
+		custom_tooltip =  cr_slavery_events.10.c_tt1
+		
+		ai_chance = {
+			base = 30
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = 35
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value > neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = 20
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value > neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = -20
+			}
+			modifier = {
+				trigger = {
+					scope:abolitionist_movement = {
+						political_movement_radicalism >50
+					}
+				}
+				add = -15
+			}
+			modifier = {
+				trigger = {
+					scope:abolitionist_movement = {
+						political_movement_radicalism >75
+					}
+				}
+				add = -20
+			}
+			modifier = {
+				trigger = {
+					scope:pro_slavery_movement = {
+						political_movement_radicalism >50
+					}
+				}
+				add = 35
+			}
+			modifier = {
+				trigger = {
+					scope:pro_slavery_movement = {
+						political_movement_radicalism >75
+					}
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_pro_slavery
+					}
+				}
+				add = 30
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_abolitionist
+					}
+				}
+				add = -25
+			}
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.10.c
+		trigger = { NOT = { is_owed_obligation_by = scope:slave_emancipator } }
+		scope:slave_emancipator = {
+			trigger_event = {
+				id = cr_slavery_events.13
+				#days = 7
+			}
+		}
+		custom_tooltip = cr_slavery_events.10.c_tt2
+		
+		ai_chance = {
+			base = 20
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = 35
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value > neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = 20
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value > neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = -20
+			}
+			modifier = {
+				trigger = {
+					scope:abolitionist_movement = {
+						political_movement_radicalism >50
+					}
+				}
+				add = -15
+			}
+			modifier = {
+				trigger = {
+					scope:abolitionist_movement = {
+						political_movement_radicalism >75
+					}
+				}
+				add = -20
+			}
+			modifier = {
+				trigger = {
+					scope:pro_slavery_movement = {
+						political_movement_radicalism >50
+					}
+				}
+				add = 35
+			}
+			modifier = {
+				trigger = {
+					scope:pro_slavery_movement = {
+						political_movement_radicalism >75
+					}
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_pro_slavery
+					}
+				}
+				add = 30
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_abolitionist
+					}
+				}
+				add = -25
+			}
+		}
+	}
+}
+
+cr_slavery_events.11 = { #A Tale of Two Islands - Slave Emancipator
+	type = country_event
+	placement = p:xecc061
+
+	title = cr_slavery_events.11.t
+	desc = cr_slavery_events.11.desc
+
+	flavor = cr_slavery_events.11.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	event_image = {
+		video = "southamerica_slave_chains"
+	}
+	
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = cr_slavery_events.11.a
+		custom_tooltip = cr_slavery_events.11.a_tt
+		default_option = yes
+		add_modifier = {
+			days = normal_modifier_time
+			name = cr_sint_maarten_emancipator
+		}
+		ai_chance = {
+			base = 80
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.11.b
+		custom_tooltip = cr_slavery_events.11.a_tt
+		add_loyalists = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		ai_chance = {
+			base = 20
+			modifier = {
+				trigger = {
+					ig:ig_intelligentsia = {
+						ig_approval < 0
+					}
+				}
+				add = 40
+			}
+		}
+		
+	}
+}
+
+
+cr_slavery_events.12 = { #A Tale of Two Islands - Obligation used
+	type = country_event
+	placement = p:xecc061
+
+	title = cr_slavery_events.12.t
+	desc = cr_slavery_events.12.desc
+
+	flavor = cr_slavery_events.12.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	event_image = {
+		video = "southamerica_slave_chains"
+	}
+	
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+		set_owes_obligation_to = {
+			country = scope:slave_country
+			setting = no
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.12.a
+		custom_tooltip = cr_slavery_events.12.a_tt
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		show_as_tooltip = {
+			set_owes_obligation_to = {
+				country = scope:slave_country
+				setting = no
+			}
+		}
+		
+	}
+}
+
+
+cr_slavery_events.13 = { #A Tale of Two Islands - No Obligation used
+	type = country_event
+	placement = p:xecc061
+
+	title = cr_slavery_events.12.t
+	desc = cr_slavery_events.13.desc
+
+	flavor = cr_slavery_events.13.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	event_image = {
+		video = "southamerica_slaves_night"
+	}
+	
+	duration = 3
+
+	trigger = {
+	}
+
+	immediate = {
+	}
+
+	option = {
+		name = cr_slavery_events.13.a
+		custom_tooltip = cr_slavery_events.13.a_tt
+		default_option = yes
+		scope:slavery_state = {
+			every_scope_pop = {
+				limit = {
+					is_pop_type = slaves
+				}
+				move_partial_pop = {
+					state = scope:emancipated_state
+					population_ratio = 0.5
+				}
+			}
+		}
+		change_relations = {
+			country = scope:slave_country
+			value = -15
+		}
+		scope:slave_country = { post_notification = cr_slaves_not_returned_sint_maarten }
+		ai_chance = {
+			base = 70
+			modifier = {
+				trigger = {
+					has_attitude = {
+						who = scope:relevant_country
+						attitude = belligerent
+					}
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					has_attitude = {
+						who = scope:relevant_country
+						attitude = domineering
+					}
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					has_attitude = {
+						who = scope:relevant_country
+						attitude = antagonistic
+					}
+				}
+				add = 200
+			}
+			modifier = {
+				trigger = {
+					"relations(scope:slave_country)" <= relations_threshold:poor
+				}
+				add = 40
+			}
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.13.b
+		change_relations = {
+			country = scope:slave_country
+			value = 5
+		}
+		custom_tooltip = cr_slavery_events.13.b_tt
+		add_radicals = {
+			value = small_radicals
+			interest_group = ig:ig_intelligentsia
+		}
+		scope:slave_country = { post_notification = cr_slaves_returned_sint_maarten }
+		ai_chance = {
+			base = 30
+			modifier = {
+				trigger = {
+					has_attitude = {
+						who = scope:relevant_country
+						attitude = genial
+					}
+				}
+				add = 15
+			}
+			modifier = {
+				trigger = {
+					has_attitude = {
+						who = scope:relevant_country
+						attitude = cooperative
+					}
+				}
+				add = 40
+			}
+			modifier = {
+				trigger = {
+					has_attitude = {
+						who = scope:relevant_country
+						attitude = protective
+					}
+				}
+				add = 10
+			}
+			modifier = {
+				trigger = {
+					"relations(scope:slave_country)" > relations_threshold:cordial
+				}
+				add = 30
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_powerful = yes
+					}				
+				}
+				add = 15
+			}
+			modifier = {
+				trigger = {
+					any_interest_group = {
+						law_stance = {
+							law = law_type:law_slavery_banned
+							value < neutral
+						}
+						is_in_government = yes
+					}				
+				}
+				add = 25
+			}
+			modifier = {
+				trigger = {
+					ruler = {
+						has_ideology = ideology:ideology_pro_slavery
+					}
+				}
+				add = 40
+			}
+		}
+	}
+}
+
+
+cr_slavery_events.20 = { #A Fate of the Elizia - Founding of Libreville, Gabon
+	type = country_event
+	placement = p:x6b44de
+
+	title = cr_slavery_events.20.t
+	desc = cr_slavery_events.20.desc
+
+	flavor = cr_slavery_events.20.f
+	on_created_soundeffect = "event:/SFX/UI/Alerts/event_appear"
+
+	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
+
+	event_image = {
+		video = "southamerica_slave_chains"
+	}
+	
+	duration = 3
+
+	trigger = {	#Trigger should include France being part of the West African Slavery Patrol. But that isn't a thing just now. Would be best if the trigger included a French ship present along the coast of West Africa or Congo.
+		c:FRA ?= this
+		year > 1840
+		country_rank >= rank_value:great_power
+		NOT = { has_journal_entry = je_scramble_for_africa }
+		OR = {
+			has_law_or_variant = law_type:law_slavery_banned
+			has_law_or_variant = law_type:law_colonial_slavery
+		}
+		any_scope_state = {
+			is_in_geographic_region = geographic_region_subsaharan_africa
+		}
+		#has_interest_marker_in_region = sr:region_biafra #disabled as the event offers multiple choices which aren't restricted to settling Libreville. Could be enabled to make it more restrictive.
+		c:BRZ ?= {	#If the USA gets a similar slave trade JE, this event could also refernce that one.
+			has_journal_entry = je_matter_of_slavery 
+			has_modifier = unrestricted_slave_trade_modifier
+		}
+		
+	}
+
+	immediate = {
+		save_scope_as = slave_liberator
+		c:BRZ = {
+			save_scope_as = slave_trading_country
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_IVORY_COAST
+				}
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_IVORY_COAST
+				}
+				save_scope_as = existing_african_colony
+			}
+		}
+		else = {
+			random_scope_state = {
+				limit = {
+					is_in_geographic_region = geographic_region_subsaharan_africa
+				}
+				save_scope_as = existing_african_colony
+			}		
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_WEST_INDIES
+				}
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_WEST_INDIES
+				}
+				save_scope_as = caribbean_colony
+			}
+		}
+		if = {
+			limit = {
+				any_scope_state = {
+					state_region = s:STATE_CAYENNE
+				}
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_CAYENNE
+				}
+				save_scope_as = guyana_colony
+			}
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.20.a	#Found Libreville
+		highlighted_option = yes
+		trigger = {
+			OR = {
+				has_interest_marker_in_region = sr:region_biafra
+				is_ai = yes
+			}
+			p:x6B44DE.owner = { is_country_type = decentralized }
+		}
+		s:STATE_GABON = {
+			set_owner_of_provinces = {
+				country = scope:slave_liberator
+				provinces = {
+					x6B44DE
+				}
+			}
+		}
+		
+		ai_chance = {
+			base = 30
+			modifier = {
+				trigger = {
+					has_interest_marker_in_region = sr:region_biafra
+				}
+				add = 40
+			}
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.20.b	#Resettle them in exiting African colony
+		default_option = yes
+		scope:existing_african_colony = {
+			add_modifier = {
+				name = cr_resettling_freed_slaves
+				days = short_modifier_time
+			}
+			save_scope_as = slave_settlement_state
+		}
+		scope:slave_trading_country = {
+			post_notification = cr_brazil_slave_ship_captured_libreville
+		}
+		ai_chance = {
+			base = 15
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.20.c	#Resettle them in the French West Indies
+		trigger = {
+			exists = scope:caribbean_colony
+		}
+		scope:caribbean_colony = {
+			create_pop = {
+				culture = afro_antillean	#Vili people, related to the Kongo people, but decided on Afro Antillean to reduce POP proliferation
+				pop_type = laborers
+				size = 500
+			}
+			save_scope_as = slave_settlement_state
+		}
+		scope:slave_trading_country = {
+			post_notification = cr_brazil_slave_ship_captured_libreville
+		}
+		ai_chance = {
+			base = 10
+		}
+	}
+
+	option = {
+		name = cr_slavery_events.20.d	#Resettle them in the French Guyana
+		trigger = {
+			exists = scope:guyana_colony
+		}
+		scope:guyana_colony = {
+			create_pop = {
+				culture = afro_antillean #Vili people, related to the Kongo people, but decided on Afro Antillean to reduce POP proliferation
+				pop_type = laborers
+				size = 500
+			}
+			save_scope_as = slave_settlement_state
+		}
+		scope:slave_trading_country = {
+			post_notification = cr_brazil_slave_ship_captured_libreville
+		}
+		ai_chance = {
+			base = 5
+		}
+	}
+	after = {
+		random_scope_state = {
+			limit = {
+				state_region = s:STATE_GABON
+				NOT = { 
+					any_scope_building = {
+						is_building_type = building_port
+					}
+				}
+			}
+			create_building = {
+				building = building_port
+				level = 1
+			}
+		}
+		if = {
+			limit = {
+				scope:slave_settlement_state ?= { exists = no }
+			}
+			random_scope_state = {
+				limit = {
+					state_region = s:STATE_GABON
+				}
+				save_scope_as = slave_settlement_state
+			}
+			scope:slave_trading_country = {
+				post_notification = cr_brazil_slave_ship_captured_libreville
+			}
+		}
+	}
+}

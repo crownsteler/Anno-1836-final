@@ -111,3 +111,17 @@
  notification_cr_don_carlos_exile_supported_name: "Spanish Pretender Finds Support"
  notification_cr_don_carlos_exile_supported_desc: "Despite losing his was for the throne, [SCOPE.sCountry('don_carlos_exile_country').GetName] has decided to provide refuge and support to Don Carlos, the absolutist [SCOPE.sCountry('spain').GetName] pretender."
  notification_cr_don_carlos_exile_supported_tooltip: "#header $notification_cr_don_carlos_exile_supported_name$#!\n$TOOLTIP_DELIMITER$\n$notification_cr_don_carlos_exile_supported_desc$"
+ 
+ notification_cr_slaves_returned_sint_maarten_name: "[SCOPE.sCountry('slave_emancipator').GetName] returns slaves to the [SCOPE.sState('slavery_state').GetName]!"
+ notification_cr_slaves_returned_sint_maarten_desc: "France has acquiest to our request to return the runaway slaves to #Sint Maarten#!, increasing our relations and preserving our workforce."
+ notification_cr_don_carlos_exile_supported_tooltip: "#header $notification_cr_slaves_returned_sint_maarten_name$#!\n$TOOLTIP_DELIMITER$\n$notification_cr_slaves_returned_sint_maarten_desc$"
+ 
+ notification_cr_slaves_not_returned_sint_maarten_name: "[SCOPE.sCountry('slave_emancipator').GetName] rejects return of slaves to the [SCOPE.sState('slavery_state').GetName]!"
+ notification_cr_slaves_not_returned_sint_maarten_desc: "France has rejected our request to return the runaway slaves to #Sint Maarten#!, decreasing our relations and causing a large number of [GetPopType('slaves').GetName] to move to [SCOPE.sState('emancipated_state').GetName]."
+ notification_cr_slaves_not_returned_sint_maarten_tooltip: "#header $notification_cr_slaves_not_returned_sint_maarten_name$#!\n$TOOLTIP_DELIMITER$\n$notification_cr_slaves_not_returned_sint_maarten_desc$"
+ 
+ notification_cr_brazil_slave_ship_captured_libreville_name: "Intercepted [SCOPE.sCountry('slave_trading_country').GetAdjectiveNoFormatting] Slaver’s Resettled."
+ notification_cr_brazil_slave_ship_captured_libreville_desc: "A [SCOPE.sCountry('slave_trading_country').GetAdjectiveNoFormatting] slave vessel intercepted by [SCOPE.sCountry('slave_liberator').GetAdjectiveNoFlag] patrols has seen its human cargo removed and resettled in [SCOPE.sState('slave_settlement_state').GetName]. The [SCOPE.sCountry('slave_liberator').GetAdjectiveNoFormatting] authorities report that the individuals have been placed under free status, beyond the reach of further claims.\n\nThe incident is the latest in a growing pattern of foreign interference in the Atlantic trade, underscoring the increasing risks faced by [SCOPE.sCountry('slave_trading_country').GetAdjectiveNoFormatting] shipping abroad."
+ notification_cr_brazil_slave_ship_captured_libreville_tooltip: "#header $notification_cr_brazil_slave_ship_captured_libreville_name$#!\n$TOOLTIP_DELIMITER$\n$notification_cr_brazil_slave_ship_captured_libreville_desc$"
+ 
+ 

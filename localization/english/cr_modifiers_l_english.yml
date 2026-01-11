@@ -321,6 +321,7 @@
  cr_cape_expansion_administrative_border:0 "Administrating expanding colonies"
  cr_cape_expansion_administrative_border_small:0 "Administrating expanding colonies"
  cr_cape_colonial_expansion_denied:0 "Colonial Expansion Denied"
+ cr_resettling_freed_slaves: "Resettling freed slaves"
  
  #Carlist wars Modifiers
  cr_embrace_of_vergara:0 "Embrace of Vergara"
@@ -355,6 +356,14 @@
  
  #France
  cr_prospecting_for_minette_modifier:0 "Prospecting for Minette"
+ 
+ #Netherlands
+ cr_sint_maarten_border_patrol_colonial: "Slave Patrols"
+ cr_sint_maarten_border_patrol_police: "Slave Patrols"
+ cr_sint_maarten_border_patrol_generic: "Slave Patrols"
+ cr_sint_maarten_border_patrol_movement: "Slavery protected in the West"
+ cr_sint_maarten_border_patrol_movement: "Slavery curtailed in the West"
+ cr_sint_maarten_emancipator: "Emancipator of foreign slaves"
  
 
  #Central Asia

@@ -570,3 +570,44 @@
  cr_carlist_events.91.b_tt:0 "His chapter in our history ends not in triumph or martyrdom, but silence."
  cr_carlist_events.91.c:0 "Even exiled, he remains a martyr to some."
  cr_carlist_events.91.c_tt:0 "His chapter in our history ends not in triumph or martyrdom, but silence."
+ 
+ 
+ 
+ #Abolition of slavery on Sint Maarten - Dutch
+ cr_slavery_events.10.t: "A Tale of Two Islands"
+ cr_slavery_events.10.desc: "With the recent abolition of slavery in [SCOPE.sCountry('slave_emancipator').GetNameNoFlag], a peculiar situation has emerged in the [SCOPE.sState('slavery_state').GetName]. The island of #variable Sint Maarten#!, shared with the [SCOPE.sCountry('slave_emancipator').GetAdjectiveNoFormatting] since 1648, now stands half free and half enslaved. Under [SCOPE.sCountry('slave_emancipator').GetAdjectiveNoFormatting] law, any slave who crosses the boundary is immediately emancipated.\n\nThis divide has placed increasing strain on our colony. Slaves have begun crossing the border in growing numbers, depriving planters of labour and eroding local authority. The matter now demands a response: stricter enforcement of the boundary, abolition to preserve our labour force, or an appeal to France for the return of those who flee."
+ cr_slavery_events.10.f: "An island divided by treaty has become divided by law. What once was a line on a map now decides a man’s fate"
+ cr_slavery_events.10.a: "Strengthen the border patrols."
+ cr_slavery_events.10.b: "End slavery on the [SCOPE.sState('slavery_state').GetNameNoFormatting]."
+ cr_slaves_freed_in_state_tt: "All [GetPopType('slaves').GetName] in [SCOPE.sState('slavery_state').GetName] will be emancipated."
+ cr_slavery_events.10.c: "Appeal to France for cooperation."
+ cr_slavery_events.10.c_tt1: "This will consume our [concept_obligation] on [SCOPE.sCountry('slave_emancipator').GetName] but will prevent any [GetPopType('slaves').GetName] from leaving the [SCOPE.sState('slavery_state').GetName].
+ cr_slavery_events.10.c_tt2: "Depending on the [SCOPE.sCountry('slave_emancipator').GetAdjective] response either no [GetPopType('slaves').GetName] or half of all [GetPopType('slaves').GetName] will leave the [SCOPE.sState('slavery_state').GetName].
+ 
+ cr_slavery_events.11.t: "A Tale of Two Islands"
+ cr_slavery_events.11.desc: "Our abolition of slavery is beginning to echo beyond our own borders. On the island of #variable Saint Martin#!—an island in the [SCOPE.sState('slavery_state').GetStateRegion.GetName] shared with the [SCOPE.sCountry('slave_country').GetAdjectiveNoFlag] since 1648—the divide between bondage and freedom has become impossible to contain.\n\nWith only a few kilometres and an arbitrary boundary separating slave from free, slaves have steadily crossed onto our side of the island, where emancipation is guaranteed by [SCOPE.sCountry('slave_emancipator').GetAdjectiveNoFormatting] law. Unable to halt this quiet exodus—and unwilling to sustain a system rendered unworkable by our example—the [SCOPE.sCountry('slave_country').GetAdjectiveNoFormatting] have been compelled to abolished slavery on their half of the island."
+ cr_slavery_events.11.f: "Liberty has a way of crossing frontiers, even when laws do not."
+ cr_slavery_events.11.a: "Let the world know of our greatness!"
+ cr_slavery_events.11.a_tt: "A small amount of [GetPopType('slaves').GetName] have moved from [SCOPE.sState('slavery_state').GetName] to [SCOPE.sState('emancipated_state').GetName] and have been emancipated."
+ cr_slavery_events.11.b: "Let our people know of our greatness!"
+ 
+ cr_slavery_events.12.t: "A Tale of Two Islands"
+ cr_slavery_events.12.desc: "In the wake of our abolition of slavery, the peculiar nature of #variable Saint Martin#! -an island in the [SCOPE.sState('emancipated_state').GetStateRegion.GetName] we have shared with the [SCOPE.sCountry('slave_country').GetAdjectiveNoFlag] since 1648- has caused an unforeseen dispute. With just a few kilometres and an arbitrary boundary separating slave from free, there has been a quiet exodus of slaves from the [SCOPE.sCountry('slave_country').GetAdjectiveNoFormatting] half of the island to our side, where emancipation is guaranteed by [SCOPE.sCountry('slave_emancipator').GetAdjectiveNoFormatting] law.\n\nThe [SCOPE.sCountry('slave_country').GetAdjectiveNoFormatting] -clinging to the outdated institution of slavery- have requested the return of all runaway slaves, citing an earlier obligation we granted them."
+ cr_slavery_events.12.f: "The island is small, but the law that divides it is not."
+ cr_slavery_events.12.a: "Alas! There is little we can do!"
+ cr_slavery_events.12.a_tt: "All [GetPopType('slaves').GetName] crossing from [SCOPE.sState('slavery_state').GetName] into [SCOPE.sState('emancipated_state').GetName] will be returned to the [SCOPE.sCountry('slave_country').GetName]."
+ 
+ cr_slavery_events.13.desc: "Our abolition of slavery has unsettled the old arrangements of the [SCOPE.sState('emancipated_state').GetStateRegion.GetName]. On the island of #variable Saint Martin#!—shared with the [SCOPE.sCountry('slave_country').GetAdjectiveNoFlag] since 1648—slaves have crossed the internal boundary in growing numbers, drawn by the promise of freedom upheld by [SCOPE.sCountry('slave_emancipator').GetAdjectiveNoFormatting] law.\n\nNow the [SCOPE.sCountry('slave_country').GetAdjectiveNoFlag] request their return, so that the institution of slavery might be preserved on their side of the island. The matter now rests with us: whether to uphold our law without exception, or to seek accommodation with a neighboring power."
+ cr_slavery_events.13.f: "Where freedom is law, it cannot be undone by treaty or convenience."
+ cr_slavery_events.13.a: "Freedom, once granted, is not negotiable."
+ cr_slavery_events.13.a_tt: "[SCOPE.sCountry('slave_emancipator').GetNameNoFormatting] will not return those who have reached liberty under its laws."
+ cr_slavery_events.13.b: "Return the fugitives."
+ cr_slavery_events.13.b_tt: "No [GetPopType('slaves').GetName] have moved from [SCOPE.sState('slavery_state').GetName] to [SCOPE.sState('emancipated_state').GetName]. Nor have any been emancipated."
+ 
+ cr_slavery_events.20.t: "The Fate of the Elizia Slaves"
+ cr_slavery_events.20.desc: "A slaving vessel flying the [SCOPE.sCountry('slave_trading_country').GetAdjectiveNoFlag] flag called #variable L'Elizia#! has been intercepted by one of our patrols and its human cargo freed. Their liberation, however, presents an immediate question of what to do with the liberated slaves.\n\nSome argue they should be directed to existing colonies, where their labor could be put to use under free conditions. Others maintain that settlement in Africa itself would better serve France’s long-term interests, strengthening our presence along the coast and reinforcing our commitment to suppressing the trade at its source"
+ cr_slavery_events.20.f: "Emancipation does not end with release from chains; it begins with the question of where freedom may take root."
+ cr_slavery_events.20.a: "Founded a new colony specifically for liberated slaves."
+ cr_slavery_events.20.b: "Settle them in our possessions in the [SCOPE.sState('existing_african_colony').GetName]."
+ cr_slavery_events.20.c: "Resettle them in the [SCOPE.sState('caribbean_colony').GetName]."
+ cr_slavery_events.20.d: "Send them to [SCOPE.sState('guyana_colony').GetName]."

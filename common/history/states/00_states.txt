@@ -2878,14 +2878,14 @@ STATES = {
 	s:STATE_GABON = {
 		create_state = {
 			country = c:FNG
-			owned_provinces = { x46DE71 xA22CB6 x0F5F7D x6B44DE xCD7A34 xA26A13 x3BD4AD x3DD6EF x402090 x2F5442 x12572A xE8DC57 x88674A xD4438C x7AC766 xC25A2B x5D3B7C x2E8386 x66BBD4 xFC7E53 x271A16 x4DA171 x86E43C xCD570F x75A079 x4A0409 }
+			owned_provinces = { x46DE71 xA22CB6 x0F5F7D x6B44DE xCD7A34 xA26A13 x3BD4AD x3DD6EF x402090 x2F5442 x12572A xE8DC57 x88674A xD4438C x7AC766 xC25A2B x5D3B7C x2E8386 x66BBD4 xFC7E53 x271A16 x4DA171 x86E43C xCD570F x75A079 x4A0409 x61D66B }
 		}
 		create_state = {
 			country = c:GBN
 			owned_provinces = { 
-				xB323FD xBAA5C1 xC02090 x6273A5 xBB6854 x9E126C x228965 x8D20C0 
+				xB323FD xBAA5C1 xC02090 x6273A5 xBB6854 x9E126C x228965 x8D20C0 x0A2A74 x34706D
 
-				xE31261 xB25786 xD76706 x819A60 x683118 x79DFE3 x53FB46 #south of river
+				xE31261 xB25786 xD76706 x819A60 x683118 x53FB46 #south of river
 			}
 		}
 		create_state = {
@@ -2896,7 +2896,7 @@ STATES = {
 		}
 		create_state = {
 			country = c:MBG
-			owned_provinces = { x534DEC xC46F31 x27723A x40A090 xDE26DB x8D528D x9EC4DA xC0A090 }
+			owned_provinces = { x534DEC xC46F31 x27723A x40A090 xDE26DB x8D528D x9EC4DA xC0A090 x79DFE3 }
 		}
 
 		add_homeland = cu:fang
@@ -5927,8 +5927,8 @@ STATES = {
 		}
 		add_homeland = cu:afro_caribbean
 	}
-	s:STATE_WEST_INDIES = {
-		create_state = {
+	s:STATE_WEST_INDIES = {	
+		create_state = { #Don't forget to update cr_slavery_events.10 etc if changed
 			country = c:FRA
 			owned_provinces = { x33895B x9C52CA xECC061 }
 			state_type = unincorporated
@@ -5944,7 +5944,7 @@ STATES = {
 			state_type = unincorporated
 		}
 		
-		create_state = {
+		create_state = { #Don't forget to update cr_slavery_events.10 etc if changed
 			country = c:NET
 			owned_provinces = {
 				x30B09D x43853B

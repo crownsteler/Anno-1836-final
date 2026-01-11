@@ -20,7 +20,7 @@
         type = "building_oil_rig"
         undiscovered_amount = 5
     }
-    naval_exit_id = 3091
+    naval_exit_id = 3088
 }
 
 STATE_WINDWARD_COAST = {
@@ -49,7 +49,7 @@ STATE_WINDWARD_COAST = {
         type = "building_rubber_plantation"
         undiscovered_amount = 24
     }
-    naval_exit_id = 3091
+    naval_exit_id = 3088
 }
 
 STATE_KONG = {
@@ -1622,19 +1622,19 @@ STATE_KATANGA = {
 STATE_GABON = {
     id = 251
     subsistence_building = "building_subsistence_farm"
-    provinces = { "x0F5F7D" "x12572A" "x228965" "x271A16" "x27723A" "x2E8386" "x2F5442" "x3BD4AD" "x3DD6EF" "x402090" "x40A090" "x46DE71" "x4A0409" "x4DA171" "x534DEC" "x53FB46" "x5D3B7C" "x6273A5" "x66BBD4" "x683118" "x6B44DE" "x75A079" "x79DFE3" "x7AC766" "x819A60" "x86E43C" "x88674A" "x8D20C0" "x8D528D" "x8FE687" "x9E126C" "x9EC4DA" "xA22CB6" "xA26A13" "xB25786" "xB323FD" "xBAA5C1" "xBB6854" "xC02090" "xC0A090" "xC25A2B" "xC46F31" "xCD570F" "xCD7A34" "xD4438C" "xD76706" "xDE26DB" "xE31261" "xE8DC57" "xFC7E53" }
+    provinces = { "x0F5F7D" "x12572A" "x228965" "x271A16" "x27723A" "x2E8386" "x2F5442" "x3BD4AD" "x3DD6EF" "x402090" "x40A090" "x46DE71" "x4A0409" "x4DA171" "x534DEC" "x53FB46" "x5D3B7C" "x6273A5" "x66BBD4" "x683118" "x6B44DE" "x75A079" "x79DFE3" "x7AC766" "x819A60" "x86E43C" "x88674A" "x8D20C0" "x8D528D" "x8FE687" "x9E126C" "x9EC4DA" "xA22CB6" "xA26A13" "xB25786" "xB323FD" "xBAA5C1" "xBB6854" "xC02090" "xC0A090" "xC25A2B" "xC46F31" "xCD570F" "xCD7A34" "xD4438C" "xD76706" "xDE26DB" "xE31261" "xE8DC57" "xFC7E53" "x61D66B" "x0A2A74" "x34706D" }
     prime_land = { "x8D20C0" "x8FE687" "xB323FD" }
     traits = { "state_trait_severe_malaria" }
-    city = "xCD7A34"
+    city = "x6B44DE"
     port = "xC02090"
     farm = "x3DD6EF"
-    mine = "xBB6854"
-    wood = "x271A16"
+    mine = "x271A16"
+    wood = "x9EC4DA"
     arable_land = 40
     arable_resources = { "building_millet_farm" "building_coffee_plantation" "building_banana_plantation" }
     capped_resources = {
-        building_logging_camp = 42
-        building_fishing_wharf = 9
+        building_logging_camp = 38
+        building_fishing_wharf = 7
     }
 
     #Or manganese
@@ -1642,19 +1642,20 @@ STATE_GABON = {
         type = "building_iron_mine"
         undiscovered_amount = 15
     }
-    #Lead/Zinc
-    resource = {
-        type = "building_lead_mine"
-        undiscovered_amount = 15
-    }
+    #Lead/Zinc, removed because to many resources
+    #resource = {
+    #    type = "building_lead_mine"
+    #    undiscovered_amount = 15
+    #}
     resource = {
         type = "building_rubber_plantation"
         undiscovered_amount = 32
     }
-    resource = {
-        type = "building_oil_rig"
-        undiscovered_amount = 10
-    }
+	#removed because to many resources
+    #resource = {
+    #    type = "building_oil_rig"
+    #    undiscovered_amount = 10
+    #}
     naval_exit_id = 3091
 }
 

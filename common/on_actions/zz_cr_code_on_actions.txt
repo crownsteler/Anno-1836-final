@@ -15,6 +15,8 @@ cr_on_monthly_pulse_country = {
 		20 = cr_mexico_events.50
 		10 = cr_central_asia_events.1
 		10 = cr_central_asia_events.5
+		30 = cr_slavery_events.10
+		20 = cr_slavery_events.20
 	}
 }
 
