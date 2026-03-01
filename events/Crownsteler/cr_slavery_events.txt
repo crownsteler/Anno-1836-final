@@ -12,11 +12,15 @@ cr_slavery_events.10 = { #A Tale of Two Islands
 
 	icon = "gfx/interface/icons/event_icons/tutorial_icon.dds"
 
+	dlc = dlc_anno1836
+
 	event_image = {
 		video = "southamerica_slaves_night"
 	}
 	
 	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
 
 	trigger = {
 		c:NET ?= this
@@ -609,6 +613,8 @@ cr_slavery_events.11 = { #A Tale of Two Islands - Slave Emancipator
 	event_image = {
 		video = "southamerica_slave_chains"
 	}
+
+	dlc = dlc_anno1836
 	
 	duration = 3
 
@@ -669,6 +675,8 @@ cr_slavery_events.12 = { #A Tale of Two Islands - Obligation used
 	event_image = {
 		video = "southamerica_slave_chains"
 	}
+
+	dlc = dlc_anno1836
 	
 	duration = 3
 
@@ -715,6 +723,8 @@ cr_slavery_events.13 = { #A Tale of Two Islands - No Obligation used
 	event_image = {
 		video = "southamerica_slaves_night"
 	}
+
+	dlc = dlc_anno1836
 	
 	duration = 3
 
@@ -881,8 +891,12 @@ cr_slavery_events.20 = { #A Fate of the Elizia - Founding of Libreville, Gabon
 	event_image = {
 		video = "southamerica_slave_chains"
 	}
+
+	dlc = dlc_anno1836
 	
 	duration = 3
+	
+	cooldown = { days = never_fire_again_modifier_time }
 
 	trigger = {	#Trigger should include France being part of the West African Slavery Patrol. But that isn't a thing just now. Would be best if the trigger included a French ship present along the coast of West Africa or Congo.
 		c:FRA ?= this
